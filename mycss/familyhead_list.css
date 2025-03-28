@@ -1,0 +1,47 @@
+
+        /* Ensure body has some spacing */
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center; /* Center aligns all content */
+        }
+
+        /* Styles for the title */
+        .header-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            background-color: #0a3d62; /* Facebook blue */
+            padding: 15px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 95%;
+            margin: 0 auto; /* Centers the title */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+
+        /* Adds spacing after the title */
+        .spacer {
+            height: 40px; /* Creates space */
+        }
+
+        /* Container for the table */
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 95%;
+            margin: auto;
+            overflow-x: auto; /* Allows scrolling if table overflows */
+        }
+
+        /* Ensures table columns are wide enough */
+        .table th, .table td {
+            padding: 12px;
+            white-space: nowrap; /* Prevents text wrapping */
+        }
+    

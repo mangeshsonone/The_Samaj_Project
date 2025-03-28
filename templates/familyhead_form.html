@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family Head Form</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Form Title */
+    .form-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 26px; /* Slightly larger text */
+      color: white;
+      background-color: #0a3d62;
+      padding: 15px;
+      border-radius: 8px;
+      width: 80%; /* Make it wider */
+      max-width: 700px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Form Container */
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+      margin-top: 20px;
+      border: 2px solid #ddd;
+    }
+    
+    /* Each Form Row is Full Width */
+    .form-group {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    
+    /* Inputs, Selects & Textareas */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border-radius: 5px;
+      padding: 8px;
+      border: 1px solid #ccc;
+    }
+    
+    /* Submit Button */
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .btn-success {
+      background-color: #1877f2;
+      border: none;
+      padding: 10px 18px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    
+    .btn-success:hover {
+      background-color: #1558b0;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 576px) {
+      .form-title {
+        font-size: 20px;
+        padding: 10px;
+        width: 90%;
+      }
+      
+      .form-container {
+        width: 90%;
+        padding: 15px;
+      }
+      
+      .btn-success {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="form-title">Enter the details of the Head of the Family</h2>
+
+  <div class="form-container">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="id_name_of_head" class="form-label fw-bold">Full Name</label>
+        {{ form.name_of_head }}
+      </div>
+      
+      <!-- Age -->
+      <div class="form-group">
+        <label for="id_age" class="form-label fw-bold">Age</label>
+        {{ form.age }}
+      </div>
+      
+      <!-- Birth Date -->
+      <div class="form-group">
+        <label for="id_birth_date" class="form-label fw-bold">Birth Date</label>
+        {{ form.birth_date }}
+      </div>
+      
+      <!-- Gender -->
+      <div class="form-group">
+        <label for="id_gender" class="form-label fw-bold">Gender</label>
+        {{ form.gender }}
+      </div>
+      
+      <!-- Marital Status -->
+      <div class="form-group">
+        <label for="id_marital_status" class="form-label fw-bold">Marital Status</label>
+        {{ form.marital_status }}
+      </div>
+      
+      <!-- Qualification -->
+      <div class="form-group">
+        <label for="id_qualification" class="form-label fw-bold">Qualification</label>
+        {{ form.qualification }}
+      </div>
+      
+      <!-- Occupation -->
+      <div class="form-group">
+        <label for="id_occupation" class="form-label fw-bold">Occupation</label>
+        {{ form.occupation }}
+      </div>
+      
+      <!-- Nature of Duties -->
+      <div class="form-group">
+        <label for="id_exact_nature_of_duties" class="form-label fw-bold">Nature of Duties</label>
+        {{ form.exact_nature_of_duties }}
+      </div>
+      
+      <!-- State -->
+      <div class="form-group">
+        <label for="id_state" class="form-label fw-bold">State</label>
+        {{ form.state }}
+      </div>
+      
+      <!-- District -->
+      <div class="form-group">
+        <label for="id_district" class="form-label fw-bold">District</label>
+        {{ form.district }}
+      </div>
+      
+      <!-- Permanent Address -->
+      <div class="form-group">
+        <label for="id_permanent_address" class="form-label fw-bold">Permanent Address</label>
+        {{ form.permanent_address }}
+      </div>
+      
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="id_phone_no" class="form-label fw-bold">Phone Number</label>
+        {{ form.phone_no }}
+      </div>
+      
+      <!-- Alternative Number -->
+      <div class="form-group">
+        <label for="id_alternative_no" class="form-label fw-bold">Alternative Number</label>
+        {{ form.alternative_no }}
+      </div>
+      
+      <!-- Landline Number -->
+      <div class="form-group">
+        <label for="id_landline_no" class="form-label fw-bold">Landline Number</label>
+        {{ form.landline_no }}
+      </div>
+      
+      <!-- Email -->
+      <div class="form-group">
+        <label for="id_email_id" class="form-label fw-bold">Email</label>
+        {{ form.email_id }}
+      </div>
+      
+      <!-- Blood Group -->
+      <div class="form-group">
+        <label for="id_blood_group" class="form-label fw-bold">Blood Group</label>
+        {{ form.blood_group }}
+      </div>
+      
+      <!-- Social Media Link -->
+      <div class="form-group">
+        <label for="id_social_media_link" class="form-label fw-bold">Social Media Link</label>
+        {{ form.social_media_link }}
+      </div>
+      
+      <!-- Upload Photo -->
+      <div class="form-group">
+        <label for="id_photo_upload" class="form-label fw-bold">Upload Photo</label>
+        {{ form.photo_upload }}
+      </div>
+      
+      <!-- Error Message Container -->
+      <div id="error_message" class="text-danger mb-3"></div>
+      
+      <div class="btn-container">
+        <button type="submit" class="btn btn-success px-4">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript for Dropdown Placeholders and Validation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Define an array of dropdown IDs and their respective placeholder text
+      const dropdowns = [
+        { id: "id_age", placeholder: "Select Age" },
+        { id: "id_gender", placeholder: "Select Gender" },
+        { id: "id_marital_status", placeholder: "Select Marital Status" },
+        { id: "id_blood_group", placeholder: "Select Blood Group" },
+        { id: "id_samaj", placeholder: "Select Samaj" }
+      ];
+
+      // Loop through each dropdown and update the first option text
+      dropdowns.forEach(dropdown => {
+        let element = document.getElementById(dropdown.id);
+        if (element && element.options.length > 0) {
+          element.options[0].text = dropdown.placeholder;
+        }
+      });
+
+      
+
+      const form = document.querySelector("form");
+  form.addEventListener("submit", function(event) {
+    let isValid = true;
+
+    // Clear previous errors
+    document.querySelectorAll(".error-message").forEach(error => error.remove());
+
+    function showError(inputId, message) {
+      let inputField = document.getElementById(inputId);
+      if (inputField) {
+        let errorDiv = document.createElement("div");
+        errorDiv.className = "text-danger error-message mt-1";
+        errorDiv.innerText = message;
+        inputField.insertAdjacentElement("afterend", errorDiv);
+      }
+    }
+
+    let phoneNo = document.getElementById("id_phone_no").value.trim();
+    let altNo = document.getElementById("id_alternative_no").value.trim();
+
+    // Validate phone number: must be numeric and exactly 10 digits
+    if (phoneNo && !/^\d{10}$/.test(phoneNo)) {
+      showError("id_phone_no", "Phone Number must be numeric and exactly 10 digits.");
+      isValid = false;
+    }
+
+    // Validate alternative number if provided: must be numeric and exactly 10 digits
+    if (altNo && !/^\d{10}$/.test(altNo)) {
+      showError("id_alternative_no", "Alternative Number must be numeric and exactly 10 digits.");
+      isValid = false;
+    }
+
+    if (!isValid) {
+      event.preventDefault();
+    }
+  });
+});
+  </script>
+
+</body>
+</html>

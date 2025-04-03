@@ -113,111 +113,171 @@
 
   <div class="form-container">
     <form method="post" enctype="multipart/form-data" id="member-form">
-      {% csrf_token %}
+        {% csrf_token %}
+    
+        <!-- Personal Details -->
+        <div class="form-group">
+            <label for="id_name" class="fw-bold">Full Name</label>
+            {{ form.name }}
+        </div>
+    
+        <div class="form-group">
+            <label for="id_middle_name" class="fw-bold">Middle Name</label>
+            {{ form.middle_name }}
+        </div>
+    
+        <div class="form-group">
+            <label for="id_last_name" class="fw-bold">Last Name</label>
+            {{ form.last_name }}
+        </div>
+    
+        <div class="form-group">
+            <label for="id_birth_date" class="fw-bold">Birth Date</label>
+            {{ form.birth_date }}
+        </div>
+    
+        <div class="form-group">
+            <label for="id_age" class="fw-bold">Age</label>
+            {{ form.age }}
+        </div>
+    
+        <div class="form-group">
+            <label for="id_gender" class="fw-bold">Gender</label>
+            {{ form.gender }}
+        </div>
+    
+        <div class="form-group">
+            <label for="id_marital_status" class="fw-bold">Marital Status</label>
+            {{ form.marital_status }}
+        </div>
+    
+        <div class="form-group">
+            <label for="id_relation_with_family_head" class="fw-bold">Relation with the Head of the Family</label>
+            {{ form.relation_with_family_head }}
+        </div>
+
+        <!-- Professional Details -->
+        <div class="form-group">
+          <label for="id_qualification" class="fw-bold">Qualification</label>
+          {{ form.qualification }}
+      </div>
+  
+      <div class="form-group">
+          <label for="id_occupation" class="fw-bold">Occupation</label>
+          {{ form.occupation }}
+      </div>
+  
+      <div class="form-group">
+          <label for="id_exact_nature_of_duties" class="fw-bold">Nature of Duties</label>
+          {{ form.exact_nature_of_duties }}
+      </div>
+    
+        <!-- Contact Details -->
+        <div class="form-group">
+            <label for="id_phone_no" class="fw-bold">Phone Number</label>
+            <input type="text" name="phone_no" id="id_phone_no" class="form-control" placeholder="Enter 10-digit Phone Number" oninput="validatePhoneNumbers()">
+            <div id="phone-error" class="text-danger"></div>
+        </div>
+    
+        <div class="form-group">
+            <label for="id_alternative_no" class="fw-bold">Alternative Number</label>
+            <input type="text" name="alternative_no" id="id_alternative_no" class="form-control" placeholder="Enter 10-digit Alternative Number" oninput="validatePhoneNumbers()">
+            <div id="alt-error" class="text-danger"></div>
+        </div>
+    
+        <div class="form-group">
+            <label for="id_landline_no" class="fw-bold">Landline Number</label>
+            {{ form.landline_no }}
+        </div>
+    
+        <div class="form-group">
+            <label for="id_email_id" class="fw-bold">Email</label>
+            {{ form.email_id }}
+        </div>
+    
+        <!-- Address Section -->
+        <div class="form-group">
+          <label for="id_country" class="form-label fw-bold">Country</label>
+          {{ form.country }}
+      </div>
       
       <div class="form-group">
-        <label for="id_name" class="fw-bold">Full Name</label>
-        {{ form.name }}
+          <label for="state">State</label>
+          <select id="state" name="state" class="form-control" required>
+              <option value="">Select State</option>
+              {% for state in states %}
+                  <option value="{{ state.state_name }}" data-id="{{ state.state_id }}">{{ state.state_name }}</option>
+              {% endfor %}
+          </select>
       </div>
-
+      
       <div class="form-group">
-        <label for="id_relation_with_family_head" class="fw-bold">Relation with the Head of the Family</label>
-        {{ form.relation_with_family_head }}
+          <label for="district">District</label>
+          <select id="district" name="district" class="form-control" required>
+              <option value="">Select District</option>
+          </select>
       </div>
-
+      <input type="hidden" id="state_name" name="state_name">
+      <input type="hidden" id="district_name" name="district_name">
+      
       <div class="form-group">
-        <label for="id_age" class="fw-bold">Age</label>
-        {{ form.age }}
+          <label for="id_pincode" class="form-label fw-bold">Pincode</label>
+          {{ form.pincode }}
       </div>
-
+      
       <div class="form-group">
-        <label for="id_birth_date" class="fw-bold">Birth Date</label>
-        {{ form.birth_date }}
+          <label for="id_building_name" class="form-label fw-bold">Building Name</label>
+          {{ form.building_name }}
       </div>
-
+      
       <div class="form-group">
-        <label for="id_gender" class="fw-bold">Gender</label>
-        {{ form.gender }}
+          <label for="id_flat_no" class="form-label fw-bold">Flat No</label>
+          {{ form.flat_no }}
       </div>
-
+      
       <div class="form-group">
-        <label for="id_marital_status" class="fw-bold">Marital Status</label>
-        {{ form.marital_status }}
+          <label for="id_door_no" class="form-label fw-bold">Door No</label>
+          {{ form.door_no }}
       </div>
-
+      
       <div class="form-group">
-        <label for="id_qualification" class="fw-bold">Qualification</label>
-        {{ form.qualification }}
+          <label for="id_street_name" class="form-label fw-bold">Street Name</label>
+          {{ form.street_name }}
       </div>
-
+      
       <div class="form-group">
-        <label for="id_occupation" class="fw-bold">Occupation</label>
-        {{ form.occupation }}
+          <label for="id_landmark" class="form-label fw-bold">Landmark</label>
+          {{ form.landmark }}
       </div>
-
+      
       <div class="form-group">
-        <label for="id_exact_nature_of_duties" class="fw-bold">Nature of Duties</label>
-        {{ form.exact_nature_of_duties }}
+          <label for="id_native_place" class="form-label fw-bold">Native Place</label>
+          {{ form.native_place }}
       </div>
-
-      <div class="form-group">
-        <label for="id_state" class="fw-bold">State</label>
-        {{ form.state }}
-      </div>
-
-      <div class="form-group">
-        <label for="id_district" class="fw-bold">District</label>
-        {{ form.district }}
-      </div>
-
-      <div class="form-group">
-        <label for="id_permanent_address" class="fw-bold">Permanent Address</label>
-        {{ form.permanent_address }}
-      </div>
-
-      <div class="form-group">
-        <label for="id_phone_no" class="fw-bold">Phone Number</label>
-        {{ form.phone_no }}
-        <!-- Inline error container for phone number -->
-        <div id="error-phone" class="error-inline"></div>
-      </div>
-
-      <div class="form-group">
-        <label for="id_alternative_no" class="fw-bold">Alternative Number</label>
-        {{ form.alternative_no }}
-        <!-- Inline error container for alternative number -->
-        <div id="error-alternative" class="error-inline"></div>
-      </div>
-
-      <div class="form-group">
-        <label for="id_landline_no" class="fw-bold">Landline Number</label>
-        {{ form.landline_no }}
-      </div>
-
-      <div class="form-group">
-        <label for="id_email_id" class="fw-bold">Email</label>
-        {{ form.email_id }}
-      </div>
-
-      <div class="form-group">
-        <label for="id_blood_group" class="fw-bold">Blood Group</label>
-        {{ form.blood_group }}
-      </div>
-
-      <div class="form-group">
-        <label for="id_social_media_link" class="fw-bold">Social Media Link</label>
-        {{ form.social_media_link }}
-      </div>
-
-      <div class="form-group">
-        <label for="id_photo_upload" class="fw-bold">Upload Photo</label>
-        {{ form.photo_upload }}
-      </div>
-
-      <div class="btn-container">
-        <button type="submit" class="btn btn-success px-4">Submit</button>
-      </div>
+       
+       
+    
+        <!-- Medical Details -->
+        <div class="form-group">
+            <label for="id_blood_group" class="fw-bold">Blood Group</label>
+            {{ form.blood_group }}
+        </div>
+    
+        <div class="form-group">
+            <label for="id_social_media_link" class="fw-bold">Social Media Link</label>
+            {{ form.social_media_link }}
+        </div>
+    
+        <div class="form-group">
+            <label for="id_photo_upload" class="fw-bold">Upload Photo</label>
+            {{ form.photo_upload }}
+        </div>
+    
+        <div class="btn-container">
+            <button type="submit" class="btn btn-success px-4">Submit</button>
+        </div>
     </form>
+    
   </div>
 
   <!-- Bootstrap JS -->
@@ -243,38 +303,122 @@
         }
       });
   
-      // Form Validation for Phone Number and Alternative Number
-      const form = document.getElementById("member-form");
-      form.addEventListener("submit", function(event) {
-        let phoneNo = document.getElementById("id_phone_no").value.trim();
-        let altNo = document.getElementById("id_alternative_no").value.trim();
-  
-        let errorPhone = document.getElementById("error-phone");
-        let errorAlternative = document.getElementById("error-alternative");
-  
-        // Clear previous error messages
-        errorPhone.innerHTML = "";
-        errorAlternative.innerHTML = "";
-  
-        let valid = true;
-  
-        // Validate phone number: must be numeric and exactly 10 digits
-        if (phoneNo && !/^\d{10}$/.test(phoneNo)) {
-          errorPhone.innerHTML = "Phone Number must be numeric and exactly 10 digits.";
-          valid = false;
-        }
-  
-        // Validate alternative number if provided: must be numeric and exactly 10 digits
-        if (altNo && !/^\d{10}$/.test(altNo)) {
-          errorAlternative.innerHTML = "Alternative Number must be numeric and exactly 10 digits.";
-          valid = false;
-        }
-  
-        if (!valid) {
-          event.preventDefault();
-        }
-      });
+      
+
+      const birthDateInput = document.getElementById("id_birth_date");
+      const ageInput = document.getElementById("id_age");
+      if(birthDateInput && ageInput) {
+        birthDateInput.addEventListener("change", function() {
+          let birthDate = new Date(this.value);
+          let today = new Date();
+          let age = today.getFullYear() - birthDate.getFullYear();
+          let m = today.getMonth() - birthDate.getMonth();
+          if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+          }
+          ageInput.value = age;
+        });
+      }
+
     });
+    function validatePhoneNumbers() {
+      const phoneInput = document.getElementById("id_phone_no");
+      const altInput = document.getElementById("id_alternative_no");
+      const phoneError = document.getElementById("phone-error");
+      const altError = document.getElementById("alt-error");
+
+      let phoneValue = phoneInput.value.replace(/\D/g, ""); // Remove non-numeric characters
+      let altValue = altInput.value.replace(/\D/g, ""); // Remove non-numeric characters
+
+      phoneInput.value = phoneValue;
+      altInput.value = altValue;
+
+      // Validation for phone number - always show error unless exactly 10 digits
+      if (phoneValue.length === 0) {
+        phoneError.textContent = "Please enter a 10-digit phone number.";
+      } else if (phoneValue.length < 10) {
+        phoneError.textContent = "Number must be exactly 10 digits. You have entered " + phoneValue.length + " digits.";
+      } else if (phoneValue.length > 10) {
+        phoneError.textContent = "Only 10 digits are allowed. Please remove " + (phoneValue.length - 10) + " digits.";
+      } else {
+        phoneError.textContent = ""; // Valid 10-digit number
+      }
+
+      // Validation for alternative number - always show error unless exactly 10 digits
+      if (altValue.length === 0) {
+        altError.textContent = "Please enter a 10-digit alternative number.";
+      } else if (altValue.length < 10) {
+        altError.textContent = "Number must be exactly 10 digits. You have entered " + altValue.length + " digits.";
+      } else if (altValue.length > 10) {
+        altError.textContent = "Only 10 digits are allowed. Please remove " + (altValue.length - 10) + " digits.";
+      } else {
+        altError.textContent = ""; // Valid 10-digit number
+      }
+
+      // Check if both numbers are the same (only if both have valid 10 digits)
+      if (phoneValue.length === 10 && altValue.length === 10 && phoneValue === altValue) {
+        altError.textContent = "Phone number and alternative number cannot be the same.";
+      }
+    }
+
+    document.getElementById('state').addEventListener('change', function() {
+    const selectedOption = this.options[this.selectedIndex];  // Get the selected `<option>`
+    const stateId = selectedOption.getAttribute('data-id');   // Fetch `data-id` attribute
+    const districtDropdown = document.getElementById('district');
+
+    console.log("Selected State Name:", this.value); // State name
+    console.log("Selected State ID:", stateId); // State ID
+
+    // Clear current options
+    districtDropdown.innerHTML = '<option value="">Select District</option>';
+    
+    if (stateId) {
+        // Fetch districts for the selected state
+        fetch(`/get_districts/${stateId}/`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.districts) {
+                    // Add each district to the dropdown
+                    data.districts.forEach(district => {
+                        const option = document.createElement('option');
+                        option.value = district.name;
+                        option.textContent = district.name;
+                        districtDropdown.appendChild(option);
+                    });
+                } else if (data.error) {
+                    console.error('Error fetching districts:', data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+
+    function autoSave() {
+        let formData = new FormData(form);
+
+        fetch("{% url 'save_form_data' %}", {  // Replace with your actual URL name
+            method: "POST",
+            body: formData,
+            headers: {
+                "X-CSRFToken": "{{ csrf_token }}",
+            },
+        })
+        .then(response => response.json())
+        .then(data => console.log("Auto-saved:", data))
+        .catch(error => console.error("Auto-save error:", error));
+    }
+
+    // Trigger auto-save on every input change
+    form.querySelectorAll("input, select, textarea").forEach((field) => {
+        field.addEventListener("input", autoSave);
+        field.addEventListener("change", autoSave); // For dropdowns and checkboxes
+    });
+});
   </script>
 
 </body>

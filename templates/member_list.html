@@ -123,8 +123,9 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Middle Name</th> <!-- New Field -->
+                        <th>Last Name</th> <!-- New Field -->
                         <th>Family Head</th>
-                        <th>Family</th>
                         <th>Samaj</th>
                         <th>Relation</th>
                         <th>Age</th>
@@ -135,15 +136,22 @@
                         <th>Email</th>
                         <th>Alternative No.</th>
                         <th>Landline No.</th>
+                        <th>Native Place</th> <!-- New Field -->
+                        <th>Country</th> <!-- New Field -->
                         <th>State</th>
                         <th>District</th>
-                        <th>Permanent Address</th>
+                        <th>City</th> <!-- New Field -->
+                        <th>Street Name</th> <!-- New Field -->
+                        <th>Landmark</th> <!-- New Field -->
+                        <th>Building Name</th> <!-- New Field -->
+                        <th>Flat No.</th> <!-- New Field -->
+                        <th>Pincode</th> <!-- New Field -->
                         <th>Qualification</th>
                         <th>Occupation</th>
                         <th>Nature of Duties</th>
                         <th>Blood Group</th>
-                        <th>Social Media</th> <!-- New Field -->
-                        <th>Photo</th> <!-- New Field -->
+                        <th>Social Media</th>
+                        <th>Photo</th>
                         <th>Detailed View</th>
                         <th>Actions</th>
                     </tr>
@@ -153,8 +161,9 @@
                     <tr>
                         <td>{{ member.id }}</td>
                         <td>{{ member.name }}</td>
+                        <td>{{ member.middle_name|default:"N/A" }}</td>
+                        <td>{{ member.last_name }}</td>
                         <td>{{ member.family_head.name_of_head }}</td>
-                        <td>{{ member.family_head.family.surname }}</td>
                         <td>{{ member.family_head.family.samaj.samaj_name }}</td>
                         <td>{{ member.relation_with_family_head }}</td>
                         <td>{{ member.age }}</td>
@@ -165,14 +174,21 @@
                         <td>{{ member.email_id }}</td>
                         <td>{{ member.alternative_no|default:"N/A" }}</td>
                         <td>{{ member.landline_no|default:"N/A" }}</td>
+                        <td>{{ member.native_place }}</td>
+                        <td>{{ member.country }}</td>
                         <td>{{ member.state }}</td>
                         <td>{{ member.district }}</td>
-                        <td>{{ member.permanent_address }}</td>
+                        <td>{{ member.city }}</td>
+                        <td>{{ member.street_name }}</td>
+                        <td>{{ member.landmark|default:"N/A" }}</td>
+                        <td>{{ member.building_name|default:"N/A" }}</td>
+                        <td>{{ member.flat_no|default:"N/A" }}</td>
+                        <td>{{ member.pincode }}</td>
                         <td>{{ member.qualification }}</td>
                         <td>{{ member.occupation }}</td>
                         <td>{{ member.exact_nature_of_duties }}</td>
                         <td>{{ member.blood_group }}</td>
-                
+                        <td>{{ member.social_media_link|default:"N/A" }}</td>
                         <!-- Social Media Link (Only if available) -->
                         <td>
                             {% if member.social_media_link %}

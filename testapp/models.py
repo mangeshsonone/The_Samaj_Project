@@ -40,24 +40,34 @@ class PersonsData(models.Model):
         ('O-', 'O-'),
     ]
 
-    age = models.IntegerField(choices=AGE_CHOICES)
+
+    middle_name = models.CharField(max_length=100,default="")
+    last_name = models.CharField(max_length=100,default="")
     birth_date = models.DateField()
+    age = models.IntegerField(choices=AGE_CHOICES)
     gender = models.CharField(max_length=100, choices=GENDER_CHOICES)
     marital_status = models.CharField(max_length=100, choices=MARITAL_STATUS_CHOICES)
     qualification = models.CharField(max_length=100)
     occupation = models.CharField(max_length=100) 
     exact_nature_of_duties = models.CharField(max_length=1000)
-    state = models.CharField(max_length=100)
+    native_place = models.CharField(max_length=100,default="")
+    country = models.CharField(max_length=100,default="India")
+    state = models.CharField(max_length=100) 
     district = models.CharField(max_length=100)
-    permanent_address = models.TextField()
+    city = models.CharField(max_length=100,default="")
+    street_name = models.CharField(max_length=100,default="")
+    landmark = models.CharField(max_length=100,default="")
+    building_name = models.CharField(max_length=100,default="")
+    door_no = models.CharField(max_length=100,default="")
+    flat_no = models.CharField(max_length=100,default="")
+    pincode = models.CharField(max_length=100,default="")
     landline_no = models.CharField(max_length=15, blank=True, null=True)
     phone_no = models.CharField(max_length=15)
     alternative_no = models.CharField(max_length=15, blank=True, null=True)
     email_id = models.EmailField(null=True,blank=True)
     blood_group = models.CharField(max_length=3, choices=BLOOD_GROUP_CHOICES)
     social_media_link= models.URLField(
-        max_length=255,
-        unique=True,  # Optional: Ensures no duplicate LinkedIn URLs
+        max_length=255,  # Optional: Ensures no duplicate LinkedIn URLs
         blank=True,    # Optional: Allows the field to be empty
         null=True,     # Optional: Stores NULL in the database if not provided
     )
@@ -77,12 +87,11 @@ class Samaj(models.Model):
 class Family(models.Model):
     
     samaj = models.ForeignKey(Samaj, on_delete=models.CASCADE)
-    surname = models.CharField(max_length=255)
     total_family_members = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.surname
+        return f"family {self.id}"
 
 class FamilyHead(PersonsData):
     name_of_head = models.CharField(max_length=255)

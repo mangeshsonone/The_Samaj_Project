@@ -23,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-e3x_lf-v)+$*&_0qrp-0rik9ss%v1asadsv!e++*i^^(3gq%f@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://4fa0-2402-3a80-c86-a60a-44ff-7a30-7689-bf80.ngrok-free.app",
+    "https://3854-42-108-238-31.ngrok-free.app",
     # Add any other domains you use for testing
 ]
 
@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'testapp.middleware.EnsureSlashMiddleware',
     # 'testapp.middleware.PreventURLModificationMiddleware',
 ]
 
@@ -136,5 +137,5 @@ STATIC_URL = 'static/'
 import os
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-MEDIA_URL = '/media/'  # URL for serving media files
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

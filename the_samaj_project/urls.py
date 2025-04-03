@@ -21,11 +21,15 @@ from testapp import views
 # from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import handler404
+# from your_app.views import custom_404
 
+handler404 = 'testapp.views.custom_404'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.create_family, name='create_family'),
-    re_path(r'^family_list/(?P<family_id>\d+)(?:/(?P<extra>.+))?/$', views.family_list, name='family_list'),
+    path('family_list/<int:family_id>/',views.family_list,name='family_list'),
+    # re_path(r'^family_list/(?P<family_id>\d+)(?:/(?P<extra>.+))?/$', views.family_list, name='family_list'),
     path('update_family/<int:family_id>/', views.update_family, name='update_family'),
     path('delete_family/<int:family_id>/', views.delete_family, name='delete_family'),
     path('create_familyhead/<int:family_id>/',views.create_familyhead, name='create_familyhead'),
@@ -38,5 +42,8 @@ urlpatterns = [
     path('update_member/<int:member_id>/', views.update_member, name='update_member'),
     path('delete_member/<int:member_id>/', views.delete_member, name='delete_member'),
     path('detail_member/<int:member_id>/', views.detail_member, name='detail_member'),
+    path('get_districts/<int:state_id>/', views.get_districts, name='get_districts'),
+    path("save_form_view/", views.save_form_view, name="save_form_view"),
+    path("save-form-data/", views.save_form_data, name="save_form_data"),
     
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

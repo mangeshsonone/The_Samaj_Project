@@ -58,16 +58,18 @@
 
     <!-- Title at the top -->
     <h2 class="header-title">Details of the Head of the Family</h2>
-
+    {% if messages %}
+    <div class="alert-container">
+        {% for message in messages %}
+            <div class="alert {{ message.tags }}" onclick="this.remove();">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
     <!-- Adds 4 line breaks for spacing -->
     <div class="spacer"></div>
-    {% if messages %}
-            <div class="alert alert-info">
-                {% for message in messages %}
-                    <div class="alert {{ message.tags }}">{{ message }}</div>
-                {% endfor %}
-            </div>
-    {% endif %}
+    
     
     <!-- Container for the table -->
     <div class="container">
@@ -79,7 +81,8 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Family</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
                     <th>Samaj</th>
                     <th>Total Family Members</th>
                     <th>Age</th>
@@ -89,25 +92,33 @@
                     <th>Qualification</th>
                     <th>Occupation</th>
                     <th>Nature of Duties</th>
+                    <th>Native Place</th>
+                    <th>Country</th>
                     <th>State</th>
                     <th>District</th>
-                    <th>Permanent Address</th>
+                    <th>City</th>
+                    <th>Street Name</th>
+                    <th>Landmark</th>
+                    <th>Building Name</th>
+                    <th>Flat No</th>
+                    <th>Pincode</th>
                     <th>Landline</th>
                     <th>Phone</th>
                     <th>Alternative No.</th>
                     <th>Email</th>
                     <th>Blood Group</th>
-                    <th>Social Media</th> <!-- New Field -->
-                    <th>Photo</th> <!-- New Field -->
+                    <th>Social Media</th>
+                    <th>Photo</th>
                     <th>Created At</th>
                     <th>Actions</th>
                 </tr>
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
                 <tr>
                     <td>{{ familyhead.id }}</td>
                     <td>{{ familyhead.name_of_head }}</td>
-                    <td>{{ familyhead.family.surname }}</td>
+                    <td>{{ familyhead.middle_name }}</td>
+                    <td>{{ familyhead.last_name }}</td>
                     <td>{{ familyhead.family.samaj.samaj_name }}</td>
                     <td>{{ familyhead.family.total_family_members }}</td>
                     <td>{{ familyhead.age }}</td>
@@ -117,15 +128,22 @@
                     <td>{{ familyhead.qualification }}</td>
                     <td>{{ familyhead.occupation }}</td>
                     <td>{{ familyhead.exact_nature_of_duties }}</td>
-                    <td>{{ familyhead.state }}</td>
+                    <td>{{ familyhead.native_place }}</td>
+                    <td>{{ familyhead.country }}</td>
+                    <td>{{ familyhead.state }}</td>  <!-- Get the state name -->
                     <td>{{ familyhead.district }}</td>
-                    <td>{{ familyhead.permanent_address }}</td>
+                    <td>{{ familyhead.city }}</td>
+                    <td>{{ familyhead.street_name }}</td>
+                    <td>{{ familyhead.landmark }}</td>
+                    <td>{{ familyhead.building_name }}</td>
+                    <td>{{ familyhead.flat_no }}</td>
+                    <td>{{ familyhead.pincode }}</td>
                     <td>{{ familyhead.landline_no|default:"N/A" }}</td>
                     <td>{{ familyhead.phone_no }}</td>
                     <td>{{ familyhead.alternative_no|default:"N/A" }}</td>
                     <td>{{ familyhead.email_id }}</td>
                     <td>{{ familyhead.blood_group }}</td>
-            
+                    
                     <!-- Social Media Link (Only if available) -->
                     <td>
                         {% if familyhead.social_media_link %}
@@ -138,7 +156,11 @@
                     <!-- Display Photo (Only if uploaded) -->
                     <td>
                         {% if familyhead.photo_upload %}
-                            <img src="{{ familyhead.photo_upload.url }}" alt="Profile Photo" style="width: 50px; height: 50px; border-radius: 5px;">
+                        
+                        <img src="/media/photos/Screenshot_1.png" alt="Profile Photo" style="width: 50px; height: 50px; border-radius: 5px;">
+                            <!-- For debugging -->
+                            <!-- <p>Path: {{ familyhead.photo_upload.path }}</p> -->
+                            <!-- <p>URL: {{ familyhead.photo_upload.url }}</p> -->
                         {% else %}
                             No Photo
                         {% endif %}
@@ -148,11 +170,7 @@
                     <td>
                         <a href="{% url 'update_familyhead' familyhead_id=familyhead.id %}" class="btn btn-primary btn-sm">Edit</a>
                         <br>
-                        <a href="{% url 'delete_familyhead' familyhead_id=familyhead.id %}" 
-                            class="btn btn-danger btn-sm"
-                            onclick="return confirm('Head of the Family cannot be deleted.\nYou can only Edit it.');">
-                            Delete
-                        </a>
+                        
                     </td>
                 </tr>
             </tbody>

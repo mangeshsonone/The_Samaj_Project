@@ -22,3 +22,13 @@ class PreventURLModificationMiddleware:
             return redirect('/')  # Redirect to home if URL resolution fails
 
         return self.get_response(request)
+    
+
+from django.http import HttpResponsePermanentRedirect
+from django.utils.deprecation import MiddlewareMixin
+
+class EnsureSlashMiddleware(MiddlewareMixin):
+    def process_request(self, request):
+        # If the request does not have a trailing slash AND a matching URL exists with a slash
+        if not request.path.endswith('/'):
+            return HttpResponsePermanentRedirect(request.path + '/')

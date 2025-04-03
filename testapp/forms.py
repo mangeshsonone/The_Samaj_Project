@@ -9,10 +9,8 @@ class SamajForm(forms.ModelForm):
 class FamilyForm(forms.ModelForm):
     class Meta:
         model = Family
-        fields = ['samaj', 'surname', 'total_family_members']
-        labels = {
-            'surname': 'Family Name',  
-        }
+        fields = ['samaj', 'total_family_members']
+        
 
     def clean_total_family_members(self):
         total = self.cleaned_data.get('total_family_members')
@@ -23,46 +21,54 @@ class FamilyForm(forms.ModelForm):
 
 class FamilyHeadForm(forms.ModelForm):
     email_id = forms.EmailField(required=False)
+    photo_upload = forms.ImageField(required=False)
     class Meta:
         model = FamilyHead
-        fields = fields = [
-            # Basic Details
-            "name_of_head",
-            "age",
-            "birth_date",
-            "gender",
-            "marital_status",
-            
-            # Contact Details
-            "phone_no",
-            "alternative_no",
-            "landline_no",
-            "email_id",
-            
-            
-            # Address
-            "state",
-            "district",
-            "permanent_address",
-            
-            # Professional Details
-            "qualification",
-            "occupation",
-            "exact_nature_of_duties",
-            
-            # Family & Other Information
-            
-            "blood_group",
-            "social_media_link",
-            "photo_upload",
-            
-        ]
+        fields = [
+    # Basic Details
+    "name_of_head",
+    "middle_name",
+    "last_name",
+    "birth_date",
+    "age",
+    "gender",
+    "marital_status",
+
+    # Contact Details
+    "phone_no",
+    "alternative_no",
+    "landline_no",
+    "email_id",
+
+    # Address
+    "country",
+    "state",
+    "district",
+    "pincode",
+    "building_name",
+    "flat_no",  # Includes Ward No/Flat No
+    "door_no",
+    "street_name",
+    "landmark",
+    "native_place",
+   
+
+    # Professional Details
+    "qualification",
+    "occupation",
+    "exact_nature_of_duties",
+
+    # Family & Other Information
+    "blood_group",
+    "social_media_link",
+    "photo_upload",
+]        
         widgets = {
             "birth_date": forms.DateInput(attrs={"type": "date"}),
             "permanent_address": forms.Textarea(attrs={"rows": 3}),
         }
         labels = {
-            'name_of_head': 'Full Name',  # Change label here
+            'name_of_head': 'Name',  # Change label here
             'photo_upload': 'Upload photo'
         }
 
@@ -89,22 +95,33 @@ class MemberForm(forms.ModelForm):
         fields = [
             # Personal Details
             "name",
-            "age",
+            "middle_name",
+            "last_name",
             "birth_date",
+            "age",
+            
             "gender",
             "marital_status",
             "relation_with_family_head",
             
-            # Contact Details
+           # Contact Details
             "phone_no",
-            "email_id",
             "alternative_no",
             "landline_no",
-            
-            # Address Details
+            "email_id",
+
+           # Address
+            "country",
             "state",
             "district",
-            "permanent_address",
+            "pincode",
+            "building_name",
+            "flat_no",  # Includes Ward No/Flat No
+            "door_no",
+            "street_name",
+            "landmark",
+            "native_place",
+            
             
             # Professional Details
             "qualification",
@@ -122,7 +139,7 @@ class MemberForm(forms.ModelForm):
             "permanent_address": forms.Textarea(attrs={"rows": 3}),
         }
         labels = {
-            'name': 'Full Name',  # Change label here
+            'name': 'Name',  # Change label here
             'photo_upload': 'Upload photo'
         }
     def clean_phone_no(self):

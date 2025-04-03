@@ -56,39 +56,13 @@
       border-radius: 5px;
       margin-top: 20px;
     }
-    .action-buttons {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .action-buttons .btn {
-      margin: 5px;
-    }
-    /* Responsive adjustments */
-    @media (max-width: 576px) {
-      .resume-container {
-        padding: 15px;
-      }
-      .header-title {
-        font-size: 24px;
-        padding: 10px;
-      }
-      .section-title {
-        font-size: 18px;
-        padding: 6px;
-      }
-      .info-box {
-        font-size: 14px;
-      }
-    }
   </style>
 </head>
 <body>
 
   <h2 class="header-title">Details of the Head of the Family</h2>
-
   <div class="resume-container">
     <div class="row">
-      <!-- Profile Image Section -->
       <div class="col-md-4 text-center">
         {% if familyhead.photo_upload %}
           <img src="{{ familyhead.photo_upload.url }}" alt="Profile Photo" class="profile-img">
@@ -97,12 +71,19 @@
         {% endif %}
       </div>
 
-      <!-- Personal Details Section -->
       <div class="col-md-8">
         <h4 class="section-title">Personal Information</h4>
         <div class="row mb-2">
-          <div class="col-6"><span class="form-label">Name:</span></div>
+          <div class="col-6"><span class="form-label">First Name:</span></div>
           <div class="col-6 info-box">{{ familyhead.name_of_head }}</div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-6"><span class="form-label">Middle Name:</span></div>
+            <div class="col-6 info-box">{{ familyhead.middle_name|default:"N/A" }}</div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-6"><span class="form-label">Last Name:</span></div>
+          <div class="col-6 info-box">{{ familyhead.last_name }}</div>
         </div>
         <div class="row mb-2">
           <div class="col-6"><span class="form-label">Age:</span></div>
@@ -123,39 +104,39 @@
       </div>
     </div>
 
-    <!-- Family & Community Information -->
-    <h4 class="section-title">Family &amp; Community</h4>
-    <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Family Surname:</span></div>
-      <div class="col-6 info-box">{{ familyhead.family.surname }}</div>
-    </div>
-    <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Samaj:</span></div>
-      <div class="col-6 info-box">{{ familyhead.family.samaj.samaj_name }}</div>
-    </div>
-    <!-- New Row: Total Members -->
-    <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Total Members:</span></div>
-      <div class="col-6 info-box">{{ familyhead.family.total_family_members }}</div>
-    </div>
+<h4 class="section-title">Family & Samaj</h4>
+<div class="row mb-2">
+  <div class="col-6"><span class="form-label">Samaj Name:</span></div>
+  <div class="col-6 info-box">{{ familyhead.family.samaj.samaj_name }}</div>
+</div>
+<div class="row mb-2">
+  <div class="col-6"><span class="form-label">Total Family Members:</span></div>
+  <div class="col-6 info-box">{{ familyhead.family.total_family_members }}</div>
+</div>
 
-    <!-- Education & Occupation -->
-    <h4 class="section-title">Education &amp; Occupation</h4>
-    <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Qualification:</span></div>
-      <div class="col-6 info-box">{{ familyhead.qualification }}</div>
-    </div>
-    <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Occupation:</span></div>
-      <div class="col-6 info-box">{{ familyhead.occupation }}</div>
-    </div>
-    <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Nature of Duties:</span></div>
-      <div class="col-6 info-box">{{ familyhead.exact_nature_of_duties }}</div>
-    </div>
+<h4 class="section-title">Qualification & Occupation</h4>
+<div class="row mb-2">
+  <div class="col-6"><span class="form-label">Qualification:</span></div>
+  <div class="col-6 info-box">{{ familyhead.qualification }}</div>
+</div>
+<div class="row mb-2">
+  <div class="col-6"><span class="form-label">Occupation:</span></div>
+  <div class="col-6 info-box">{{ familyhead.occupation }}</div>
+</div>
+<div class="row mb-2">
+  <div class="col-6"><span class="form-label">Nature of Duties:</span></div>
+  <div class="col-6 info-box">{{ familyhead.exact_nature_of_duties }}</div>
+</div>
 
-    <!-- Contact Information -->
-    <h4 class="section-title">Contact Details</h4>
+    <h4 class="section-title">Address</h4>
+    <div class="row mb-2">
+      <div class="col-6"><span class="form-label">Native Place:</span></div>
+      <div class="col-6 info-box">{{ familyhead.native_place }}</div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-6"><span class="form-label">Country:</span></div>
+      <div class="col-6 info-box">{{ familyhead.country }}</div>
+    </div>
     <div class="row mb-2">
       <div class="col-6"><span class="form-label">State:</span></div>
       <div class="col-6 info-box">{{ familyhead.state }}</div>
@@ -165,27 +146,48 @@
       <div class="col-6 info-box">{{ familyhead.district }}</div>
     </div>
     <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Permanent Address:</span></div>
-      <div class="col-6 info-box">{{ familyhead.permanent_address }}</div>
+      <div class="col-6"><span class="form-label">City:</span></div>
+      <div class="col-6 info-box">{{ familyhead.city }}</div>
     </div>
     <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Landline No:</span></div>
-      <div class="col-6 info-box">{{ familyhead.landline_no|default:"N/A" }}</div>
+      <div class="col-6"><span class="form-label">Street Name:</span></div>
+      <div class="col-6 info-box">{{ familyhead.street_name }}</div>
     </div>
     <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Phone No:</span></div>
-      <div class="col-6 info-box">{{ familyhead.phone_no }}</div>
+      <div class="col-6"><span class="form-label">Landmark:</span></div>
+      <div class="col-6 info-box">{{ familyhead.landmark }}</div>
     </div>
     <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Alternative No:</span></div>
-      <div class="col-6 info-box">{{ familyhead.alternative_no|default:"N/A" }}</div>
+      <div class="col-6"><span class="form-label">Building Name:</span></div>
+      <div class="col-6 info-box">{{ familyhead.building_name }}</div>
     </div>
     <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Email ID:</span></div>
-      <div class="col-6 info-box">{{ familyhead.email_id }}</div>
+      <div class="col-6"><span class="form-label">Flat No:</span></div>
+      <div class="col-6 info-box">{{ familyhead.flat_no }}</div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-6"><span class="form-label">Pincode:</span></div>
+      <div class="col-6 info-box">{{ familyhead.pincode }}</div>
     </div>
 
-    <!-- Other Details -->
+    <h4 class="section-title">Contact Details</h4>
+<div class="row mb-2">
+  <div class="col-6"><span class="form-label">Phone No:</span></div>
+  <div class="col-6 info-box">{{ familyhead.phone_no }}</div>
+</div>
+<div class="row mb-2">
+  <div class="col-6"><span class="form-label">Alternative No:</span></div>
+  <div class="col-6 info-box">{{ familyhead.alternative_no|default:"N/A" }}</div>
+</div>
+<div class="row mb-2">
+  <div class="col-6"><span class="form-label">Landline No:</span></div>
+  <div class="col-6 info-box">{{ familyhead.landline_no|default:"N/A" }}</div>
+</div>
+<div class="row mb-2">
+  <div class="col-6"><span class="form-label">Email ID:</span></div>
+  <div class="col-6 info-box">{{ familyhead.email_id }}</div>
+</div>
+
     <h4 class="section-title">Other Details</h4>
     <div class="row mb-2">
       <div class="col-6"><span class="form-label">Blood Group:</span></div>
@@ -202,13 +204,9 @@
       </div>
     </div>
   </div>
-
   <div class="action-buttons text-center mt-4">
     <a href="{% url 'update_familyhead' familyhead_id=familyhead.id %}" class="btn btn-primary">Edit</a>
-    <a href="{% url 'delete_familyhead' familyhead_id=familyhead.id %}" class="btn btn-danger"
-       onclick="return confirm('Head of the Family cannot be deleted.\nYou can only Edit it.');">
-       Delete
-    </a>
+    
     <a href="{% url 'familyhead_list' familyhead_id=familyhead.id %}" class="btn btn-dark">Back</a>
   </div>
 

@@ -57,30 +57,6 @@
       border-radius: 5px;
       margin-top: 20px;
     }
-    .action-buttons {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .action-buttons .btn {
-      margin: 5px;
-    }
-    /* Responsive adjustments */
-    @media (max-width: 576px) {
-      .resume-container {
-        padding: 15px;
-      }
-      .header-title {
-        font-size: 24px;
-        padding: 10px;
-      }
-      .section-title {
-        font-size: 18px;
-        padding: 6px;
-      }
-      .info-box {
-        font-size: 14px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -89,7 +65,6 @@
 
   <div class="resume-container">
     <div class="row">
-      <!-- Profile Image Section -->
       <div class="col-md-4 text-center">
         {% if member.photo_upload %}
           <img src="{{ member.photo_upload.url }}" alt="Profile Photo" class="profile-img">
@@ -97,60 +72,52 @@
           <img src="https://via.placeholder.com/170" alt="No Photo" class="profile-img">
         {% endif %}
       </div>
-
-      <!-- Personal Details Section -->
       <div class="col-md-8">
         <h4 class="section-title">Personal Information</h4>
         <div class="row mb-2">
-          <div class="col-6"><span class="form-label">Name:</span></div>
-          <div class="col-6 info-box">{{ member.name }}</div>
+          <div class="col-6"><span class="form-label">Full Name:</span></div>
+          <div class="col-6 info-box">{{ member.name }} {{ member.middle_name }} {{ member.last_name }}</div>
         </div>
         <div class="row mb-2">
-          <div class="col-6"><span class="form-label">Age:</span></div>
-          <div class="col-6 info-box">{{ member.age }}</div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-6"><span class="form-label">Birth Date:</span></div>
-          <div class="col-6 info-box">{{ member.birth_date }}</div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-6"><span class="form-label">Gender:</span></div>
-          <div class="col-6 info-box">{{ member.get_gender_display }}</div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-6"><span class="form-label">Marital Status:</span></div>
-          <div class="col-6 info-box">{{ member.get_marital_status_display }}</div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-6"><span class="form-label">Relation with Head:</span></div>
-          <div class="col-6 info-box">{{ member.relation_with_family_head }}</div>
-        </div>
+            <div class="col-6"><span class="form-label">Age:</span></div>
+            <div class="col-6 info-box">{{ member.age }}</div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-6"><span class="form-label">Birth Date:</span></div>
+            <div class="col-6 info-box">{{ member.birth_date }}</div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-6"><span class="form-label">Gender:</span></div>
+            <div class="col-6 info-box">{{ member.get_gender_display }}</div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-6"><span class="form-label">Marital Status:</span></div>
+            <div class="col-6 info-box">{{ member.get_marital_status_display }}</div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-6"><span class="form-label">Relation with Head:</span></div>
+            <div class="col-6 info-box">{{ member.relation_with_family_head }}</div>
+          </div>
       </div>
     </div>
 
-    <!-- Family & Community Information -->
     <h4 class="section-title">Family & Community</h4>
     <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Family Head Name:</span></div>
+      <div class="col-6"><span class="form-label">Family Head:</span></div>
       <div class="col-6 info-box">{{ member.family_head.name_of_head }}</div>
     </div>
+    
     <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Family Surname:</span></div>
-      <div class="col-6 info-box">{{ member.family_head.family.surname }}</div>
-    </div>
-    <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Samaj:</span></div>
+      <div class="col-6"><span class="form-label">Samaj Name:</span></div>
       <div class="col-6 info-box">{{ member.family_head.family.samaj.samaj_name }}</div>
     </div>
-    <!-- New Row: Total Members -->
     <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Total Members:</span></div>
+      <div class="col-6"><span class="form-label">Total Family Members:</span></div>
       <div class="col-6 info-box">{{ member.family_head.family.total_family_members }}</div>
     </div>
 
-    <!-- Education & Occupation -->
     <h4 class="section-title">Education & Occupation</h4>
-    <div class="row">
+    <div class="row mb-2">
       <div class="col-6"><span class="form-label">Qualification:</span></div>
       <div class="col-6 info-box">{{ member.qualification }}</div>
     </div>
@@ -163,44 +130,86 @@
       <div class="col-6 info-box">{{ member.exact_nature_of_duties }}</div>
     </div>
 
-    <!-- Contact Information -->
-    <h4 class="section-title">Contact Details</h4>
-    <div class="row">
-      <div class="col-6"><span class="form-label">State:</span></div>
-      <div class="col-6 info-box">{{ member.state }}</div>
-    </div>
+    <h4 class="section-title">Contact Information</h4>
     <div class="row mb-2">
-      <div class="col-6"><span class="form-label">District:</span></div>
-      <div class="col-6 info-box">{{ member.district }}</div>
-    </div>
-    <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Permanent Address:</span></div>
-      <div class="col-6 info-box">{{ member.permanent_address }}</div>
-    </div>
-    <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Phone No:</span></div>
+      <div class="col-6"><span class="form-label">Phone:</span></div>
       <div class="col-6 info-box">{{ member.phone_no }}</div>
     </div>
-
-    <!-- Other Details -->
-    <h4 class="section-title">Other Details</h4>
     <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Blood Group:</span></div>
-      <div class="col-6 info-box">{{ member.blood_group }}</div>
+        <div class="col-6 form-label">Alternative No:</div>
+        <div class="col-6 info-box">{{ member.alternative_no }}</div>
+    </div>
+      <div class="row mb-2"><div class="col-6 form-label">Landline No:</div>
+      <div class="col-6 info-box">{{ member.landline_no }}</div>
     </div>
     <div class="row mb-2">
-      <div class="col-6"><span class="form-label">Social Media:</span></div>
-      <div class="col-6 info-box">
-        {% if member.social_media_link %}
-          <a href="{{ member.social_media_link }}" target="_blank" class="btn btn-sm btn-info">View Profile</a>
-        {% else %}
-          N/A
-        {% endif %}
+      <div class="col-6"><span class="form-label">Email:</span></div>
+      <div class="col-6 info-box">{{ member.email_id }}</div>
+    </div>
+   
+    
+    <h4 class="section-title">Address Information</h4>
+      <div class="row mb-2">
+        <div class="col-6"><span class="form-label">Native Place:</span></div>
+        <div class="col-6 info-box">{{ member.native_place }}</div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-6"><span class="form-label">Country:</span></div>
+        <div class="col-6 info-box">{{ member.country }}</div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-6"><span class="form-label">State:</span></div>
+        <div class="col-6 info-box">{{ member.state }}</div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-6"><span class="form-label">District:</span></div>
+        <div class="col-6 info-box">{{ member.district }}</div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-6"><span class="form-label">City:</span></div>
+        <div class="col-6 info-box">{{ member.city }}</div>
+      </div>
+      <div class="row mb-2">
+          <div class="col-6"><span class="form-label">Street Name:</span></div>
+          <div class="col-6 info-box">{{ member.street_name }}</div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-6"><span class="form-label">Landmark:</span></div>
+          <div class="col-6 info-box">{{ member.landmark }}</div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-6"><span class="form-label">Building Name:</span></div>
+          <div class="col-6 info-box">{{ member.building_name }}</div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-6"><span class="form-label">Flat Number:</span></div>
+          <div class="col-6 info-box">{{ member.flat_no }}</div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-6"><span class="form-label">Pincode:</span></div>
+          <div class="col-6 info-box">{{ member.pincode }}</div>
+        </div>
+    
+      
+      <h4 class="section-title">Other Details</h4>
+      <div class="row mb-2">
+        <div class="col-6"><span class="form-label">Blood Group:</span></div>
+        <div class="col-6 info-box">{{ member.blood_group }}</div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-6"><span class="form-label">Social Media Link:</span></div>
+        <div class="col-6 info-box">
+          {% if member.social_media_link %}
+            <a href="{{ member.social_media_link }}" target="_blank" class="btn btn-sm btn-info">View Profile</a>
+          {% else %}
+            N/A
+          {% endif %}
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="action-buttons text-center mt-4">
+
+  <div class="text-center mt-4">
     <a href="{% url 'update_member' member_id=member.id %}" class="btn btn-primary">Edit</a>
     <a href="{% url 'delete_member' member_id=member.id %}" class="btn btn-danger"
        onclick="return confirm('Are you sure you want to delete this member?');">

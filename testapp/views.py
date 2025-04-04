@@ -160,6 +160,7 @@ def get_districts(request, state_id):
 # Create Family Head
 def create_familyhead(request, family_id=None):
     try:
+        print("entering in family head")
         family = get_object_or_404(Family, pk=family_id)
         existing_family_head = FamilyHead.objects.filter(family=family).first()
 
@@ -181,10 +182,13 @@ def create_familyhead(request, family_id=None):
                 print("Session After Deletion:", dict(request.session))
                 return redirect('familyhead_list', familyhead_id=family_head.id)
         else:
+            print("entering in else")
             x_forwarded_for = request.META.get("HTTP_X_FORWARDED_FOR")
             if x_forwarded_for:
                 ip = x_forwarded_for.split(",")[0]  # Get the first IP from the list
-       
+            else:
+                ip = request.META.get("REMOTE_ADDR", "unknown")
+            print("entering in else2",ip)
             saved_data = request.session.get(ip, {})
             form = FamilyHeadForm(initial=saved_data)  
             response = requests.get(INDIA_API_URL)
@@ -192,7 +196,9 @@ def create_familyhead(request, family_id=None):
         print("family head form")
         return render(request, 'familyhead_form.html', {'form': form,'states': states})
     except Exception as e:
-        # messages.error(request, f"An error occurred: {e}")
+        print("erreo accurs")
+        messages.error(request, f"An error occurred: {e}")
+        print( f"An error occurred: {e}")
         return redirect(request.META.get('HTTP_REFERER', '/'))
 
 # List Family Heads
@@ -334,6 +340,8 @@ def create_member(request, familyhead_id=None):
             x_forwarded_for = request.META.get("HTTP_X_FORWARDED_FOR")
             if x_forwarded_for:
                 ip = x_forwarded_for.split(",")[0]  # Get the first IP from the list
+            else:
+                ip = request.META.get("REMOTE_ADDR", "unknown")
             saved_data = request.session.get(ip, {})  
             form = MemberForm(initial=saved_data)
             response = requests.get(INDIA_API_URL)

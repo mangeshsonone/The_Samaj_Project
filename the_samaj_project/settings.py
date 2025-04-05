@@ -29,9 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://the-samaj-project-1.onrender.com",
     "https://the-samaj-project-nygn.onrender.com",
-    # Add any other domains you use for testing
 ]
 
 # Application definition

@@ -155,7 +155,7 @@ def get_districts(request, state_id):
             districts = [{"id": dist["district_id"], "name": dist["district_name"]} for dist in data["districts"]]
             return JsonResponse({"districts": districts})  # Ensure full district list is sent
     except Exception as e:
-            print("the error is",e)
+        print("the error is",e)
         return JsonResponse({"error": str(e)}, status=500)
 
     return JsonResponse({"error": "Failed to fetch districts"}, status=500)

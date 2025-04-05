@@ -28,7 +28,7 @@ DEBUG = False
 ALLOWED_HOSTS = []
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://3854-42-108-238-31.ngrok-free.app",
+    "https://the-samaj-project-1.onrender.com",
     # Add any other domains you use for testing
 ]
 

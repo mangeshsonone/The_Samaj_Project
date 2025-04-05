@@ -145,7 +145,11 @@ def delete_family(request, family_id=None):
 def get_districts(request, state_id):
     """Fetch districts based on the selected state."""
     try:
-        response = requests.get(f"{DISTRICT_API_URL}{state_id}")
+        headers = {
+            "User-Agent": "Mozilla/5.0"
+        }
+        response = requests.get(f"{DISTRICT_API_URL}{state_id}", headers=headers)
+        # response = requests.get(f"{DISTRICT_API_URL}{state_id}")
         if response.status_code == 200:
             data = response.json()
             districts = [{"id": dist["district_id"], "name": dist["district_name"]} for dist in data["districts"]]

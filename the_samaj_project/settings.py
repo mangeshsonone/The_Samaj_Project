@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-e3x_lf-v)+$*&_0qrp-0rik9ss%v1asadsv!e++*i^^(3gq%f@
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+
 
 CSRF_TRUSTED_ORIGINS = [
     "https://the-samaj-project-1.onrender.com",

@@ -160,26 +160,6 @@ def get_districts(request, state_id):
 
     return JsonResponse({"error": "Failed to fetch districts"}, status=500)
 
-# def get_districts(request, state_id):
-#     """Fetch districts based on the selected state."""
-#     try:
-#         headers = {"User-Agent": "Mozilla/5.0"}
-#         url = f"https://cdn-api.co-vin.in/api/v2/admin/location/districts/{state_id}"
-#         print(f"Fetching districts from: {url}")
-#         response = requests.get(url, headers=headers)
-#         print(f"Status code: {response.status_code}")
-#         print(f"Response: {response.text}")
-
-#         if response.status_code == 200:
-#             data = response.json()
-#             districts = [{"id": dist["district_id"], "name": dist["district_name"]} for dist in data["districts"]]
-#             return JsonResponse({"districts": districts})
-#         else:
-#             return JsonResponse({"error": "Failed to fetch districts from API"}, status=response.status_code)
-
-#     except Exception as e:
-#         print("Exception occurred while fetching districts:", e)
-#         return JsonResponse({"error": str(e)}, status=500)
 
 # Create Family Head
 def create_familyhead(request, family_id=None):

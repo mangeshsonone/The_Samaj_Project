@@ -10,6 +10,11 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 import requests
+import logging
+
+
+# Define logging for this module
+logger = logging.getLogger(__name__)
 
 
 
@@ -86,13 +91,14 @@ def create_family(request):
             if form.is_valid():
                 fm = form.save()
                 family_id = fm.id
+                logger.info("Family created with id: %s", family_id)
                 return redirect('family_list', family_id=family_id)
         else:
             form = FamilyForm()
         return render(request, 'create_family.html', {'form': form})
     except Exception as e:
         # messages.error(request, f"An error occurred: {e}")
-        pass
+        logger.exception("Error in create_family: %s", e)
         return redirect('create_family')
 
 # List Family
@@ -101,19 +107,15 @@ def family_list(request, family_id=None):
         family = Family.objects.get(id=family_id)
         context = {'family_list': family}
 
-        
+        logger.info("Displaying family list for family id: %s", family_id)
         return render(request, 'family_list.html', context)
 
     except ObjectDoesNotExist:
-        # messages.error(request, "Family not found.")
-        pass
+        logger.error("Family not found: id %s", family_id)
     except MultipleObjectsReturned:
-        pass
-        # messages.error(request, "Multiple families found with the same ID.")
+        logger.error("Multiple families returned for id %s", family_id)
     except Exception as e:
-        # messages.error(request, f"An unexpected error occurred: {e}")
-        pass
-
+        logger.exception("Unexpected error in family_list: %s", e)
     return redirect(request.META.get('HTTP_REFERER', '/'))
 
 
@@ -125,12 +127,13 @@ def update_family(request, family_id=None):
             form = FamilyForm(request.POST, instance=family)
             if form.is_valid():
                 fm = form.save()
+                logger.info("Family updated: id %s", fm.id)
                 return redirect('family_list', family_id=fm.id)
         else:
             form = FamilyForm(instance=family)
         return render(request, 'create_family.html', {'form': form})
     except Exception as e:
-        # messages.error(request, f"An error occurred: {e}")
+        logger.exception("Error in update_family: %s", e)
         return redirect('create_family')
 
 # Delete Family
@@ -138,28 +141,27 @@ def delete_family(request, family_id=None):
     try:
         family = get_object_or_404(Family, pk=family_id)
         family.delete()
+        logger.info("Family deleted: id %s", family_id)
         return redirect('create_family')
     except Exception as e:
-        # messages.error(request, f"An error occurred while deleting the family: {e}")
+        logger.exception("Error deleting family id %s: %s", family_id, e)
         return redirect('create_family')
     
 def get_districts(request, state_id):
     """Fetch districts based on the selected state."""
     try:
-        headers = {
-            "User-Agent": "Mozilla/5.0"
-        }
-        response = requests.get(f"{DISTRICT_API_URL}{state_id}", headers=headers)
-        # response = requests.get(f"{DISTRICT_API_URL}{state_id}")
+        response = requests.get(f"{DISTRICT_API_URL}{state_id}")
         if response.status_code == 200:
             data = response.json()
             districts = [{"id": dist["district_id"], "name": dist["district_name"]} for dist in data["districts"]]
+            logger.info("Districts fetched for state_id %s", state_id)
             return JsonResponse({"districts": districts})  # Ensure full district list is sent
     except Exception as e:
-        print("the error is",e)
+        logger.exception("Error fetching districts for state_id %s: %s", state_id, e)
         return JsonResponse({"error": str(e)}, status=500)
 
     return JsonResponse({"error": "Failed to fetch districts"}, status=500)
+
 
 
 # Create Family Head
@@ -170,6 +172,7 @@ def create_familyhead(request, family_id=None):
         existing_family_head = FamilyHead.objects.filter(family=family).first()
 
         if existing_family_head:
+            logger.warning("FamilyHead already exists for family id: %s", family_id)
             messages.error(request, "A Family Head is already created for this family. You can edit the details if needed.")
             return redirect('familyhead_list', familyhead_id=existing_family_head.id)
 
@@ -179,12 +182,17 @@ def create_familyhead(request, family_id=None):
                 family_head = form.save(commit=False)
                 family_head.family = family
                 family_head.save()
+                logger.info("FamilyHead created with id: %s", family_head.id)
                 x_forwarded_for = request.META.get("HTTP_X_FORWARDED_FOR")
                 if x_forwarded_for:
                     ip = x_forwarded_for.split(",")[0]  # Get the first IP from the list
-                del request.session[ip]  # Deletes only form_dat
-                request.session.modified = True # Ensure session updates
-                print("Session After Deletion:", dict(request.session))
+                    del request.session[ip]  # Deletes only form_dat
+                    request.session.modified = True # Ensure session updates
+                    logger.info("Deleted session data for IP: %s", ip)
+
+                else:
+                    logger.info("No session data found for IP: %s", ip)
+                    logger.debug("Session after deletion: %s", dict(request.session))
                 return redirect('familyhead_list', familyhead_id=family_head.id)
         else:
             print("entering in else")
@@ -193,17 +201,20 @@ def create_familyhead(request, family_id=None):
                 ip = x_forwarded_for.split(",")[0]  # Get the first IP from the list
             else:
                 ip = request.META.get("REMOTE_ADDR", "unknown")
-            print("entering in else2",ip)
+            logger.info("Using IP for session retrieval: %s", ip)
             saved_data = request.session.get(ip, {})
             form = FamilyHeadForm(initial=saved_data)  
             response = requests.get(INDIA_API_URL)
-            states = response.json().get("states", []) if response.status_code == 200 else []
-        print("family head form")
+            if response.status_code == 200:
+                states = response.json().get("states", [])
+                logger.info("Fetched states from INDIA_API_URL")
+            else:
+                states = []
+                logger.error("Failed to fetch states from INDIA_API_URL, status: %s", response.status_code)
+        logger.info("Rendering familyhead_form.html")
         return render(request, 'familyhead_form.html', {'form': form,'states': states})
     except Exception as e:
-        print("erreo accurs")
-        messages.error(request, f"An error occurred: {e}")
-        print( f"An error occurred: {e}")
+        logger.exception("Error in create_familyhead: %s", e)
         return redirect(request.META.get('HTTP_REFERER', '/'))
 
             

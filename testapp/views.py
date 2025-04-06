@@ -205,8 +205,11 @@ def create_familyhead(request, family_id=None):
             saved_data = request.session.get(ip, {})
             form = FamilyHeadForm(initial=saved_data)  
             headers = {
-                "User-Agent": "Mozilla/5.0"
-            } 
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json",
+                "Origin": "https://cdn-api.co-vin.in",
+                "Referer": "https://cdn-api.co-vin.in",
+            }
             response = requests.get(INDIA_API_URL, headers=headers)
             if response.status_code == 200:
                 states = response.json().get("states", [])

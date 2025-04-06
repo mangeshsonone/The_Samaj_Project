@@ -204,7 +204,10 @@ def create_familyhead(request, family_id=None):
             logger.info("Using IP for session retrieval: %s", ip)
             saved_data = request.session.get(ip, {})
             form = FamilyHeadForm(initial=saved_data)  
-            response = requests.get(INDIA_API_URL)
+            headers = {
+                "User-Agent": "Mozilla/5.0"
+            } 
+            response = requests.get(INDIA_API_URL, headers=headers)
             if response.status_code == 200:
                 states = response.json().get("states", [])
                 logger.info("Fetched states from INDIA_API_URL")

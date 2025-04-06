@@ -10,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 import requests
+import logging
 
 
 
@@ -164,13 +165,22 @@ def get_districts(request, state_id):
 # Create Family Head
 def create_familyhead(request, family_id=None):
     try:
-        print("entering in family head")
+        logger.info("Entering create_familyhead view for family_id: %s", family_id)
         family = get_object_or_404(Family, pk=family_id)
         existing_family_head = FamilyHead.objects.filter(family=family).first()
 
         if existing_family_head:
+            logger.warning("FamilyHead already exists for family id: %s", family_id)
             messages.error(request, "A Family Head is already created for this family. You can edit the details if needed.")
             return redirect('familyhead_list', familyhead_id=existing_family_head.id)
+
+        # Determine client's IP address
+        x_forwarded_for = request.META.get("HTTP_X_FORWARDED_FOR")
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(",")[0]  # Get the first IP from the list
+        else:
+            ip = request.META.get("REMOTE_ADDR", "unknown")
+        logger.info("Client IP determined as: %s", ip)
 
         if request.method == "POST":
             form = FamilyHeadForm(request.POST, request.FILES)
@@ -178,33 +188,38 @@ def create_familyhead(request, family_id=None):
                 family_head = form.save(commit=False)
                 family_head.family = family
                 family_head.save()
-                x_forwarded_for = request.META.get("HTTP_X_FORWARDED_FOR")
-                if x_forwarded_for:
-                    ip = x_forwarded_for.split(",")[0]  # Get the first IP from the list
-                del request.session[ip]  # Deletes only form_dat
-                request.session.modified = True # Ensure session updates
-                print("Session After Deletion:", dict(request.session))
+                logger.info("FamilyHead created with id: %s", family_head.id)
+                
+                # Delete session data keyed by client's IP if it exists
+                if ip in request.session:
+                    del request.session[ip]
+                    request.session.modified = True  # Ensure session updates
+                    logger.info("Deleted session data for IP: %s", ip)
+                else:
+                    logger.info("No session data found for IP: %s", ip)
+                    
+                logger.debug("Session after deletion: %s", dict(request.session))
                 return redirect('familyhead_list', familyhead_id=family_head.id)
         else:
-            print("entering in else")
-            x_forwarded_for = request.META.get("HTTP_X_FORWARDED_FOR")
-            if x_forwarded_for:
-                ip = x_forwarded_for.split(",")[0]  # Get the first IP from the list
-            else:
-                ip = request.META.get("REMOTE_ADDR", "unknown")
-            print("entering in else2",ip)
+            logger.info("Processing GET request for create_familyhead")
             saved_data = request.session.get(ip, {})
-            form = FamilyHeadForm(initial=saved_data)  
+            form = FamilyHeadForm(initial=saved_data)
             response = requests.get(INDIA_API_URL)
-            states = response.json().get("states", []) if response.status_code == 200 else []
-        print("family head form")
-        return render(request, 'familyhead_form.html', {'form': form,'states': states})
+            if response.status_code == 200:
+                states = response.json().get("states", [])
+                logger.info("Fetched states successfully from INDIA_API_URL")
+            else:
+                states = []
+                logger.error("Failed to fetch states. Status code: %s", response.status_code)
+                
+        logger.info("Rendering familyhead_form.html with form and states")
+        return render(request, 'familyhead_form.html', {'form': form, 'states': states})
+    
     except Exception as e:
-        print("erreo accurs")
+        logger.exception("An error occurred in create_familyhead view: %s", e)
         messages.error(request, f"An error occurred: {e}")
-        print( f"An error occurred: {e}")
         return redirect(request.META.get('HTTP_REFERER', '/'))
-
+            
 # List Family Heads
 def familyhead_list(request, familyhead_id=None):
     try:

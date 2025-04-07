@@ -203,35 +203,6 @@
         <!-- Address Fields -->
         <!-- Address Details -->
     <div class="form-group">
-      <label for="id_country" class="form-label fw-bold">Country</label>
-      {{ form.country }}
-  </div>
-  
-  <div class="form-group">
-      <label for="state">State</label>
-      <select id="state" name="state" class="form-control" required>
-          <option value="">Select State</option>
-          {% for state in states %}
-              <option value="{{ state.state_name }}" data-id="{{ state.state_id }}">{{ state.state_name }}</option>
-          {% endfor %}
-      </select>
-  </div>
-  
-  <div class="form-group">
-      <label for="district">District</label>
-      <select id="district" name="district" class="form-control" required>
-          <option value="">Select District</option>
-      </select>
-  </div>
-  <input type="hidden" id="state_name" name="state_name">
-  <input type="hidden" id="district_name" name="district_name">
-  
-  <div class="form-group">
-      <label for="id_pincode" class="form-label fw-bold">Pincode</label>
-      {{ form.pincode }}
-  </div>
-  
-  <div class="form-group">
       <label for="id_building_name" class="form-label fw-bold">Building Name</label>
       {{ form.building_name }}
   </div>
@@ -255,12 +226,33 @@
       <label for="id_landmark" class="form-label fw-bold">Landmark</label>
       {{ form.landmark }}
   </div>
+
+  <div class="form-group">
+    <label for="district">District</label>
+    <input type="text" id="district" name="district" class="form-control" placeholder="Enter District" required>
+</div>
+
+<div class="form-group">
+  <label for="id_pincode" class="form-label fw-bold">Pincode</label>
+  {{ form.pincode }}
+</div>
+
+  <div class="form-group">
+    <label for="state">State</label>
+    <input type="text" id="state" name="state" class="form-control" placeholder="Enter State" required>
+</div>
+
+
+
+<div class="form-group">
+  <label for="id_country" class="form-label fw-bold">Country</label>
+  {{ form.country }}
+</div>
   
   <div class="form-group">
       <label for="id_native_place" class="form-label fw-bold">Native Place</label>
       {{ form.native_place }}
   </div>
-  
         
         
         <!-- Blood Group -->

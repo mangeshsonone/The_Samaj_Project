@@ -133,27 +133,38 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      // Change the first option of the samaj dropdown to "Select Samaj"
-      let samajDropdown = document.getElementById("id_samaj");
-      if (samajDropdown && samajDropdown.options.length > 0) {
-          samajDropdown.options[0].text = "Select Samaj";
-      }
+  // Change the first option of the samaj dropdown to "Select Samaj"
+  let samajDropdown = document.getElementById("id_samaj");
+  if (samajDropdown && samajDropdown.options.length > 0) {
+      samajDropdown.options[0].text = "Select Samaj";
+  }
 
-      // Form Validation
-      document.getElementById("familyForm").addEventListener("submit", function(event) {
-        let familyMembers = document.getElementById("id_total_family_members");
-        let errorDiv = document.getElementById("familyError");
+  // Prevent entering a value of 0 or less in the family members field
+  let familyMembers = document.getElementById("id_total_family_members");
+  familyMembers.addEventListener("input", function(event) {
+    let value = parseInt(this.value, 10);
+    // Check if value is a number and if it's 0 or negative
+    if (!isNaN(value) && value <= 0) {
+      this.value = "";  // Clear the input field
+      let errorDiv = document.getElementById("familyError");
+      errorDiv.textContent = "Please enter a number greater than 0.";
+    } else {
+      // Clear error message if the value is valid
+      document.getElementById("familyError").textContent = "";
+    }
+  });
 
-        // Clear previous error messages
-        errorDiv.textContent = "";
-
-        // Validate total family members input
-        if (familyMembers.value.trim() === "" || parseInt(familyMembers.value) <= 0) {
-          event.preventDefault(); // Stop form submission
-          errorDiv.textContent = "The family members should not be 0 or less.";
-        }
-      });
-    });
+  // Form Validation on submission
+  document.getElementById("familyForm").addEventListener("submit", function(event) {
+    let errorDiv = document.getElementById("familyError");
+    errorDiv.textContent = "";
+    
+    if (familyMembers.value.trim() === "" || parseInt(familyMembers.value) <= 0) {
+      event.preventDefault(); // Stop form submission
+      errorDiv.textContent = "The family members field must contain a number greater than 0.";
+    }
+  });
+});
   </script>
 </body>
 </html>

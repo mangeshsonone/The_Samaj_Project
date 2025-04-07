@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 
 COUNTRIES_API_URL="https://restcountries.com/v3.1/all"
-INDIA_API_URL = "https://cdn-api.co-vin.in/api/v2/admin/location/states"
+INDIA_API_URL = "https://api.countrystatecity.in/v1/states"
 DISTRICT_API_URL = "https://cdn-api.co-vin.in/api/v2/admin/location/districts/"
 
 # def login_view(request):

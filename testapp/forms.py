@@ -50,7 +50,8 @@ class FamilyHeadForm(forms.ModelForm):
     "door_no",
     "street_name",
     "landmark",
-    "native_place",
+    "native_city",
+    "native_state",
    
 
     # Professional Details
@@ -120,7 +121,8 @@ class MemberForm(forms.ModelForm):
             "door_no",
             "street_name",
             "landmark",
-            "native_place",
+            "native_city",
+            "native_state",
             
             
             # Professional Details

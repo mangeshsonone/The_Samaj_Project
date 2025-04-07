@@ -1,0 +1,34 @@
+INFO 2025-04-07 14:50:00,868 autoreload 8736 20772 Watching for file changes with StatReloader
+INFO 2025-04-07 14:51:42,157 autoreload 8736 20772 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-07 14:51:43,110 autoreload 15572 8376 Watching for file changes with StatReloader
+WARNING 2025-04-07 14:51:58,021 log 15572 15400 Not Found: /favicon.ico/
+WARNING 2025-04-07 14:52:10,849 log 15572 27872 Forbidden (Origin checking failed - https://a8f6-49-15-234-32.ngrok-free.app does not match any trusted origins.): /
+INFO 2025-04-07 14:52:50,719 autoreload 15572 8376 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-07 14:52:51,649 autoreload 18924 26548 Watching for file changes with StatReloader
+INFO 2025-04-07 14:52:53,639 autoreload 18924 26548 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-07 14:52:54,504 autoreload 17016 28236 Watching for file changes with StatReloader
+INFO 2025-04-07 14:53:16,844 views 17016 31720 Family created with id: 195
+INFO 2025-04-07 14:53:17,441 views 17016 31720 Displaying family list for family id: 195
+INFO 2025-04-07 14:53:21,158 views 17016 25668 Using IP for session retrieval: 49.15.232.50
+ERROR 2025-04-07 14:53:23,313 views 17016 25668 Failed to fetch states from INDIA_API_URL, status: 401
+INFO 2025-04-07 14:53:23,314 views 17016 25668 Rendering familyhead_form.html
+WARNING 2025-04-07 14:55:00,445 log 17016 25736 Not Found: /favicon.ico/
+INFO 2025-04-07 14:55:12,184 views 17016 25736 Family created with id: 196
+INFO 2025-04-07 14:55:12,317 views 17016 25736 Displaying family list for family id: 196
+INFO 2025-04-07 14:55:14,113 views 17016 25736 Using IP for session retrieval: 2405:201:f018:80d1:7d7d:ad7c:1463:14f7
+ERROR 2025-04-07 14:55:14,838 views 17016 25736 Failed to fetch states from INDIA_API_URL, status: 401
+INFO 2025-04-07 14:55:14,838 views 17016 25736 Rendering familyhead_form.html
+INFO 2025-04-07 16:14:55,330 views 17016 11200 Family created with id: 197
+INFO 2025-04-07 16:14:55,807 views 17016 11200 Displaying family list for family id: 197
+INFO 2025-04-07 16:14:57,958 views 17016 11200 Using IP for session retrieval: 2402:8100:31b9:4160:157e:b090:fc8d:a400
+ERROR 2025-04-07 16:14:59,185 views 17016 11200 Failed to fetch states from INDIA_API_URL, status: 401
+INFO 2025-04-07 16:14:59,185 views 17016 11200 Rendering familyhead_form.html
+INFO 2025-04-07 16:16:17,690 autoreload 17016 28236 E:\samaj project django\samaj project\The_Samaj_Project\testapp\models.py changed, reloading.
+INFO 2025-04-07 16:16:18,808 autoreload 7052 30396 Watching for file changes with StatReloader
+INFO 2025-04-07 16:16:26,495 autoreload 7052 30396 E:\samaj project django\samaj project\The_Samaj_Project\testapp\models.py changed, reloading.
+INFO 2025-04-07 16:16:27,357 autoreload 21100 23048 Watching for file changes with StatReloader
+INFO 2025-04-07 16:16:32,914 autoreload 21100 23048 E:\samaj project django\samaj project\The_Samaj_Project\testapp\models.py changed, reloading.
+INFO 2025-04-07 16:16:33,622 autoreload 14740 19320 Watching for file changes with StatReloader
+INFO 2025-04-07 16:16:36,022 autoreload 14740 19320 E:\samaj project django\samaj project\The_Samaj_Project\testapp\models.py changed, reloading.
+INFO 2025-04-07 16:16:36,825 autoreload 2360 28516 Watching for file changes with StatReloader
+INFO 2025-04-07 16:32:56,108 autoreload 30932 28544 Watching for file changes with StatReloader

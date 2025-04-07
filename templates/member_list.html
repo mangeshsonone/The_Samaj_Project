@@ -136,7 +136,8 @@
                         <th>Email</th>
                         <th>Alternative No.</th>
                         <th>Landline No.</th>
-                        <th>Native Place</th> <!-- New Field -->
+                        <th>Native City</th> <!-- New Field -->
+                        <th>Native State</th>
                         <th>Country</th> <!-- New Field -->
                         <th>State</th>
                         <th>District</th>
@@ -174,7 +175,8 @@
                         <td>{{ member.email_id }}</td>
                         <td>{{ member.alternative_no|default:"N/A" }}</td>
                         <td>{{ member.landline_no|default:"N/A" }}</td>
-                        <td>{{ member.native_place }}</td>
+                        <td>{{ member.native_city }}</td>
+                        <td>{{ member.native_state }}</td>
                         <td>{{ member.country }}</td>
                         <td>{{ member.state }}</td>
                         <td>{{ member.district }}</td>

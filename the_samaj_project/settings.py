@@ -27,9 +27,8 @@ DEBUG = True
 
 
 
-
 CSRF_TRUSTED_ORIGINS = [
-    "https://the-samaj-project-1.onrender.com",
+    "https://a8f6-49-15-234-32.ngrok-free.app",  # Add your current ngrok domain
 ]
 
 # Application definition

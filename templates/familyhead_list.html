@@ -92,11 +92,12 @@
                     <th>Qualification</th>
                     <th>Occupation</th>
                     <th>Nature of Duties</th>
-                    <th>Native Place</th>
+                    <th>Native City</th>
+                    <th>Native State</th>
                     <th>Country</th>
                     <th>State</th>
                     <th>District</th>
-                    <th>City</th>
+                    
                     <th>Street Name</th>
                     <th>Landmark</th>
                     <th>Building Name</th>
@@ -111,10 +112,10 @@
                     <th>Photo</th>
                     <th>Created At</th>
                     <th>Actions</th>
-                </tr>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
+                  <tr>
                     <td>{{ familyhead.id }}</td>
                     <td>{{ familyhead.name_of_head }}</td>
                     <td>{{ familyhead.middle_name }}</td>
@@ -128,11 +129,13 @@
                     <td>{{ familyhead.qualification }}</td>
                     <td>{{ familyhead.occupation }}</td>
                     <td>{{ familyhead.exact_nature_of_duties }}</td>
-                    <td>{{ familyhead.native_place }}</td>
+                    <!-- Native place is now split into two fields -->
+                    <td>{{ familyhead.native_city }}</td>
+                    <td>{{ familyhead.native_state }}</td>
                     <td>{{ familyhead.country }}</td>
-                    <td>{{ familyhead.state }}</td>  <!-- Get the state name -->
+                    <td>{{ familyhead.state }}</td>
                     <td>{{ familyhead.district }}</td>
-                    <td>{{ familyhead.city }}</td>
+                    
                     <td>{{ familyhead.street_name }}</td>
                     <td>{{ familyhead.landmark }}</td>
                     <td>{{ familyhead.building_name }}</td>

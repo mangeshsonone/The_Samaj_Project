@@ -104,14 +104,24 @@ class FamilyHead(PersonsData):
 
 class Member(PersonsData):
     RELATION_CHOICES = [
+    ('husband','Husband'),
+    ('wife','Wife'),
     ('son', 'Son'),
     ('daughter', 'Daughter'),
-    ('spouse', 'Spouse'),
     ('father', 'Father'),
     ('mother', 'Mother'),
     ('brother', 'Brother'),
     ('sister', 'Sister'),
+    ('son-in-law','Son-in-law'),
+    ('daughter-in-law','Daughter-in-law'),
     ('other', 'Other'),
+    ('grandson','Grandson'),
+    ('granddaughter','Granddaughter'),
+    ('great Grandson','great Grandson'),
+    ('great granddaughter','Great Granddaughter'),
+    ('father-in-law','Father-in-law'),
+    ('mother-in-law','Mother-in-law'),
+
 ]
 
 

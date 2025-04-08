@@ -4461,3 +4461,5 @@ INFO 2025-04-08 13:24:14,194 autoreload 29092 25300 E:\samaj project django\sama
 INFO 2025-04-08 13:24:15,107 autoreload 24728 17756 Watching for file changes with StatReloader
 INFO 2025-04-08 13:24:17,067 autoreload 24728 17756 E:\samaj project django\samaj project\The_Samaj_Project\testapp\models.py changed, reloading.
 INFO 2025-04-08 13:24:17,891 autoreload 27420 17280 Watching for file changes with StatReloader
+INFO 2025-04-08 13:29:29,308 autoreload 27420 17280 E:\samaj project django\samaj project\The_Samaj_Project\testapp\models.py changed, reloading.
+INFO 2025-04-08 13:29:30,213 autoreload 1652 19924 Watching for file changes with StatReloader

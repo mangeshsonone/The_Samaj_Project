@@ -114,7 +114,6 @@ class Member(PersonsData):
     ('sister', 'Sister'),
     ('son-in-law','Son-in-law'),
     ('daughter-in-law','Daughter-in-law'),
-    ('other', 'Other'),
     ('grandson','Grandson'),
     ('granddaughter','Granddaughter'),
     ('great Grandson','great Grandson'),

@@ -4289,3 +4289,18 @@ Traceback (most recent call last):
     request.session[ip] = request.POST.dict()
                     ^^
 UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+INFO 2025-04-08 11:39:01,263 autoreload 25232 14728 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-08 11:39:03,747 autoreload 16968 11916 Watching for file changes with StatReloader
+INFO 2025-04-08 11:41:06,223 autoreload 16968 11916 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-08 11:41:07,248 autoreload 23124 19848 Watching for file changes with StatReloader
+INFO 2025-04-08 11:42:12,473 autoreload 23124 19848 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-08 11:42:13,323 autoreload 22976 16964 Watching for file changes with StatReloader
+INFO 2025-04-08 11:42:15,259 autoreload 22976 16964 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-08 11:42:16,119 autoreload 29108 27956 Watching for file changes with StatReloader
+INFO 2025-04-08 11:57:54,138 views 29108 2092 Family created with id: 2
+INFO 2025-04-08 11:57:55,923 views 29108 2092 Displaying family list for family id: 2
+INFO 2025-04-08 11:58:00,624 views 29108 2092 Using IP for session retrieval: 2402:8100:31b9:4160:9871:7a01:fb3a:47b8
+ERROR 2025-04-08 11:58:01,753 views 29108 2092 Failed to fetch states from INDIA_API_URL, status: 401
+INFO 2025-04-08 11:58:01,753 views 29108 2092 Rendering familyhead_form.html
+INFO 2025-04-08 11:59:44,513 views 29108 22616 FamilyHead created with id: 2
+INFO 2025-04-08 11:59:44,778 views 29108 22616 Deleted session data for IP: 2402:8100:31b9:4160:9871:7a01:fb3a:47b8

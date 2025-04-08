@@ -32,3 +32,1385 @@ INFO 2025-04-07 16:16:33,622 autoreload 14740 19320 Watching for file changes wi
 INFO 2025-04-07 16:16:36,022 autoreload 14740 19320 E:\samaj project django\samaj project\The_Samaj_Project\testapp\models.py changed, reloading.
 INFO 2025-04-07 16:16:36,825 autoreload 2360 28516 Watching for file changes with StatReloader
 INFO 2025-04-07 16:32:56,108 autoreload 30932 28544 Watching for file changes with StatReloader
+INFO 2025-04-07 16:33:26,007 views 30932 23688 Family created with id: 198
+INFO 2025-04-07 16:33:26,484 views 30932 23688 Displaying family list for family id: 198
+INFO 2025-04-07 16:33:28,899 views 30932 23688 Using IP for session retrieval: 2402:8100:31b9:4160:157e:b090:fc8d:a400
+ERROR 2025-04-07 16:33:30,103 views 30932 23688 Failed to fetch states from INDIA_API_URL, status: 401
+INFO 2025-04-07 16:33:30,104 views 30932 23688 Rendering familyhead_form.html
+INFO 2025-04-07 16:35:33,628 views 30932 16172 FamilyHead created with id: 99
+INFO 2025-04-07 16:35:33,629 views 30932 16172 Deleted session data for IP: 2402:8100:31b9:4160:157e:b090:fc8d:a400
+INFO 2025-04-07 16:51:52,639 views 30932 20332 Family created with id: 199
+INFO 2025-04-07 16:51:52,942 views 30932 20332 Displaying family list for family id: 199
+INFO 2025-04-07 16:51:55,764 views 30932 20332 Using IP for session retrieval: 2402:8100:31b9:4160:157e:b090:fc8d:a400
+ERROR 2025-04-07 16:51:57,452 views 30932 20332 Failed to fetch states from INDIA_API_URL, status: 401
+INFO 2025-04-07 16:51:57,452 views 30932 20332 Rendering familyhead_form.html
+INFO 2025-04-07 22:34:15,787 autoreload 27592 30528 Watching for file changes with StatReloader
+INFO 2025-04-07 22:45:09,921 autoreload 27592 30528 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-07 22:45:10,884 autoreload 18984 20244 Watching for file changes with StatReloader
+INFO 2025-04-07 22:46:05,172 views 18984 4388 Family created with id: 200
+INFO 2025-04-07 22:46:05,186 views 18984 4388 Displaying family list for family id: 200
+INFO 2025-04-07 22:46:06,905 views 18984 4388 Using IP for session retrieval: 127.0.0.1
+ERROR 2025-04-07 22:46:07,815 views 18984 4388 Failed to fetch states from INDIA_API_URL, status: 401
+INFO 2025-04-07 22:46:07,815 views 18984 4388 Rendering familyhead_form.html
+ERROR 2025-04-07 22:46:12,459 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:12,533 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:12,675 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:12,798 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:12,909 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:14,327 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:15,049 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:15,177 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:15,305 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:15,431 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:15,569 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:16,662 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:17,316 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:17,472 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:17,631 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:17,776 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:17,923 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:18,059 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:20,451 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:22,371 log 18984 4388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:22,380 log 18984 26748 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:26,032 log 18984 7960 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:26,033 log 18984 4756 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:30,070 log 18984 7960 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:30,086 log 18984 4756 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:32,350 log 18984 4756 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:32,357 log 18984 7960 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:34,779 log 18984 18748 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:34,789 log 18984 30400 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:36,277 log 18984 18748 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:36,280 log 18984 30400 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:39,237 log 18984 30400 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:39,245 log 18984 18748 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:40,950 log 18984 30400 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:40,957 log 18984 18748 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:40,970 log 18984 31452 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:40,977 log 18984 27468 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:40,989 log 18984 18244 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:41,021 log 18984 17964 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:41,099 log 18984 18748 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:41,115 log 18984 30400 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:41,151 log 18984 27468 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:41,169 log 18984 31452 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:41,177 log 18984 18244 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:41,195 log 18984 17964 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:41,216 log 18984 30400 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:41,226 log 18984 18748 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:41,706 log 18984 18748 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:43,014 log 18984 15996 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:44,210 log 18984 18768 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:44,216 log 18984 15996 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:46,749 log 18984 15996 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:46,757 log 18984 18768 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:48,584 log 18984 15996 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:48,593 log 18984 18768 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:51,435 log 18984 15996 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:51,443 log 18984 18768 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:53,581 log 18984 25192 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:53,588 log 18984 31164 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:55,961 log 18984 31164 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:55,978 log 18984 25192 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:58,838 log 18984 25192 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:46:58,846 log 18984 31164 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:02,972 log 18984 19404 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:02,988 log 18984 28388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+INFO 2025-04-07 22:47:05,492 views 18984 28388 FamilyHead created with id: 100
+ERROR 2025-04-07 22:47:05,492 views 18984 28388 Error in create_familyhead: cannot access local variable 'ip' where it is not associated with a value
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 194, in create_familyhead
+    logger.info("No session data found for IP: %s", ip)
+                                                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+WARNING 2025-04-07 22:47:05,504 views 18984 28388 FamilyHead already exists for family id: 200
+ERROR 2025-04-07 22:47:13,130 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:13,276 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:13,423 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:13,548 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:13,713 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:14,956 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:15,674 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:15,809 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:15,968 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:16,113 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:16,267 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:16,401 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:17,688 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:17,902 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:18,070 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:18,219 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:18,366 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:18,509 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:18,658 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:18,838 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:20,900 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:22,486 log 18984 17148 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:22,496 log 18984 31268 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:25,093 log 18984 22940 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:25,103 log 18984 31268 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:27,178 log 18984 31268 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:27,189 log 18984 22940 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:29,652 log 18984 22940 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:29,660 log 18984 31268 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:31,967 log 18984 31268 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:31,974 log 18984 22940 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:35,008 log 18984 27720 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:35,016 log 18984 23252 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:37,395 log 18984 27720 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:37,403 log 18984 23252 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:40,146 log 18984 23252 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:40,150 log 18984 27720 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,267 log 18984 27720 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,276 log 18984 27124 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,284 log 18984 31196 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,295 log 18984 23252 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,312 log 18984 8452 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,330 log 18984 24848 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,425 log 18984 27720 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,442 log 18984 27124 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,451 log 18984 31196 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,475 log 18984 8452 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,490 log 18984 24848 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,500 log 18984 23252 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,530 log 18984 27720 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,543 log 18984 27124 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:42,916 log 18984 27124 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:43,978 log 18984 27124 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:45,548 log 18984 27124 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:45,555 log 18984 27720 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:48,684 log 18984 27720 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:48,694 log 18984 27124 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:50,512 log 18984 27124 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:50,527 log 18984 27720 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:53,197 log 18984 29712 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:53,213 log 18984 25956 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:55,531 log 18984 25956 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:55,539 log 18984 29712 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:59,180 log 18984 29712 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:47:59,184 log 18984 25956 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:48:01,689 log 18984 25956 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:48:01,698 log 18984 29712 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:48:06,234 log 18984 9388 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+ERROR 2025-04-07 22:48:06,243 log 18984 21208 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 477, in save_form_data
+    request.session[ip] = request.POST.dict()
+                    ^^
+UnboundLocalError: cannot access local variable 'ip' where it is not associated with a value
+INFO 2025-04-07 22:49:03,772 views 18984 28544 Family created with id: 201
+INFO 2025-04-07 22:49:03,867 views 18984 28544 Displaying family list for family id: 201
+INFO 2025-04-07 22:49:05,811 views 18984 28544 Using IP for session retrieval: 2402:8100:31b9:4160:ed4b:4749:c0c3:9057
+ERROR 2025-04-07 22:49:06,575 views 18984 28544 Failed to fetch states from INDIA_API_URL, status: 401
+INFO 2025-04-07 22:49:06,575 views 18984 28544 Rendering familyhead_form.html
+INFO 2025-04-07 22:50:34,965 views 18984 15304 FamilyHead created with id: 101
+INFO 2025-04-07 22:50:34,967 views 18984 15304 Deleted session data for IP: 2402:8100:31b9:4160:ed4b:4749:c0c3:9057
+INFO 2025-04-08 10:10:01,682 autoreload 18984 20244 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-08 10:10:03,489 autoreload 12956 1592 Watching for file changes with StatReloader
+INFO 2025-04-08 10:10:07,503 autoreload 12956 1592 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-08 10:47:35,915 autoreload 27268 30144 Watching for file changes with StatReloader
+INFO 2025-04-08 10:50:18,849 autoreload 27268 30144 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-08 10:50:19,612 autoreload 15500 26764 Watching for file changes with StatReloader
+INFO 2025-04-08 10:51:02,616 autoreload 25232 14728 Watching for file changes with StatReloader

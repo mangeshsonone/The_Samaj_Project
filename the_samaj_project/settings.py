@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +28,8 @@ DEBUG = True
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://a8f6-49-15-234-32.ngrok-free.app",  # Add your current ngrok domain
+    "https://the-samaj-project-1.onrender.com",
+     "https://a8f6-49-15-234-32.ngrok-free.app",
 ]
 
 # Application definition
@@ -81,17 +82,22 @@ ALLOWED_HOSTS = [
     '*'
 ]
 
+import os
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(
+        "postgresql://the_samaj_db_user:AGk5vVKHzmCQM4oQvRPuyQO7CdDSBY8Q@dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com/the_samaj_db"
+    )
 }
-
-
+# postgresql://the_samaj_db_user:AGk5vVKHzmCQM4oQvRPuyQO7CdDSBY8Q@dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com/the_samaj_db
 
 
 

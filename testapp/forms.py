@@ -1,5 +1,6 @@
 from django import forms
 from .models import Samaj, Family, FamilyHead, Member
+from datetime import date
 
 class SamajForm(forms.ModelForm):
     class Meta:
@@ -87,6 +88,12 @@ class FamilyHeadForm(forms.ModelForm):
             if not alternative.isdigit() or len(alternative) != 10:
                 raise forms.ValidationError("Alternative number must be numeric and exactly of 10 digits.")
         return alternative
+    
+    def clean_birth_date(self):
+        birth_date = self.cleaned_data.get('birth_date')
+        if birth_date and birth_date > date.today():
+            raise forms.ValidationError("Birthdate cannot be a future date.")
+        return birth_date
 
 
 class MemberForm(forms.ModelForm):
@@ -157,3 +164,9 @@ class MemberForm(forms.ModelForm):
             if not alternative.isdigit() or len(alternative) != 10:
                 raise forms.ValidationError("Alternative number must be numeric and exactly of 10 digits.")
         return alternative
+    
+    def clean_birth_date(self):
+        birth_date = self.cleaned_data.get('birth_date')
+        if birth_date and birth_date > date.today():
+            raise forms.ValidationError("Birthdate cannot be a future date.")
+        return birth_date

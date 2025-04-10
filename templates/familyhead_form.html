@@ -174,10 +174,12 @@
           {{ form.exact_nature_of_duties }}
         </div>
         
-        <!-- Phone Number -->
         <div class="form-group">
           <label for="id_phone_no" class="form-label fw-bold">Phone Number</label>
-          <input type="text" name="phone_no" id="id_phone_no" class="form-control" placeholder="Enter 10-digit Phone Number" oninput="validatePhoneNumbers()">
+          <div class="input-group">
+            <span class="input-group-text">+91</span>
+            <input type="text" name="phone_no" id="id_phone_no" class="form-control" placeholder="Enter 10-digit Phone Number" oninput="validatePhoneNumbers()">
+          </div>
           <div id="phone-error" class="text-danger"></div>
         </div>
   

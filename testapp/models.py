@@ -41,15 +41,15 @@ class PersonsData(models.Model):
     ]
 
 
-    middle_name = models.CharField(max_length=100,default="")
+    middle_name = models.CharField(max_length=100,blank=True, null=True,default="")
     last_name = models.CharField(max_length=100,default="")
     birth_date = models.DateField()
     age = models.IntegerField(choices=AGE_CHOICES)
     gender = models.CharField(max_length=100, choices=GENDER_CHOICES)
     marital_status = models.CharField(max_length=100, choices=MARITAL_STATUS_CHOICES)
-    qualification = models.CharField(max_length=100)
-    occupation = models.CharField(max_length=100) 
-    exact_nature_of_duties = models.CharField(max_length=1000)
+    qualification = models.CharField(max_length=100,blank=True, null=True)
+    occupation = models.CharField(max_length=100,blank=True, null=True) 
+    exact_nature_of_duties = models.CharField(max_length=1000,blank=True, null=True)
     native_city = models.CharField(max_length=100,default="")
     native_state = models.CharField(max_length=100,default="")
     country = models.CharField(max_length=100,default="India")

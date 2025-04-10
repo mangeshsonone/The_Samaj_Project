@@ -183,9 +183,12 @@
         </div>
     
         <div class="form-group">
-            <label for="id_alternative_no" class="fw-bold">Alternative Number</label>
-            <input type="text" name="alternative_no" id="id_alternative_no" class="form-control" placeholder="Enter 10-digit Alternative Number" oninput="validatePhoneNumbers()">
-            <div id="alt-error" class="text-danger"></div>
+          <label for="id_alternative_no" class="form-label fw-bold">Alternative Number</label>
+          <div class="input-group">
+            <span class="input-group-text">+91</span>
+          <input type="text" name="alternative_no" id="id_alternative_no" class="form-control" placeholder="Enter 10-digit Alternative Number" oninput="validatePhoneNumbers()">
+        </div>
+          <div id="alt-error" class="text-danger"></div>
         </div>
     
         <div class="form-group">

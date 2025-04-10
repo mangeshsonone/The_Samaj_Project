@@ -427,6 +427,34 @@ document.addEventListener("DOMContentLoaded", function () {
         field.addEventListener("change", autoSave); // For dropdowns and checkboxes
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const birthDateInput = document.getElementById("id_birth_date");
+
+    // Create an error element if not present and insert it after the birth date field
+    let errorDiv = document.getElementById("birthDateError");
+    if (!errorDiv) {
+        errorDiv = document.createElement("div");
+        errorDiv.id = "birthDateError";
+        errorDiv.className = "text-danger";
+        birthDateInput.parentElement.appendChild(errorDiv);
+    }
+
+    birthDateInput.addEventListener("change", function() {
+        // Parse the date input value into a Date object
+        const selectedDate = new Date(birthDateInput.value);
+        const today = new Date();
+        // Set the time to midnight for a proper comparison
+        today.setHours(0, 0, 0, 0);
+
+        if (selectedDate > today) {
+            errorDiv.textContent = "Birthdate cannot be a future date.";
+        } else {
+            errorDiv.textContent = "";
+        }
+    });
+});
+
   </script>
 
 </body>

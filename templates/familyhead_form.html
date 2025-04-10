@@ -471,6 +471,67 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const pincodeInput = document.getElementById("id_pincode");
+
+    pincodeInput.addEventListener("change", function() {
+        const pincode = pincodeInput.value.trim();
+
+        // Validate that pincode has exactly 6 digits and is numeric
+        if (pincode.length === 6 && !isNaN(pincode)) {
+            // Call the Postal Pincode API
+            fetch(`https://api.postalpincode.in/pincode/${pincode}`)
+            .then(response => response.json())
+            .then(data => {
+                // Check if the API returned success and at least one post office detail
+                if (data[0].Status === "Success" && data[0].PostOffice && data[0].PostOffice.length > 0) {
+                    const postOffice = data[0].PostOffice[0];
+
+                    // Autofill the state field (assuming it's a text input)
+                    const stateInput = document.getElementById("state");
+                    stateInput.value = postOffice.State;
+
+                    // Autofill the country field. This depends on how your country field is rendered.
+                    const countryField = document.getElementById("id_country");
+                    
+                    // If countryField is an <input> type
+                    if (countryField.tagName.toLowerCase() === "input") {
+                        countryField.value = postOffice.Country;
+                    } 
+                    // If countryField is a <select>, select the matching option if possible.
+                    else if (countryField.tagName.toLowerCase() === "select") {
+                        let found = false;
+                        for (let i = 0; i < countryField.options.length; i++) {
+                            if (countryField.options[i].text.toLowerCase() === postOffice.Country.toLowerCase()) {
+                                countryField.selectedIndex = i;
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) {
+                            // Optionally add the country if it's not already in the list.
+                            const newOption = document.createElement("option");
+                            newOption.value = postOffice.Country;
+                            newOption.text = postOffice.Country;
+                            countryField.add(newOption);
+                            countryField.selectedIndex = countryField.options.length - 1;
+                        }
+                    }
+                } else {
+                    alert("Invalid pincode or no data found for the provided pincode.");
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching pincode data:", error);
+                alert("An error occurred while fetching pincode data.");
+            });
+        } else {
+            alert("Please enter a valid 6-digit pincode.");
+        }
+    });
+});
   </script>
 </body>
 </html>

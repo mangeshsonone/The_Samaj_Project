@@ -11,6 +11,7 @@ from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 import requests
 import logging
+from django.utils import timezone
 
 
 # Define logging for this module
@@ -173,7 +174,7 @@ def create_familyhead(request, family_id=None):
 
         if existing_family_head:
             logger.warning("FamilyHead already exists for family id: %s", family_id)
-            messages.error(request, "A Family Head is already created for this family. You can edit the details if needed.")
+            messages.error(request, "A Family Head is created for this family. You can edit the details if needed.")
             return redirect('familyhead_list', familyhead_id=existing_family_head.id)
 
         if request.method == "POST":
@@ -268,7 +269,9 @@ def update_familyhead(request, familyhead_id):
         if request.method == "POST":
             form = FamilyHeadForm(request.POST, request.FILES, instance=family_head)
             if form.is_valid():
-                fm = form.save()
+                fm = form.save(commit=False)
+                fm.updated_at = timezone.now()  # Set updated_at to the current date/time
+                fm.save()
                 return redirect('familyhead_list', familyhead_id=fm.id)
         else:
             form = FamilyHeadForm(instance=family_head)
@@ -277,7 +280,7 @@ def update_familyhead(request, familyhead_id):
 
         return render(request, 'familyhead_form.html', {'form': form, 'edit_mode': True,'states': states})
     except Exception as e:
-        messages.error(request, f"An error occurred: {e}")
+        # messages.error(request, f"An error occurred: {e}")
         return redirect(request.META.get('HTTP_REFERER', '/'))
 
 # Delete Family Head
@@ -396,6 +399,9 @@ def update_member(request, member_id):
             form = MemberForm(request.POST, request.FILES, instance=member)
             if form.is_valid():
                 form.save()
+                fm = form.save(commit=False)
+                fm.updated_at = timezone.now()  # Set updated_at to the current date/time
+                fm.save()
                 messages.success(request, "Member details updated successfully!")
                 return redirect('member_list', familyhead_id=family_head_id)
         else:

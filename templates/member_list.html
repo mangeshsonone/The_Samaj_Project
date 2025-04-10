@@ -152,7 +152,10 @@
                         <th>Nature of Duties</th>
                         <th>Blood Group</th>
                         <th>Social Media</th>
+                        
                         <th>Photo</th>
+                        <th>Created At</th>
+                        <th>Updated At</th>
                         <th>Detailed View</th>
                         <th>Actions</th>
                     </tr>
@@ -190,7 +193,7 @@
                         <td>{{ member.occupation }}</td>
                         <td>{{ member.exact_nature_of_duties }}</td>
                         <td>{{ member.blood_group }}</td>
-                        <td>{{ member.social_media_link|default:"N/A" }}</td>
+                        
                         <!-- Social Media Link (Only if available) -->
                         <td>
                             {% if member.social_media_link %}
@@ -208,6 +211,8 @@
                                 No Photo
                             {% endif %}
                         </td>
+                        <td>{{ member.created_at|date:"Y-m-d H:i" }}</td>
+                        <td>{{ member.updated_at|date:"Y-m-d H:i" }}</td>
                         <td>
                             <a href="{% url 'detail_member' member.id %}" class="btn" style="background-color: #6f42c1; color: white; border: none; padding: 8px 12px;">
                                 Form View

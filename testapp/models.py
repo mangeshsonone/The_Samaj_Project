@@ -98,6 +98,7 @@ class FamilyHead(PersonsData):
     name_of_head = models.CharField(max_length=255)
     family = models.ForeignKey(Family, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(null=True,blank=True,default=None)
 
     def __str__(self):
         return self.name_of_head
@@ -129,6 +130,7 @@ class Member(PersonsData):
     relation_with_family_head = models.CharField(max_length=255, choices=RELATION_CHOICES)
     name = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(null=True,blank=True,default=None)
 
     def __str__(self):
         return self.name

@@ -455,6 +455,30 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const emailInput = document.getElementById("id_email_id");
+  const emailErrorDiv = document.getElementById("email-error");
+
+  // Function to validate email format using HTML5 validation
+  function validateEmail() {
+    if (!emailInput.checkValidity()) {
+      emailErrorDiv.textContent = "Please enter a valid email address.";
+    } else {
+      emailErrorDiv.textContent = "";
+    }
+  }
+
+  // Validate on blur
+  emailInput.addEventListener("blur", validateEmail);
+
+  // Optional: Validate on form submission
+  document.getElementById("yourFormId").addEventListener("submit", function(event) {
+    validateEmail();
+    if (!emailInput.checkValidity()) {
+      event.preventDefault(); // Prevent submission if invalid
+    }
+  });
+});
   </script>
 
 </body>

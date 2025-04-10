@@ -247,6 +247,7 @@
 <div class="form-group">
   <label for="id_pincode" class="form-label fw-bold">Pincode</label>
   {{ form.pincode }}
+  <div id="pincode-error" class="text-danger" style="display:none;">Please enter only numbers.</div>
 </div>
 
   <div class="form-group">
@@ -558,6 +559,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const pincodeInput = document.getElementById("id_pincode");
+    const errorDiv = document.getElementById("pincode-error");
+
+    pincodeInput.addEventListener("input", function () {
+      const isValid = /^\d*$/.test(pincodeInput.value); // Only digits allowed
+      if (!isValid) {
+        errorDiv.style.display = "block";
+        // Remove non-digit characters
+        pincodeInput.value = pincodeInput.value.replace(/\D/g, "");
+      } else {
+        errorDiv.style.display = "none";
+      }
+    });
+  });
   </script>
 </body>
 </html>

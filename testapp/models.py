@@ -57,7 +57,7 @@ class PersonsData(models.Model):
     district = models.CharField(max_length=100)
     city = models.CharField(max_length=100,default="")
     street_name = models.CharField(max_length=100,default="")
-    landmark = models.CharField(max_length=100,default="")
+    landmark = models.CharField(max_length=100,blank=True, null=True,default="")
     building_name = models.CharField(max_length=100,default="")
     door_no = models.CharField(max_length=100,default="")
     flat_no = models.CharField(max_length=100,default="")

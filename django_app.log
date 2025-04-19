@@ -13561,3 +13561,1135 @@ INFO 2025-04-10 17:44:33,555 autoreload 24316 1680 Watching for file changes wit
 INFO 2025-04-10 17:44:34,831 autoreload 24316 1680 E:\samaj project django\samaj project\The_Samaj_Project\testapp\models.py changed, reloading.
 INFO 2025-04-10 17:44:35,521 autoreload 35728 32888 Watching for file changes with StatReloader
 INFO 2025-04-10 17:45:24,293 autoreload 31000 15412 Watching for file changes with StatReloader
+ERROR 2025-04-16 16:50:31,678 log 31000 6604 Internal Server Error: /admin/testapp/familyhead/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 289, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 275, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "E:\wpp bot project\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: SSL connection has been closed unexpectedly
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\sites.py", line 230, in inner
+    if not self.has_permission(request):
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\sites.py", line 203, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 330, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 306, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 289, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 275, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "E:\wpp bot project\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: SSL connection has been closed unexpectedly
+
+ERROR 2025-04-16 16:51:08,551 log 31000 35008 Internal Server Error: /admin/testapp/familyhead/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 289, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 275, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "E:\wpp bot project\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: SSL connection has been closed unexpectedly
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\sites.py", line 230, in inner
+    if not self.has_permission(request):
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\sites.py", line 203, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 330, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 306, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 289, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 275, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "E:\wpp bot project\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: SSL connection has been closed unexpectedly
+
+ERROR 2025-04-16 16:51:22,216 log 31000 13128 Internal Server Error: /admin/t/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 289, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 275, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "E:\wpp bot project\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: SSL connection has been closed unexpectedly
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\sites.py", line 230, in inner
+    if not self.has_permission(request):
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\sites.py", line 203, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 330, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 306, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 289, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 275, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "E:\wpp bot project\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: SSL connection has been closed unexpectedly
+
+ERROR 2025-04-16 16:51:28,864 log 31000 35652 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 289, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 275, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "E:\wpp bot project\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: SSL connection has been closed unexpectedly
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\sites.py", line 230, in inner
+    if not self.has_permission(request):
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\admin\sites.py", line 203, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\wpp bot project\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 330, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 306, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 289, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\base\base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\wpp bot project\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 275, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "E:\wpp bot project\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: SSL connection has been closed unexpectedly
+
+INFO 2025-04-16 16:51:56,021 autoreload 26440 28768 Watching for file changes with StatReloader
+INFO 2025-04-18 12:38:52,392 autoreload 12776 32412 Watching for file changes with StatReloader
+INFO 2025-04-18 12:59:34,073 autoreload 32992 39708 Watching for file changes with StatReloader
+INFO 2025-04-18 14:53:54,125 autoreload 38128 36444 Watching for file changes with StatReloader
+INFO 2025-04-18 15:58:32,805 autoreload 39096 27036 Watching for file changes with StatReloader
+INFO 2025-04-18 15:59:32,948 autoreload 39096 27036 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 15:59:33,951 autoreload 32444 3280 Watching for file changes with StatReloader
+INFO 2025-04-18 15:59:42,229 autoreload 32444 3280 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 15:59:43,010 autoreload 19184 40852 Watching for file changes with StatReloader
+INFO 2025-04-18 15:59:59,295 autoreload 3616 35192 Watching for file changes with StatReloader
+INFO 2025-04-18 16:00:47,167 autoreload 3616 35192 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:00:47,806 autoreload 24300 34912 Watching for file changes with StatReloader
+INFO 2025-04-18 16:02:45,676 autoreload 24300 34912 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:02:46,300 autoreload 37564 30420 Watching for file changes with StatReloader
+INFO 2025-04-18 16:03:08,248 autoreload 24848 31492 Watching for file changes with StatReloader
+INFO 2025-04-18 16:04:09,399 autoreload 24848 31492 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:04:10,013 autoreload 38880 30772 Watching for file changes with StatReloader
+INFO 2025-04-18 16:04:57,690 autoreload 38880 30772 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:04:58,443 autoreload 36192 40544 Watching for file changes with StatReloader
+INFO 2025-04-18 16:07:58,865 autoreload 36192 40544 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:07:59,664 autoreload 36728 33640 Watching for file changes with StatReloader
+INFO 2025-04-18 16:08:30,579 autoreload 39112 35416 Watching for file changes with StatReloader
+INFO 2025-04-18 16:10:08,500 autoreload 40800 28652 Watching for file changes with StatReloader
+INFO 2025-04-18 16:11:31,666 autoreload 28096 8120 Watching for file changes with StatReloader
+INFO 2025-04-18 16:11:48,742 autoreload 28096 8120 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:11:49,547 autoreload 35008 18252 Watching for file changes with StatReloader
+INFO 2025-04-18 16:24:20,474 autoreload 35008 18252 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:24:21,323 autoreload 6936 38760 Watching for file changes with StatReloader
+INFO 2025-04-18 16:27:21,714 autoreload 6936 38760 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:27:22,436 autoreload 38608 28192 Watching for file changes with StatReloader
+INFO 2025-04-18 16:27:48,720 autoreload 38608 28192 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:27:49,369 autoreload 36176 26904 Watching for file changes with StatReloader
+INFO 2025-04-18 16:35:10,670 autoreload 18108 40196 Watching for file changes with StatReloader
+INFO 2025-04-18 16:41:36,817 autoreload 18108 40196 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:41:37,585 autoreload 21328 33536 Watching for file changes with StatReloader
+INFO 2025-04-18 16:42:06,267 autoreload 21128 35824 Watching for file changes with StatReloader
+INFO 2025-04-18 16:43:38,505 autoreload 21128 35824 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:43:39,137 autoreload 27392 34192 Watching for file changes with StatReloader
+INFO 2025-04-18 16:43:59,087 autoreload 27392 34192 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:43:59,721 autoreload 25776 17108 Watching for file changes with StatReloader
+INFO 2025-04-18 16:44:07,806 autoreload 25776 17108 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:44:08,640 autoreload 38924 28036 Watching for file changes with StatReloader
+INFO 2025-04-18 16:44:21,045 autoreload 38924 28036 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:44:21,660 autoreload 37892 39392 Watching for file changes with StatReloader
+INFO 2025-04-18 16:44:28,921 autoreload 37892 39392 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:44:29,572 autoreload 3820 37592 Watching for file changes with StatReloader
+INFO 2025-04-18 16:47:41,678 autoreload 35392 29564 Watching for file changes with StatReloader
+INFO 2025-04-18 16:53:31,026 autoreload 37440 33248 Watching for file changes with StatReloader
+INFO 2025-04-18 16:58:33,006 autoreload 37440 33248 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:58:33,641 autoreload 34620 21824 Watching for file changes with StatReloader
+INFO 2025-04-18 16:58:51,929 autoreload 27396 33648 Watching for file changes with StatReloader
+INFO 2025-04-18 16:59:53,112 autoreload 27396 33648 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 16:59:53,737 autoreload 40188 33536 Watching for file changes with StatReloader
+INFO 2025-04-18 17:00:15,502 autoreload 40188 33536 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:00:16,178 autoreload 33292 34108 Watching for file changes with StatReloader
+INFO 2025-04-18 17:00:23,993 autoreload 33292 34108 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:00:24,660 autoreload 38968 40040 Watching for file changes with StatReloader
+INFO 2025-04-18 17:00:30,970 autoreload 38968 40040 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:00:31,566 autoreload 15544 29060 Watching for file changes with StatReloader
+INFO 2025-04-18 17:00:39,108 autoreload 15544 29060 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:00:39,704 autoreload 29516 5320 Watching for file changes with StatReloader
+INFO 2025-04-18 17:00:58,501 autoreload 29516 5320 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:00:59,093 autoreload 37444 38996 Watching for file changes with StatReloader
+INFO 2025-04-18 17:03:42,450 autoreload 30840 28072 Watching for file changes with StatReloader
+INFO 2025-04-18 17:06:14,014 autoreload 36596 2152 Watching for file changes with StatReloader
+INFO 2025-04-18 17:10:07,037 autoreload 36596 2152 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-18 17:10:07,818 autoreload 22656 26164 Watching for file changes with StatReloader
+INFO 2025-04-18 17:18:06,518 autoreload 22656 26164 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:18:07,872 autoreload 34432 15348 Watching for file changes with StatReloader
+INFO 2025-04-18 17:19:51,608 autoreload 34432 15348 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:19:52,499 autoreload 31880 31236 Watching for file changes with StatReloader
+INFO 2025-04-18 17:20:20,327 autoreload 31880 31236 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:20:21,225 autoreload 35244 26544 Watching for file changes with StatReloader
+INFO 2025-04-18 17:21:28,637 autoreload 35244 26544 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-18 17:21:29,795 autoreload 39696 30700 Watching for file changes with StatReloader
+INFO 2025-04-18 17:25:39,072 autoreload 28844 27164 Watching for file changes with StatReloader
+INFO 2025-04-18 17:28:08,741 autoreload 28844 27164 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-18 17:28:09,805 autoreload 37164 9876 Watching for file changes with StatReloader
+INFO 2025-04-18 17:28:21,067 autoreload 37164 9876 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-18 17:28:22,083 autoreload 39148 26008 Watching for file changes with StatReloader
+INFO 2025-04-18 17:28:38,235 autoreload 30604 29564 Watching for file changes with StatReloader
+INFO 2025-04-18 17:29:58,074 autoreload 17140 38180 Watching for file changes with StatReloader
+ERROR 2025-04-18 17:31:12,854 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 199, in adddata
+    worksheet.append_row(member_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:31:16,529 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:31:47,169 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 199, in adddata
+    worksheet.append_row(member_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:31:50,664 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:31:54,444 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:31:57,942 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:32:01,500 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:32:05,070 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:32:08,524 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:32:12,079 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:32:15,569 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:32:45,739 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 199, in adddata
+    worksheet.append_row(member_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:32:49,229 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:32:53,003 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:32:56,741 views 17140 23708 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+INFO 2025-04-18 17:35:44,264 autoreload 17140 38180 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:35:45,386 autoreload 32800 25132 Watching for file changes with StatReloader
+INFO 2025-04-18 17:35:51,796 autoreload 32800 25132 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:35:52,697 autoreload 38208 17164 Watching for file changes with StatReloader
+INFO 2025-04-18 17:37:00,853 autoreload 38208 17164 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-18 17:37:01,984 autoreload 12620 35344 Watching for file changes with StatReloader
+INFO 2025-04-18 17:43:22,527 autoreload 35632 36016 Watching for file changes with StatReloader
+INFO 2025-04-18 17:44:06,730 autoreload 31520 19000 Watching for file changes with StatReloader
+INFO 2025-04-18 17:52:41,694 autoreload 38676 16960 Watching for file changes with StatReloader
+INFO 2025-04-18 17:53:03,606 autoreload 38676 16960 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-18 17:53:04,709 autoreload 18392 5116 Watching for file changes with StatReloader
+INFO 2025-04-18 17:55:12,199 autoreload 27464 11608 Watching for file changes with StatReloader
+ERROR 2025-04-18 17:56:04,478 views 27464 24952 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 199, in adddata
+    worksheet.append_row(member_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:56:08,004 views 27464 24952 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:56:11,516 views 27464 24952 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:56:34,504 views 27464 32468 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 199, in adddata
+    worksheet.append_row(member_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+ERROR 2025-04-18 17:56:34,696 views 27464 24952 Error in create_family: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 99, in create_family
+    adddata()
+    ~~~~~~~^^
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py", line 157, in adddata
+    worksheet.append_row(head_row)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ~~~~~~~~~~~~~~~~^
+        [values],
+        ^^^^^^^^^
+    ...<3 lines>...
+        include_values_in_response=include_values_in_response,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "E:\wpp bot project\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [429]: Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:71171167242'.
+INFO 2025-04-18 17:57:33,344 autoreload 40904 39708 Watching for file changes with StatReloader
+INFO 2025-04-18 17:58:03,962 autoreload 40904 39708 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:58:05,020 autoreload 26620 28056 Watching for file changes with StatReloader
+INFO 2025-04-18 17:58:47,737 autoreload 26620 28056 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-18 17:58:48,799 autoreload 3520 37764 Watching for file changes with StatReloader
+INFO 2025-04-18 17:59:20,724 autoreload 38360 39856 Watching for file changes with StatReloader
+INFO 2025-04-18 18:01:10,530 autoreload 40024 28720 Watching for file changes with StatReloader
+INFO 2025-04-18 18:01:57,189 autoreload 40024 28720 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-18 18:01:58,296 autoreload 30792 27164 Watching for file changes with StatReloader
+INFO 2025-04-18 18:02:05,174 autoreload 30792 27164 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-18 18:02:06,012 autoreload 36632 25452 Watching for file changes with StatReloader
+INFO 2025-04-18 18:02:46,506 autoreload 29820 27008 Watching for file changes with StatReloader
+INFO 2025-04-18 18:07:39,296 autoreload 29820 27008 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-18 18:07:40,356 autoreload 38012 12156 Watching for file changes with StatReloader
+INFO 2025-04-18 18:10:10,217 autoreload 40344 39340 Watching for file changes with StatReloader
+INFO 2025-04-18 18:12:23,968 autoreload 24776 38368 Watching for file changes with StatReloader
+INFO 2025-04-18 18:14:06,739 autoreload 24776 38368 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-18 18:14:07,725 autoreload 30252 30612 Watching for file changes with StatReloader
+INFO 2025-04-18 18:14:16,368 autoreload 30252 30612 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-18 18:14:17,432 autoreload 1512 25312 Watching for file changes with StatReloader
+INFO 2025-04-19 14:04:23,803 autoreload 5256 6384 Watching for file changes with StatReloader
+INFO 2025-04-19 14:04:37,925 autoreload 5256 6384 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-19 14:04:38,835 autoreload 13692 32816 Watching for file changes with StatReloader
+INFO 2025-04-19 14:09:36,206 autoreload 13692 32816 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
+INFO 2025-04-19 14:09:37,933 autoreload 3852 24484 Watching for file changes with StatReloader
+INFO 2025-04-19 14:10:31,591 autoreload 21984 33688 Watching for file changes with StatReloader
+INFO 2025-04-19 14:15:45,831 autoreload 17468 32456 Watching for file changes with StatReloader
+INFO 2025-04-19 14:18:32,271 autoreload 10368 40444 Watching for file changes with StatReloader
+INFO 2025-04-19 14:51:37,437 autoreload 32688 31040 Watching for file changes with StatReloader
+INFO 2025-04-19 14:52:04,610 autoreload 32864 25036 Watching for file changes with StatReloader

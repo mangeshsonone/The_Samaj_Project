@@ -12,6 +12,7 @@ from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 import requests
 import logging
 from django.utils import timezone
+# from .google_sheet_data import adddata
 
 
 # Define logging for this module
@@ -95,6 +96,7 @@ def create_family(request):
                 logger.info("Family created with id: %s", family_id)
                 return redirect('family_list', family_id=family_id)
         else:
+            # adddata()
             form = FamilyForm()
         return render(request, 'create_family.html', {'form': form})
     except Exception as e:

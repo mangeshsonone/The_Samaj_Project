@@ -126,7 +126,7 @@ class Member(PersonsData):
 
 
 
-    family_head = models.ForeignKey(FamilyHead, on_delete=models.PROTECT)
+    family_head = models.ForeignKey(FamilyHead, on_delete=models.CASCADE)
     relation_with_family_head = models.CharField(max_length=255, choices=RELATION_CHOICES)
     name = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)

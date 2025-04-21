@@ -27,6 +27,9 @@ from django.conf.urls import handler404
 handler404 = 'testapp.views.custom_404'
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login_view/',views.login_view,name='login_view'),
+    path('register_view/',views.register_view,name='register_view'),
+    path('otp_view/',views.otp_view,name='otp_view'),
     path('', views.create_family, name='create_family'),
     path('family_list/<int:family_id>/',views.family_list,name='family_list'),
     # re_path(r'^family_list/(?P<family_id>\d+)(?:/(?P<extra>.+))?/$', views.family_list, name='family_list'),

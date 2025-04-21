@@ -13,7 +13,7 @@ import requests
 import logging
 from django.utils import timezone
 # from .google_sheet_data import adddata
-
+# from .main import a
 
 # Define logging for this module
 logger = logging.getLogger(__name__)
@@ -26,59 +26,63 @@ COUNTRIES_API_URL="https://restcountries.com/v3.1/all"
 INDIA_API_URL = "https://api.countrystatecity.in/v1/states"
 DISTRICT_API_URL = "https://cdn-api.co-vin.in/api/v2/admin/location/districts/"
 
-# def login_view(request):
-#     if request.method == 'POST':
-#         username = request.POST.get('username')
-#         phone_number = request.POST.get('phone_number')
+def login_view(request):
+    if request.method == 'POST':
+    #     username = request.POST.get('username')
+    #     phone_number = request.POST.get('phone_number')
 
-#         # Check if a profile exists with the given username and phone number
-#         profile = Profile.objects.filter(user__username=username, phone_number=phone_number)
+    #     # Check if a profile exists with the given username and phone number
+    #     profile = Profile.objects.filter(user__username=username, phone_number=phone_number)
 
         
-#         if not profile.exists():
-#             return redirect('/register_view/')
+    #     if not profile.exists():
+    #         return redirect('/register_view/')
 
-#         profile = profile.first()
-#         profile.otp = random.randint(1000, 9999)
-#         profile.save()
+    #     profile = profile.first()
+    #     profile.otp = random.randint(1000, 9999)
+    #     profile.save()
         
-#         # Send OTP via Twilio
-#         message_handler = MessageHandler(phone_number, profile.otp)
-#         message_handler.send_otp_on_phone()
+    #     # Send OTP via Twilio
+    #     message_handler = MessageHandler(phone_number, profile.otp)
+    #     message_handler.send_otp_on_phone()
         
-#         return redirect(f'/otp_view/{profile.uuid}')
+    #     return redirect(f'/otp_view/{profile.uuid}')
+        return redirect('/otp_view/')
 
-#     return render(request, 'login.html')
+    return render(request, 'login.html')
 
 
-# def register_view(request):
-#     if request.method == 'POST':
-#         username = request.POST.get('username')
-#         phone_number = request.POST.get('phone_number')
+def register_view(request):
+    # if request.method == 'POST':
+    #     username = request.POST.get('username')
+    #     phone_number = request.POST.get('phone_number')
 
-#         if User.objects.filter(username=username).exists():
-#             messages.error(request, "Username already exists. Please choose another one.")
-#             return redirect('/')  # Redirect back to registration page
+    #     if User.objects.filter(username=username).exists():
+    #         messages.error(request, "Username already exists. Please choose another one.")
+    #         return redirect('/')  # Redirect back to registration page
 
-#         user = User.objects.create(username=username)
-#         Profile.objects.create(user=user, phone_number=phone_number)
+    #     user = User.objects.create(username=username)
+    #     Profile.objects.create(user=user, phone_number=phone_number)
 
-#         return redirect('/login_view/')
+    #     return redirect('/login_view/')
 
-#     return render(request, 'register.html')
+    return render(request, 'register.html')
     
 # def otp_view(request, uid):
-#     profile = get_object_or_404(Profile, uuid=uid)
+def otp_view(request):
+    # profile = get_object_or_404(Profile, uuid=uid)
     
-#     if request.method == 'POST':
-#         otp = request.POST.get('otp')
+    if request.method == 'POST':
+    #     otp = request.POST.get('otp')
         
 
-#         if otp == profile.otp:
-#             login(request, profile.user)
-#             return redirect('/create_family/')  # Redirect to home or dashboard
+    #     if otp == profile.otp:
+    #         login(request, profile.user)
+            return redirect('/create_family/')  # Redirect to home or dashboard
 
-#     return render(request, 'otp.html', {'profile': profile})
+    # return render(request, 'otp.html', {'profile': profile})
+    return render(request, 'otp.html')
+
 
 # def logout_view(request):
 #     logout(request)

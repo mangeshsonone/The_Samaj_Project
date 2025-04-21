@@ -1,14 +1,5 @@
 
 
-# # Set the path for Django settings
-# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-# # Set up Django settings module
-# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "The_Samaj_Project.settings")
-# django.setup()
-
-# # Now you can import the models after Django setup
-# from testapp.models import Samaj, Family, FamilyHead, Member
 
 from gspread import worksheet
 import gspread
@@ -20,8 +11,8 @@ from .models import Samaj,Family,FamilyHead,Member
 gc=gspread.service_account(filename="testapp/credentials.json")
 
 sh=gc.open_by_key('1qdJcSbquB9-guAeqxsWRTr7sn33GjkCa_8ZERYpIf2M')
-for ws in sh.worksheets():
-    print(ws.title)
+# for ws in sh.worksheets():
+#     print(ws.title)
 
 worksheet = sh.worksheet("Sheet1")
 
@@ -223,3 +214,93 @@ worksheet = sh.worksheet("Sheet1")
 #     print(f"Added {len(rows_to_append)} rows to the Google Sheet")
 # # # Call the function to add the data
 
+def add_family_head_to_sheet(head):
+    samaj = head.family.samaj
+    family = head.family
+    # number_of_members = Member.objects.filter(family_head=head).count()
+
+    head_row = [
+        head.created_at.strftime('%Y-%m-%d %H:%M:%S') if head.created_at else '',
+        samaj.samaj_name,                    # samaj
+        family.total_family_members,         # total members
+        "",
+        "",
+        head.name_of_head,                   # head name
+        head.name_of_head,
+        head.middle_name,                    # middle name
+        head.last_name,                      # last name
+        head.birth_date.strftime('%Y-%m-%d') if head.birth_date else '',  # birth date (converted to string)
+        head.age,                            # age
+        head.gender,                         # gender
+        head.marital_status,                 # marital status
+        "self",                              # relation with family head (self for head)
+        head.phone_no,                       # phone no
+        head.alternative_no,                 # alternative no
+        head.landline_no,                    # landline no
+        head.email_id,                       # email id
+        head.country,                        # country
+        head.state,                          # state
+        head.district,                       # district
+        head.pincode,                        # pincode
+        head.building_name,                  # building name
+        head.flat_no,                        # flat no
+        head.door_no,                        # door no
+        head.street_name,                    # street name
+        head.landmark,                       # landmark
+        head.native_city,                    # native city
+        head.native_state,                   # native state
+        head.qualification,                  # qualification
+        head.occupation,                     # occupation
+        head.exact_nature_of_duties,         # exact nature of duties
+        head.blood_group,                    # blood group
+        head.social_media_link               # social media link
+        
+    ]
+    worksheet.append_row(head_row)
+
+
+def add_member_to_sheet(member):
+   
+
+    head = member.family_head
+    family = head.family
+    samaj = family.samaj
+
+    member_row = [
+            member.created_at.strftime('%Y-%m-%d %H:%M:%S') if member.created_at else '',
+            samaj.samaj_name,                    # samaj
+            family.total_family_members,         # total members
+            "",
+            "",
+            head.name_of_head,                   # head name
+            member.name,
+            member.middle_name,                  # middle name
+            member.last_name,                    # last name
+            member.birth_date.strftime('%Y-%m-%d') if member.birth_date else '',  # birth date (converted to string)
+            member.age,                          # age
+            member.gender,                       # gender
+            member.marital_status,               # marital status
+            member.relation_with_family_head,                              # relation with family head (self for head)
+            member.phone_no,                     # phone no
+            member.alternative_no,               # alternative no
+            member.landline_no,                  # landline no
+            member.email_id,                     # email id
+            member.country,                      # country
+            member.state,                        # state
+            member.district,                     # district
+            member.pincode,                      # pincode
+            member.building_name,                # building name
+            member.flat_no,                      # flat no
+            member.door_no,                      # door no
+            member.street_name,                  # street name
+            member.landmark,                     # landmark
+            member.native_city,                  # native city
+            member.native_state,                 # native state
+            member.qualification,                # qualification
+            member.occupation,                   # occupation
+            member.exact_nature_of_duties,       # exact nature of duties
+            member.blood_group,                  # blood group
+            member.social_media_link             # social media link
+            
+        ]
+    worksheet.append_row(member_row)

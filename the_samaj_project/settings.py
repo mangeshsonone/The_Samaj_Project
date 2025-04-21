@@ -121,6 +121,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CELERY_BROKER_URL = 'redis://redis:6379/0'
+
+# Optional but Recommended: Where Celery stores the result of tasks (same Redis is okay)
+CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
+
+# Optional: Accept only JSON for serialization (safer)
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+# Optional: Timezone support (match your Django settings)
+CELERY_TIMEZONE = 'Asia/Kolkata'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -138,6 +151,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

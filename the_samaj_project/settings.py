@@ -102,12 +102,7 @@ DATABASES = {
 # postgresql://the_samaj_db_user:AGk5vVKHzmCQM4oQvRPuyQO7CdDSBY8Q@dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com/the_samaj_db
 
 
-SECRET_KEY = "your-unsafe-open-key"  # Not recommended for production
-DEBUG = False
 
-
-# Redis settings (for Celery)
-CELERY_BROKER_URL = 'redis://:<REDIS_PASSWORD>@<REDIS_HOST>:6379/0'
 
 
 # Password validation
@@ -128,10 +123,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CELERY_BROKER_URL = 'redis://default:pjROCICQcfXcIhFlaIaTyBSVruqJqStR@redis.railway.internal:6379/0'
+CELERY_BROKER_URL = 'redis://redis:6379/0'
 
 # Optional but Recommended: Where Celery stores the result of tasks (same Redis is okay)
-CELERY_RESULT_BACKEND = 'redis://default:pjROCICQcfXcIhFlaIaTyBSVruqJqStR@redis.railway.internal:6379/0'
+CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
 
 # Optional: Accept only JSON for serialization (safer)
 CELERY_ACCEPT_CONTENT = ['json']

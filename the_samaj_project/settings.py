@@ -102,6 +102,13 @@ DATABASES = {
 # postgresql://the_samaj_db_user:AGk5vVKHzmCQM4oQvRPuyQO7CdDSBY8Q@dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com/the_samaj_db
 
 
+SECRET_KEY = "your-unsafe-open-key"  # Not recommended for production
+DEBUG = False
+
+
+# Redis settings (for Celery)
+CELERY_BROKER_URL = 'redis://:<REDIS_PASSWORD>@<REDIS_HOST>:6379/0'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

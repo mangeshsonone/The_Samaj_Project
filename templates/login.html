@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login with OTP</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -16,49 +16,55 @@
         }
 
         .container {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            width: 350px;
             text-align: center;
-            width: 320px;
         }
 
         h2 {
-            color: #333;
             margin-bottom: 20px;
+            color: #333;
         }
 
         input {
             width: 90%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 12px;
+            margin: 12px 0;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 16px;
-            outline: none;
             transition: 0.3s;
         }
 
         input:focus {
             border-color: #007bff;
-            box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+            outline: none;
         }
 
-        button {
+        .btn {
+            display: block;
             background-color: #007bff;
             color: white;
             border: none;
             padding: 12px;
+            margin: 10px auto;
             width: 100%;
-            border-radius: 5px;
-            cursor: pointer;
+            border-radius: 8px;
             font-size: 16px;
+            cursor: pointer;
             transition: background 0.3s;
         }
 
-        button:hover {
+        .btn:hover {
             background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
         }
 
         @media (max-width: 400px) {
@@ -71,12 +77,18 @@
 <body>
 
     <div class="container">
-        <h2>Login with Phone Number</h2>
+        <h2>Login with OTP</h2>
         <form method="post">
             {% csrf_token %}
             <input type="text" name="phone_number" placeholder="Enter Phone Number" required>
-            
-            <button type="submit">Send OTP</button>
+
+            <button type="submit" name="send_otp" class="btn">Send OTP</button>
+
+            <input type="text" name="otp" placeholder="Enter OTP" required>
+
+            {% if otp_sent %}
+                <button type="submit" name="verify_otp" class="btn">Verify OTP</button>
+            {% endif %}
         </form>
     </div>
 

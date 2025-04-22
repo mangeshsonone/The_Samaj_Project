@@ -27,7 +27,24 @@ INDIA_API_URL = "https://api.countrystatecity.in/v1/states"
 DISTRICT_API_URL = "https://cdn-api.co-vin.in/api/v2/admin/location/districts/"
 
 def login_view(request):
+    # def login_view(request):
     if request.method == 'POST':
+        phone_number = request.POST.get('phone_number')
+        otp = 123456
+
+        if otp:
+            # Verify OTP logic
+            if otp == "123456":  # Replace with actual verification
+                return redirect('/create_family/')
+            else:
+                return render(request, 'login.html', {'otp_sent': True, 'phone_number': phone_number, 'error': 'Invalid OTP'})
+
+        # Send OTP logic here
+        # e.g., twilio.verify(phone_number)
+        return render(request, 'login.html', {'otp_sent': True, 'phone_number': phone_number})
+    
+    return render(request, 'login.html')
+    # if request.method == 'POST':
     #     username = request.POST.get('username')
     #     phone_number = request.POST.get('phone_number')
 
@@ -47,9 +64,9 @@ def login_view(request):
     #     message_handler.send_otp_on_phone()
         
     #     return redirect(f'/otp_view/{profile.uuid}')
-        return redirect('/otp_view/')
+        # return redirect('/otp_view/')
 
-    return render(request, 'login.html')
+    # return render(request, 'login.html')
 
 
 def register_view(request):

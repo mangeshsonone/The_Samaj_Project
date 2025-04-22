@@ -128,10 +128,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CELERY_BROKER_URL = 'redis://redis:6379/0'
+CELERY_BROKER_URL = 'redis://default:pjROCICQcfXcIhFlaIaTyBSVruqJqStR@redis.railway.internal:6379/0'
 
 # Optional but Recommended: Where Celery stores the result of tasks (same Redis is okay)
-CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
+CELERY_RESULT_BACKEND = 'redis://default:pjROCICQcfXcIhFlaIaTyBSVruqJqStR@redis.railway.internal:6379/0'
 
 # Optional: Accept only JSON for serialization (safer)
 CELERY_ACCEPT_CONTENT = ['json']

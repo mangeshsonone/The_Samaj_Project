@@ -1,5 +1,13 @@
 from celery import shared_task
 from .google_sheet_data import add_family_head_to_sheet, add_member_to_sheet
+from django.core.management import call_command
+
+
+
+@shared_task
+def export_samaj_summary():
+    call_command('export_samaj_summary')
+    
 
 @shared_task
 def add_family_head_to_sheet_task(family_head_id):

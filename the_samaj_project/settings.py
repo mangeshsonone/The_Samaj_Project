@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'testapp',
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +60,16 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'the_samaj_project.urls'
+
+
+from celery.schedules import crontab
+
+CELERY_BEAT_SCHEDULE = {
+    'run-export-samaj-summary-every-minute': {
+        'task': 'testapp.tasks.export_samaj_summary',
+        'schedule': crontab(),  # every minute
+    },
+}
 
 TEMPLATES = [
     {

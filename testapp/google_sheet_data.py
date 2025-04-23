@@ -1,20 +1,20 @@
 
-def get_worksheet():
-
-    from gspread import worksheet
-    import gspread
-
-    from .models import Samaj,Family,FamilyHead,Member
 
 
+from gspread import worksheet
+import gspread
 
-    gc=gspread.service_account(filename="testapp/credentials.json")
+from .models import Samaj,Family,FamilyHead,Member
 
-    sh=gc.open_by_key('1qdJcSbquB9-guAeqxsWRTr7sn33GjkCa_8ZERYpIf2M')
+
+
+gc=gspread.service_account(filename="testapp/credentials.json")
+
+sh=gc.open_by_key('1qdJcSbquB9-guAeqxsWRTr7sn33GjkCa_8ZERYpIf2M')
     # for ws in sh.worksheets():
     #     print(ws.title)
 
-    worksheet = sh.worksheet("Sheet1")
+worksheet = sh.worksheet("Sheet1")
 
 
 
@@ -215,18 +215,20 @@ def get_worksheet():
     # # # Call the function to add the data
 
 def add_family_head_to_sheet(head):
-    worksheet = get_worksheet()
+    
     samaj = head.family.samaj
     family = head.family
-    # number_of_members = Member.objects.filter(family_head=head).count()
+    number_of_members = Member.objects.filter(family_head=head).count() + 1
+    remaining_members = family.total_family_members - number_of_members
 
     head_row = [
         head.created_at.strftime('%Y-%m-%d %H:%M:%S') if head.created_at else '',
-        samaj.samaj_name,                    # samaj
+        samaj.samaj_name,      
+        f"{head.name_of_head} {head.middle_name} {head.last_name}".title().strip(),                            # samaj
         family.total_family_members,         # total members
-        "",
-        "",
-        head.name_of_head,                   # head name
+        number_of_members,
+        remaining_members,
+                           # head name
         head.name_of_head,
         head.middle_name,                    # middle name
         head.last_name,                      # last name
@@ -261,19 +263,22 @@ def add_family_head_to_sheet(head):
 
 
 def add_member_to_sheet(member):
-    worksheet = get_worksheet()
+    
 
     head = member.family_head
     family = head.family
     samaj = family.samaj
+    number_of_members = Member.objects.filter(family_head=head).count() + 1
+    remaining_members = family.total_family_members - number_of_members
 
     member_row = [
             member.created_at.strftime('%Y-%m-%d %H:%M:%S') if member.created_at else '',
             samaj.samaj_name,                    # samaj
+            f"{head.name_of_head} {head.middle_name} {head.last_name}".title().strip(),
             family.total_family_members,         # total members
-            "",
-            "",
-            head.name_of_head,                   # head name
+            number_of_members,
+            remaining_members,
+                               # head name
             member.name,
             member.middle_name,                  # middle name
             member.last_name,                    # last name

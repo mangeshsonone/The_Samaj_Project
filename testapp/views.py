@@ -14,6 +14,8 @@ import logging
 from django.utils import timezone
 # from .google_sheet_data import adddata
 # from .main import a
+# from .google_sheet_data2 import a
+
 
 # Define logging for this module
 logger = logging.getLogger(__name__)
@@ -215,6 +217,7 @@ def create_familyhead(request, family_id=None):
                     logger.info("Deleted session data for IP: %s", ip)
 
                 else:
+                    ip = request.META.get("REMOTE_ADDR", "unknown")
                     logger.info("No session data found for IP: %s", ip)
                     logger.debug("Session after deletion: %s", dict(request.session))
                 return redirect('familyhead_list', familyhead_id=family_head.id)

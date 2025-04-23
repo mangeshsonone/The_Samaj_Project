@@ -23,6 +23,16 @@ services:
     depends_on:
       - redis
 
+  celery-beat:
+    build: .
+    command: celery -A the_samaj_project beat --loglevel=info
+    volumes:
+      - .:/app
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    depends_on:
+      - redis
+
   redis:
     image: redis:7-alpine
     ports:

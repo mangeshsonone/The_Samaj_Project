@@ -10,7 +10,7 @@ class DashboardDataAPIView(APIView):
     def get(self, request):
         samaj_data = []
         incomplete_heads = []
-
+        
         samajs = Samaj.objects.all()
         for samaj in samajs:
             families = Family.objects.filter(samaj=samaj)

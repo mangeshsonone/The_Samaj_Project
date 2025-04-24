@@ -22794,3 +22794,119 @@ django.template.exceptions.TemplateDoesNotExist: dashboard/samaj_dashboard.html
 INFO 2025-04-24 14:50:50,279 autoreload 840 14608 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
 INFO 2025-04-24 14:50:52,415 autoreload 26492 21100 Watching for file changes with StatReloader
 INFO 2025-04-24 14:52:44,589 autoreload 33388 40060 Watching for file changes with StatReloader
+INFO 2025-04-24 15:45:31,916 autoreload 22604 39516 Watching for file changes with StatReloader
+WARNING 2025-04-24 15:48:02,200 log 22604 11908 Not Found: /favicon.ico/
+INFO 2025-04-24 16:04:56,896 autoreload 23072 21268 Watching for file changes with StatReloader
+WARNING 2025-04-24 16:08:30,249 log 23072 29260 Not Found: /apidashboard/apidashboard/
+/
+INFO 2025-04-24 16:12:40,372 autoreload 26572 5628 Watching for file changes with StatReloader
+INFO 2025-04-24 16:16:41,491 autoreload 31168 29280 Watching for file changes with StatReloader
+WARNING 2025-04-24 16:18:14,095 log 31168 9636 Not Found: /apidashboard/apidashboard/
+/
+WARNING 2025-04-24 16:18:16,124 log 31168 9636 Not Found: /apidashboard/apidashboard/
+/
+WARNING 2025-04-24 16:18:18,339 log 31168 9636 Not Found: /apidashboard/apidashboard/
+/
+INFO 2025-04-24 16:19:31,686 autoreload 31168 29280 E:\samaj project django\samaj project\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-24 16:19:32,838 autoreload 38752 23920 Watching for file changes with StatReloader
+INFO 2025-04-24 16:19:34,673 autoreload 38752 23920 E:\samaj project django\samaj project\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-24 16:19:35,930 autoreload 39740 39532 Watching for file changes with StatReloader
+WARNING 2025-04-24 16:20:20,788 log 39740 38556 Not Found: /apidashboard/dashboard/
+/
+INFO 2025-04-24 16:20:45,007 autoreload 39740 39532 E:\samaj project django\samaj project\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-24 16:20:46,139 autoreload 34396 8524 Watching for file changes with StatReloader
+WARNING 2025-04-24 16:22:41,807 log 34396 40552 Not Found: /apidashboard/dashboard/
+/
+INFO 2025-04-24 16:28:32,766 autoreload 34396 8524 E:\samaj project django\samaj project\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-24 16:28:34,081 autoreload 9056 28136 Watching for file changes with StatReloader
+WARNING 2025-04-24 16:29:04,894 log 9056 39816 Not Found: /apidashboard/
+/
+WARNING 2025-04-24 16:34:57,080 log 9056 16884 Not Found: /apidashboard/
+/
+ERROR 2025-04-24 12:11:04,149 signal 1 139843202468736 Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x7f2fc7396c50>> raised: ModuleNotFoundError("No module named 'rest_framework'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/utils/dispatch/signal.py", line 280, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 101, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 139, in validate_models
+    self.django_setup()
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 135, in django_setup
+    django.setup()
+  File "/usr/local/lib/python3.10/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.10/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.10/site-packages/django/apps/config.py", line 193, in create
+    import_module(entry)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'rest_framework'
+ERROR 2025-04-24 12:11:04,149 signal 1 140365326232448 Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x7fa958392c50>> raised: ModuleNotFoundError("No module named 'rest_framework'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/utils/dispatch/signal.py", line 280, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 101, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 139, in validate_models
+    self.django_setup()
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 135, in django_setup
+    django.setup()
+  File "/usr/local/lib/python3.10/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.10/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.10/site-packages/django/apps/config.py", line 193, in create
+    import_module(entry)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'rest_framework'
+ERROR 2025-04-24 12:11:04,152 signal 1 140365326232448 Signal handler <promise@0x7fa957f472e0 --> <bound method Celery._autodiscover_tasks of <Celery the_samaj_project at 0x7fa9583c0f70>>> raised: AppRegistryNotReady("Apps aren't loaded yet.")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/utils/dispatch/signal.py", line 280, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.10/site-packages/vine/promises.py", line 161, in __call__
+    return self.throw()
+  File "/usr/local/lib/python3.10/site-packages/vine/promises.py", line 158, in __call__
+    retval = fun(*final_args, **final_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/celery/app/base.py", line 788, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_fixups(related_name)
+  File "/usr/local/lib/python3.10/site-packages/celery/app/base.py", line 797, in _autodiscover_tasks_from_fixups
+    return self._autodiscover_tasks_from_names([
+  File "/usr/local/lib/python3.10/site-packages/celery/app/base.py", line 800, in <listcomp>
+    for pkg in fixup.autodiscover_tasks()
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 111, in autodiscover_tasks
+    return [config.name for config in apps.get_app_configs()]
+  File "/usr/local/lib/python3.10/site-packages/django/apps/registry.py", line 147, in get_app_configs
+    self.check_apps_ready()
+  File "/usr/local/lib/python3.10/site-packages/django/apps/registry.py", line 138, in check_apps_ready
+    raise AppRegistryNotReady("Apps aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Apps aren't loaded yet.
+ERROR 2025-04-24 12:11:04,152 signal 1 139843202468736 Signal handler <promise@0x7f2fc6f3f2e0 --> <bound method Celery._autodiscover_tasks of <Celery the_samaj_project at 0x7f2fc73c4f70>>> raised: AppRegistryNotReady("Apps aren't loaded yet.")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/utils/dispatch/signal.py", line 280, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.10/site-packages/vine/promises.py", line 161, in __call__
+    return self.throw()
+  File "/usr/local/lib/python3.10/site-packages/vine/promises.py", line 158, in __call__
+    retval = fun(*final_args, **final_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/celery/app/base.py", line 788, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_fixups(related_name)
+  File "/usr/local/lib/python3.10/site-packages/celery/app/base.py", line 797, in _autodiscover_tasks_from_fixups
+    return self._autodiscover_tasks_from_names([
+  File "/usr/local/lib/python3.10/site-packages/celery/app/base.py", line 800, in <listcomp>
+    for pkg in fixup.autodiscover_tasks()
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 111, in autodiscover_tasks
+    return [config.name for config in apps.get_app_configs()]
+  File "/usr/local/lib/python3.10/site-packages/django/apps/registry.py", line 147, in get_app_configs
+    self.check_apps_ready()
+  File "/usr/local/lib/python3.10/site-packages/django/apps/registry.py", line 138, in check_apps_ready
+    raise AppRegistryNotReady("Apps aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Apps aren't loaded yet.
+INFO 2025-04-24 17:56:34,117 autoreload 29744 36500 Watching for file changes with StatReloader

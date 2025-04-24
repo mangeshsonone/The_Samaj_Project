@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import path, re_path
+from django.urls import path, re_path,include
 from testapp import views
 # from django.contrib.auth.decorators import login_required
 from django.conf import settings
@@ -49,5 +49,6 @@ urlpatterns = [
     path("save_form_view/", views.save_form_view, name="save_form_view"),
     path("save-form-data/", views.save_form_data, name="save_form_data"),
     path("dashboard/", views.samaj_dashboard, name="samaj_dashboard"),
+    path('apidashboard/', include('dashboardapp.urls')),
     
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

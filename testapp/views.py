@@ -517,3 +517,57 @@ def save_form_view(request):
     saved_data = {key: request.session.get(key, "") for key in FamilyHeadForm().fields.keys()}
     form = FamilyHeadForm(initial=saved_data)  # Load saved data
     return render(request, "familyhead_form.html", {"form": form})
+
+from datetime import datetime
+from django.db.models import Sum
+def samaj_dashboard(request):
+    today_str = datetime.now().strftime('%Y-%m-%d')
+
+    chart_data = []
+    incomplete_heads = []
+
+    samajs = Samaj.objects.all()
+
+    for samaj in samajs:
+        families = Family.objects.filter(samaj=samaj)
+        family_ids_with_heads = FamilyHead.objects.filter(family__in=families).values_list('family_id', flat=True).distinct()
+        valid_families = families.filter(id__in=family_ids_with_heads)
+
+        family_heads = FamilyHead.objects.filter(family__in=valid_families)
+        members = Member.objects.filter(family_head__in=family_heads)
+
+        total_heads = family_heads.count()
+        total_expected = valid_families.aggregate(total=Sum('total_family_members'))['total'] or 0
+        actual_entries = total_heads + members.count()
+
+        # For chart
+        chart_data.append({
+            'name': samaj.samaj_name,
+            'families': total_heads,
+            'members': actual_entries,
+            'needed': total_expected
+        })
+
+        # For incomplete family head list
+        for head in family_heads:
+            expected_total = head.family.total_family_members
+            entered_members = Member.objects.filter(family_head=head).count()
+            total_with_head = entered_members + 1
+            missing = expected_total - total_with_head
+
+            if missing > 0:
+                incomplete_heads.append({
+                    'samaj': samaj.samaj_name,
+                    'head': head.name_of_head,
+                    'phone': head.phone_no,
+                    'expected': expected_total,
+                    'entered': total_with_head,
+                    'missing': missing
+                })
+
+    context = {
+        'today': today_str,
+        'chart_data': chart_data,
+        'incomplete_heads': incomplete_heads
+    }
+    return render(request, 'dashboard.html', context)

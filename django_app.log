@@ -22140,3 +22140,657 @@ INFO 2025-04-23 15:04:50,563 autoreload 36132 11032 E:\samaj project django\sama
 INFO 2025-04-23 15:04:54,488 autoreload 22900 19288 Watching for file changes with StatReloader
 INFO 2025-04-23 15:05:12,402 autoreload 22900 19288 E:\samaj project django\samaj project\The_Samaj_Project\testapp\google_sheet_data.py changed, reloading.
 INFO 2025-04-23 15:05:14,890 autoreload 23104 6852 Watching for file changes with StatReloader
+INFO 2025-04-23 16:18:55,153 autoreload 23104 6852 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-23 16:18:58,875 autoreload 9436 24220 Watching for file changes with StatReloader
+INFO 2025-04-23 16:20:19,342 autoreload 9436 24220 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-23 16:20:21,707 autoreload 30772 27824 Watching for file changes with StatReloader
+INFO 2025-04-23 16:23:10,946 autoreload 30772 27824 E:\samaj project django\samaj project\The_Samaj_Project\the_samaj_project\urls.py changed, reloading.
+INFO 2025-04-23 16:23:13,467 autoreload 16344 30140 Watching for file changes with StatReloader
+INFO 2025-04-23 16:29:39,048 autoreload 7948 37368 Watching for file changes with StatReloader
+INFO 2025-04-23 16:38:54,382 autoreload 37520 40008 Watching for file changes with StatReloader
+INFO 2025-04-23 16:39:39,912 autoreload 6672 39960 Watching for file changes with StatReloader
+INFO 2025-04-23 16:42:27,223 autoreload 1380 24328 Watching for file changes with StatReloader
+INFO 2025-04-23 16:43:01,824 autoreload 3212 17412 Watching for file changes with StatReloader
+INFO 2025-04-23 16:45:19,763 autoreload 32968 28884 Watching for file changes with StatReloader
+INFO 2025-04-23 18:23:17,575 autoreload 11520 25788 Watching for file changes with StatReloader
+WARNING 2025-04-23 18:26:12,658 log 11520 21040 Not Found: /favicon.ico/
+WARNING 2025-04-23 18:26:54,925 log 11520 21184 Not Found: /favicon.ico/
+WARNING 2025-04-24 11:04:49,310 log 11520 37592 Not Found: /favicon.ico/
+INFO 2025-04-24 11:46:36,755 autoreload 40836 6664 Watching for file changes with StatReloader
+INFO 2025-04-24 12:29:27,354 autoreload 40836 6664 E:\samaj project django\samaj project\The_Samaj_Project\testapp\signals.py changed, reloading.
+INFO 2025-04-24 12:29:30,163 autoreload 29064 40352 Watching for file changes with StatReloader
+INFO 2025-04-24 12:29:32,390 autoreload 29064 40352 E:\samaj project django\samaj project\The_Samaj_Project\testapp\signals.py changed, reloading.
+INFO 2025-04-24 12:29:34,118 autoreload 40336 29328 Watching for file changes with StatReloader
+INFO 2025-04-24 12:29:44,646 autoreload 40336 29328 E:\samaj project django\samaj project\The_Samaj_Project\testapp\signals.py changed, reloading.
+INFO 2025-04-24 12:29:46,163 autoreload 6232 17468 Watching for file changes with StatReloader
+INFO 2025-04-24 12:58:44,485 autoreload 6232 17468 E:\samaj project django\samaj project\The_Samaj_Project\testapp\signals.py changed, reloading.
+INFO 2025-04-24 12:58:48,669 autoreload 26100 22136 Watching for file changes with StatReloader
+INFO 2025-04-24 13:02:36,430 autoreload 33960 34628 Watching for file changes with StatReloader
+INFO 2025-04-24 13:02:57,543 views 33960 19988 Family created with id: 384
+INFO 2025-04-24 13:02:59,226 views 33960 19988 Displaying family list for family id: 384
+INFO 2025-04-24 13:03:14,149 views 33960 19988 Using IP for session retrieval: 127.0.0.1
+ERROR 2025-04-24 13:03:15,418 views 33960 19988 Failed to fetch states from INDIA_API_URL, status: 401
+INFO 2025-04-24 13:03:15,419 views 33960 19988 Rendering familyhead_form.html
+ERROR 2025-04-24 13:03:23,129 log 33960 19988 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:23,332 log 33960 21908 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:23,570 log 33960 40744 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:24,017 log 33960 27464 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:24,278 log 33960 35224 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:24,662 log 33960 30580 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:26,005 log 33960 40744 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:26,938 log 33960 30580 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:27,080 log 33960 35224 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:27,428 log 33960 27464 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:27,800 log 33960 21908 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:29,336 log 33960 35224 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:33,137 log 33960 35224 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:33,362 log 33960 21908 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:33,915 log 33960 27464 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:34,459 log 33960 30580 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:34,570 log 33960 40744 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:38,106 log 33960 40744 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:40,264 log 33960 30580 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:40,286 log 33960 27464 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:42,993 log 33960 27464 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:43,026 log 33960 30580 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:47,762 log 33960 30580 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:47,792 log 33960 27464 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:55,615 log 33960 30580 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:55,618 log 33960 27464 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:59,753 log 33960 30580 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:03:59,846 log 33960 27464 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:04,639 log 33960 30580 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:04,664 log 33960 27464 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:08,319 log 33960 1488 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:08,358 log 33960 21740 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:08,405 log 33960 19152 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:08,489 log 33960 27464 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:08,493 log 33960 30580 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:08,512 log 33960 34932 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:10,686 log 33960 1488 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:10,898 log 33960 34932 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:10,930 log 33960 21740 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:11,041 log 33960 27464 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:11,061 log 33960 30580 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:11,084 log 33960 19152 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:12,777 log 33960 1488 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:12,911 log 33960 21740 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:13,007 log 33960 34932 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:16,989 log 33960 27032 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:18,391 log 33960 18272 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:18,406 log 33960 24220 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:26,598 log 33960 26308 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:26,653 log 33960 6992 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:29,214 log 33960 6992 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:29,296 log 33960 26308 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:31,557 log 33960 6992 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:31,743 log 33960 26308 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:34,554 log 33960 6992 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:34,584 log 33960 26308 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:37,057 log 33960 6992 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:37,072 log 33960 26308 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:39,526 log 33960 6992 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:39,654 log 33960 26308 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:42,924 log 33960 6992 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:42,931 log 33960 26308 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:50,970 log 33960 37760 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:50,999 log 33960 13032 Internal Server Error: /save-form-data/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 509, in save_form_data
+    request.session[ip] = request.POST.dict()
+UnboundLocalError: local variable 'ip' referenced before assignment
+ERROR 2025-04-24 13:04:54,076 views 33960 13032 Error in create_familyhead: 'Samaj' object has no attribute 'name'
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 210, in create_familyhead
+    family_head.save()
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\db\models\base.py", line 892, in save_base
+    post_save.send(
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\signals.py", line 39, in update_sheet_on_save
+    samaj_name = family.samaj.name
+AttributeError: 'Samaj' object has no attribute 'name'
+WARNING 2025-04-24 13:04:56,111 views 33960 13032 FamilyHead already exists for family id: 384
+INFO 2025-04-24 14:04:45,654 autoreload 36908 39284 Watching for file changes with StatReloader
+INFO 2025-04-24 14:46:36,267 autoreload 22164 40384 Watching for file changes with StatReloader
+ERROR 2025-04-24 14:47:31,035 log 22164 19568 Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 539, in samaj_dashboard
+    total_expected = valid_families.aggregate(total=Sum('total_family_members'))['total'] or 0
+NameError: name 'Sum' is not defined
+INFO 2025-04-24 14:48:20,870 autoreload 22164 40384 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-24 14:48:22,930 autoreload 840 14608 Watching for file changes with StatReloader
+ERROR 2025-04-24 14:49:59,697 log 840 27240 Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py", line 573, in samaj_dashboard
+    return render(request, 'dashboard/samaj_dashboard.html', context)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\samaj project django\samaj project\venv310\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: dashboard/samaj_dashboard.html
+INFO 2025-04-24 14:50:50,279 autoreload 840 14608 E:\samaj project django\samaj project\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-24 14:50:52,415 autoreload 26492 21100 Watching for file changes with StatReloader
+INFO 2025-04-24 14:52:44,589 autoreload 33388 40060 Watching for file changes with StatReloader

@@ -65,9 +65,9 @@ ROOT_URLCONF = 'the_samaj_project.urls'
 from celery.schedules import crontab
 
 CELERY_BEAT_SCHEDULE = {
-    'run-export-samaj-summary-every-minute': {
+    'run-export-samaj-summary-every-morning-6am': {
         'task': 'testapp.tasks.export_samaj_summary',
-        'schedule': crontab(),  # every minute
+        'schedule': crontab(hour=6, minute=0),  # Runs every day at 6:00 AM
     },
 }
 

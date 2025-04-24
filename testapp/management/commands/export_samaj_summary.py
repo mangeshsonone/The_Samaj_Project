@@ -7,25 +7,23 @@ from testapp.models import Samaj, Family, FamilyHead, Member
 
 
 class Command(BaseCommand):
-    help = 'Export Samaj summary to a CSV file'
+    help = 'Export Samaj summary and incomplete family heads to CSV files'
 
     def handle(self, *args, **kwargs):
         # Create output directory if it doesn't exist
         output_dir = 'exports'
         os.makedirs(output_dir, exist_ok=True)
 
-        # File name with current date
-        filename = f"samaj_summary_{datetime.now().strftime('%Y-%m-%d')}.csv"
-        file_path = os.path.join(output_dir, filename)
+        today_str = datetime.now().strftime('%Y-%m-%d')
+        
+        # === File 1: Samaj Summary CSV ===
+        summary_filename = f"samaj_summary_{today_str}.csv"
+        summary_path = os.path.join(output_dir, summary_filename)
 
-        with open(file_path, mode='w', newline='', encoding='utf-8') as file:
+        with open(summary_path, mode='w', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
-
-            # Header row
-            writer.writerow([
-                f"Samaj Summary Report - {datetime.now().strftime('%Y-%m-%d')}"
-            ])
-            writer.writerow([])  # Empty row
+            writer.writerow([f"Samaj Summary Report - {today_str}"])
+            writer.writerow([])
             writer.writerow(['Samaj Name', 'Total Family', 'Total Members', 'Actual Member Count Needed', 'Missing Member Count'])
 
             # Totals counters
@@ -64,7 +62,6 @@ class Command(BaseCommand):
                 grand_expected_members += total_expected
                 grand_remaining += remaining
 
-            # Write total row
             writer.writerow([])
             writer.writerow([
                 'Total',
@@ -74,4 +71,34 @@ class Command(BaseCommand):
                 grand_remaining
             ])
 
-        self.stdout.write(self.style.SUCCESS(f'CSV file "{filename}" created successfully at "{file_path}"!'))
+        # === File 2: Incomplete Family Heads CSV ===
+        incomplete_filename = f"incomplete_members_family_heads_{today_str}.csv"
+        incomplete_path = os.path.join(output_dir, incomplete_filename)
+
+        with open(incomplete_path, mode='w', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerow([f"Family Heads with Missing Members - {today_str}"])
+            writer.writerow([])
+            writer.writerow(['Samaj Name', 'Family Head', 'Phone No', 'Total Members Expected', 'Entered Members', 'Missing Members'])
+
+            for samaj in samajs:
+                families = Family.objects.filter(samaj=samaj)
+                family_heads = FamilyHead.objects.filter(family__in=families)
+
+                for head in family_heads:
+                    expected_total = head.family.total_family_members
+                    entered_members = Member.objects.filter(family_head=head).count()
+                    total_with_head = entered_members + 1  # +1 for head himself
+                    missing = expected_total - total_with_head
+
+                    if missing > 0:
+                        writer.writerow([
+                            samaj.samaj_name,
+                            head.name_of_head,
+                            head.phone_no,
+                            expected_total,
+                            total_with_head,
+                            missing
+                        ])
+
+        self.stdout.write(self.style.SUCCESS(f'CSV files "{summary_filename}" and "{incomplete_filename}" created successfully in "{output_dir}/"!'))

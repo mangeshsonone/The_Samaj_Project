@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Samaj Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .chart-box {
+            background: white;
+            padding: 16px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            width: 40%;
+            min-width: 260px;
+        }
+        .chart-box canvas {
+            max-height: 240px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Samaj Dashboard - {{ today }}</h1>
+
+    <div class="chart-container">
+        <div class="chart-box">
+            <h2 style="font-size: 18px;">Families by Samaj</h2>
+            <canvas id="barChart"></canvas>
+        </div>
+        <div class="chart-box">
+            <h2 style="font-size: 18px;">Expected vs Entered Members</h2>
+            <canvas id="lineChart"></canvas>
+        </div>
+        <div class="chart-box">
+            <h2 style="font-size: 18px;">Members by Samaj</h2>
+            <canvas id="membersChart"></canvas>
+        </div>
+        <div class="chart-box">
+            <h2 style="font-size: 18px;">Expected vs Not Entered</h2>
+            <canvas id="stackedChart"></canvas>
+        </div>
+    </div>
+
+    <h2 style="font-size: 18px;">Incomplete Members by Family Heads</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Samaj</th>
+                    <th>Family Head</th>
+                    <th>Phone No</th>
+                    <th>Expected</th>
+                    <th>Entered</th>
+                    <th>Missing</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in incomplete_heads %}
+                <tr>
+                    <td>{{ item.samaj }}</td>
+                    <td>{{ item.head }}</td>
+                    <td>{{ item.phone }}</td>
+                    <td>{{ item.expected }}</td>
+                    <td>{{ item.entered }}</td>
+                    <td>{{ item.missing }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="6">No incomplete entries found.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {{ chart_data|json_script:"samaj-data" }}
+    <script>
+        const chartData = JSON.parse(document.getElementById('samaj-data').textContent);
+        const labels = chartData.map(item => item.name);
+        const families = chartData.map(item => item.families);
+        const members = chartData.map(item => item.members);
+        const expected = chartData.map(item => item.needed);
+        const nonEntered = chartData.map(item => item.needed - item.members);
+
+        new Chart(document.getElementById('barChart'), {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Family Heads',
+                    data: families,
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true, scales: { y: { beginAtZero: true } } }
+        });
+
+        new Chart(document.getElementById('lineChart'), {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Expected',
+                        data: expected,
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        fill: false,
+                        tension: 0.3
+                    },
+                    {
+                        label: 'Entered',
+                        data: members,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        fill: false,
+                        tension: 0.3
+                    }
+                ]
+            },
+            options: { responsive: true, scales: { y: { beginAtZero: true } } }
+        });
+
+        new Chart(document.getElementById('membersChart'), {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Members Entered',
+                    data: members,
+                    backgroundColor: 'rgba(153, 102, 255, 0.7)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true, scales: { y: { beginAtZero: true } } }
+        });
+
+        new Chart(document.getElementById('stackedChart'), {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Entered',
+                        data: members,
+                        backgroundColor: 'rgba(75, 192, 192, 0.7)'
+                    },
+                    {
+                        label: 'Not Entered',
+                        data: nonEntered,
+                        backgroundColor: 'rgba(255, 159, 64, 0.7)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: { tooltip: { mode: 'index', intersect: false } },
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true, beginAtZero: true }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

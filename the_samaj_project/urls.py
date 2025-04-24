@@ -48,5 +48,6 @@ urlpatterns = [
     path('get_districts/<int:state_id>/', views.get_districts, name='get_districts'),
     path("save_form_view/", views.save_form_view, name="save_form_view"),
     path("save-form-data/", views.save_form_data, name="save_form_data"),
+    path("dashboard/", views.samaj_dashboard, name="samaj_dashboard"),
     
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

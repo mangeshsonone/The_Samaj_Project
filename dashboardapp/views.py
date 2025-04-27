@@ -10,6 +10,7 @@ from django.http import JsonResponse
 
 class DashboardDataAPIView(APIView):
     def get(self, request):
+        b=20
         samaj_data = []
         incomplete_heads = []
         a=10

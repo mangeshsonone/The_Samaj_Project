@@ -5,6 +5,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.db.models import Sum
 from testapp.models import Samaj, Family, FamilyHead, Member
+import requests
+from django.http import JsonResponse
 
 class DashboardDataAPIView(APIView):
     def get(self, request):
@@ -51,3 +53,53 @@ class DashboardDataAPIView(APIView):
             "chart_data": samaj_data,
             "incomplete_heads": incomplete_heads,
         })
+
+
+def send_to_google_sheet(request):
+    
+
+    GOOGLE_SHEETS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwbpJTHWrz4GRZtKzAJSppQN0eEOT3LOlQC3LFE4Rg8U7vBegnHlaKznFi-KQ1jqQh_Gw/exec"
+
+    payload = {
+        "created_at": "2025-04-25 12:00",
+        "samaj": "Test Samaj",
+        "head_name": "John Middle Doe",
+        "total_members": "4",
+        "entered_members": "3",
+        "remaining_members": "1",
+
+        "name": "John",
+        "middle_name": "Middle",
+        "last_name": "Doe",
+        "birth_date": "1980-01-01",
+        "age": "45",
+        "gender": "Male",
+        "marital_status": "Married",
+        "relation_with_head": "Self",
+        "phone_no": "1234567890",
+        "alternative_no": "0987654321",
+        "landline_no": "",
+        "email_id": "john.doe@example.com",
+        "country": "India",
+        "state": "Gujarat",
+        "district": "Ahmedabad",
+        "pincode": "380015",
+        "building_name": "Green Towers",
+        "flat_no": "202",
+        "door_no": "",
+        "street_name": "CG Road",
+        "landmark": "Near XYZ Mall",
+        "native_city": "Surat",
+        "native_state": "Gujarat",
+        "qualification": "MBA",
+        "occupation": "Manager",
+        "duties": "HR",
+        "blood_group": "B+",
+        "social_media": "https://linkedin.com/in/johndoe"
+    }
+    payload = {k: str(v) if v is not None else '' for k, v in payload.items()}
+
+    headers = {"Content-Type": "application/json"}
+    response = requests.post(GOOGLE_SHEETS_SCRIPT_URL, json=payload, headers=headers)
+    print("Status Code:", response.status_code)
+    print("Response:", response.text)

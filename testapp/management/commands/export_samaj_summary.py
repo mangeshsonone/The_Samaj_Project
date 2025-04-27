@@ -15,7 +15,7 @@ class Command(BaseCommand):
         os.makedirs(output_dir, exist_ok=True)
 
         today_str = datetime.now().strftime('%Y-%m-%d')
-        
+
         # === File 1: Samaj Summary CSV ===
         summary_filename = f"samaj_summary_{today_str}.csv"
         summary_path = os.path.join(output_dir, summary_filename)
@@ -24,9 +24,8 @@ class Command(BaseCommand):
             writer = csv.writer(file)
             writer.writerow([f"Samaj Summary Report - {today_str}"])
             writer.writerow([])
-            writer.writerow(['Samaj Name', 'Total Family', 'Total Members', 'Actual Member Count Needed', 'Missing Member Count'])
+            writer.writerow(['Samaj Name', 'Total Family', 'Total Members Entered', 'Actual Member Count Needed', 'Missing Member Count'])
 
-            # Totals counters
             grand_total_heads = 0
             grand_actual_members = 0
             grand_expected_members = 0
@@ -47,7 +46,6 @@ class Command(BaseCommand):
                 actual_entries = total_heads + members.count()
                 remaining = total_expected - actual_entries
 
-                # Write row
                 writer.writerow([
                     samaj.samaj_name,
                     total_heads,
@@ -56,7 +54,6 @@ class Command(BaseCommand):
                     remaining
                 ])
 
-                # Update grand totals
                 grand_total_heads += total_heads
                 grand_actual_members += actual_entries
                 grand_expected_members += total_expected
@@ -79,7 +76,11 @@ class Command(BaseCommand):
             writer = csv.writer(file)
             writer.writerow([f"Family Heads with Missing Members - {today_str}"])
             writer.writerow([])
-            writer.writerow(['Samaj Name', 'Family Head', 'Phone No', 'Total Members Expected', 'Entered Members', 'Missing Members'])
+            writer.writerow(['Samaj Name', 'Family Head', 'Phone No', 'Total Members Entered', 'Actual Member Count Needed', 'Missing Member Count'])
+
+            total_entered_all = 0
+            total_expected_all = 0
+            total_missing_all = 0
 
             for samaj in samajs:
                 families = Family.objects.filter(samaj=samaj)
@@ -88,17 +89,30 @@ class Command(BaseCommand):
                 for head in family_heads:
                     expected_total = head.family.total_family_members
                     entered_members = Member.objects.filter(family_head=head).count()
-                    total_with_head = entered_members + 1  # +1 for head himself
+                    total_with_head = entered_members + 1
                     missing = expected_total - total_with_head
 
                     if missing > 0:
                         writer.writerow([
                             samaj.samaj_name,
-                            head.name_of_head,
+                            f"{head.name_of_head} {head.middle_name} {head.last_name}".title().strip(),
                             head.phone_no,
-                            expected_total,
                             total_with_head,
+                            expected_total,
                             missing
                         ])
+                        total_entered_all += total_with_head
+                        total_expected_all += expected_total
+                        total_missing_all += missing
 
-        self.stdout.write(self.style.SUCCESS(f'CSV files "{summary_filename}" and "{incomplete_filename}" created successfully in "{output_dir}/"!'))
+            writer.writerow([])
+            writer.writerow([
+                'Total', '', '',
+                total_entered_all,
+                total_expected_all,
+                total_missing_all
+            ])
+
+        self.stdout.write(self.style.SUCCESS(
+            f'CSV files "{summary_filename}" and "{incomplete_filename}" created successfully in "{output_dir}/"!'
+        ))

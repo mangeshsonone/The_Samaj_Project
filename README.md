@@ -208,5 +208,136 @@ Want to contribute? Follow these steps:
 3️⃣ **Make changes & test thoroughly**  
 4️⃣ **Submit a pull request**  
 
+
+
+
+
+# 📊 Samaj Data Export System
+
+This project includes a custom Django management command and Celery task to export summary reports related to `Samaj`, `Family`, `FamilyHead`, and `Member` models. It automatically generates daily CSV reports with summary and missing data insights.
+
+---
+
+## 📝 Features
+
+- ✅ Export **Samaj Summary** to a CSV file.
+- ✅ Export **Incomplete Family Heads** to a CSV file.
+- ✅ Automatically runs every day at **6:00 AM** via Celery Beat.
+- ✅ Creates an `exports/` directory and stores dated reports.
+
+---
+
+## 📁 CSV Reports
+
+### 1. `samaj_summary_<YYYY-MM-DD>.csv`
+
+**Location**: `exports/samaj_summary_<date>.csv`
+
+**Description**: Provides summary data per Samaj.
+
+| Column                     | Description                                          |
+|---------------------------|------------------------------------------------------|
+| Samaj Name                | Name of the Samaj                                     |
+| Total Family              | Number of families with a registered head            |
+| Total Members             | Head + all members                                    |
+| Actual Member Count Needed | Expected number of members based on family data      |
+| Missing Member Count      | Difference between expected and actual members       |
+
+Includes a **final row** with grand totals.
+
+---
+
+### 2. `incomplete_members_family_heads_<YYYY-MM-DD>.csv`
+
+**Location**: `exports/incomplete_members_family_heads_<date>.csv`
+
+**Description**: Lists family heads where entered members are fewer than expected.
+
+| Column                 | Description                          |
+|------------------------|--------------------------------------|
+| Samaj Name             | Name of the Samaj                     |
+| Family Head            | Full name of the head of the family  |
+| Phone No               | Contact number of the head           |
+| Total Members Expected | Value from `total_family_members`    |
+| Entered Members        | Actual count (including the head)    |
+| Missing Members        | Difference between expected and entered |
+
+---
+
+## ⚙️ Management Command
+
+**Location**: `testapp/management/commands/export_samaj_summary.py`
+
+### ▶️ Usage (Manual Run)
+
+```bash
+python manage.py export_samaj_summary
+Behavior:
+
+Creates an exports/ directory if not present.
+
+Writes two CSV files.
+
+Outputs success message with file names.
+
+🔁 Celery Task Integration
+File: testapp/tasks.py
+
+python
+Copy
+Edit
+@shared_task
+def export_samaj_summary():
+    call_command('export_samaj_summary')
+Wraps the Django management command to be used as an asynchronous task.
+
+⏰ Scheduled Task (Celery Beat)
+Configuration:
+python
+Copy
+Edit
+from celery.schedules import crontab
+
+CELERY_BEAT_SCHEDULE = {
+    'run-export-samaj-summary-every-morning-6am': {
+        'task': 'testapp.tasks.export_samaj_summary',
+        'schedule': crontab(hour=6, minute=0),  # Runs daily at 6:00 AM
+    },
+}
+🕕 This ensures the export runs automatically every morning.
+
+🧪 Testing
+Manual Command Test
+bash
+Copy
+Edit
+python manage.py export_samaj_summary
+Manual Task Test via Django Shell
+python
+Copy
+Edit
+from testapp.tasks import export_samaj_summary
+export_samaj_summary.delay()
+✅ Requirements
+Django models:
+
+Samaj, Family, FamilyHead, Member
+
+Celery configured and running
+
+Celery Beat configured
+
+Redis or another message broker
+
+exports/ folder will be created automatically
+
+📂 Output Folder Structure
+bash
+Copy
+Edit
+/exports/
+├── samaj_summary_2025-04-25.csv
+└── incomplete_members_family_heads_2025-04-25.csv
+
 📌 **Happy Coding!** 🚀
 

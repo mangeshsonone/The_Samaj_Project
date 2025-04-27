@@ -558,7 +558,7 @@ def samaj_dashboard(request):
             if missing > 0:
                 incomplete_heads.append({
                     'samaj': samaj.samaj_name,
-                    'head': head.name_of_head,
+                    'head': f"{head.name_of_head} {head.middle_name} {head.last_name}".title().strip(),
                     'phone': head.phone_no,
                     'expected': expected_total,
                     'entered': total_with_head,

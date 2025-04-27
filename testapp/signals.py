@@ -19,11 +19,15 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from .models import FamilyHead, Member
 
-GOOGLE_SHEETS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxeNkTfCMCEwxnj3M-X20cAbZ1f3BY5tmFoYLu_uMRazrcO_FRHIlPzjWtaWd5_xXUMrQ/exec"
+GOOGLE_SHEETS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzep8DbvquVrcg3mBOaxCVnfiSoHgvSmeC7cjzNudpVtfPeEWLhnpDbXm-0_upFkD5C/exec"
 
 def send_data_to_google_sheet(payload):
     try:
-        response = requests.post(GOOGLE_SHEETS_SCRIPT_URL, data=payload)
+        response = requests.post(
+            GOOGLE_SHEETS_SCRIPT_URL,
+            json=payload,
+            headers={"Content-Type": "application/json"}
+        )
         print("Sheets update response:", response.text)
     except Exception as e:
         print("Error sending data to Sheets:", str(e))
@@ -42,14 +46,43 @@ def update_sheet_on_save(sender, instance, created, **kwargs):
         remaining_members = total_members - entered_members
 
         payload = {
-            "created_at": instance.created_at.strftime("%Y-%m-%d %H:%M"),
+            "created_at": instance.created_at.strftime("%Y-%m-%d %H:%M") if instance.created_at else "",
             "samaj": samaj_name,
-            "head_name": f"{instance.name} {instance.middle_name} {instance.last_name}",
+            "head_name": f"{instance.name_of_head} {instance.middle_name} {instance.last_name}".strip(),
             "total_members": total_members,
             "entered_members": entered_members,
             "remaining_members": remaining_members,
-            # Add other head-specific fields as needed
+
+            "name": instance.name_of_head,
+            "middle_name": instance.middle_name,
+            "last_name": instance.last_name,
+            "birth_date": instance.birth_date.strftime('%Y-%m-%d') if instance.birth_date else '',
+            "age": instance.age,
+            "gender": instance.gender,
+            "marital_status": instance.marital_status,
+            "relation_with_head": "self",  # Since it's the family head
+            "phone_no": instance.phone_no,
+            "alternative_no": instance.alternative_no,
+            "landline_no": instance.landline_no,
+            "email_id": instance.email_id,
+            "country": instance.country,
+            "state": instance.state,
+            "district": instance.district,
+            "pincode": instance.pincode,
+            "building_name": instance.building_name,
+            "flat_no": instance.flat_no,
+            "door_no": instance.door_no,
+            "street_name": instance.street_name,
+            "landmark": instance.landmark,
+            "native_city": instance.native_city,
+            "native_state": instance.native_state,
+            "qualification": instance.qualification,
+            "occupation": instance.occupation,
+            "duties": instance.exact_nature_of_duties,
+            "blood_group": instance.blood_group,
+            "social_media": instance.social_media_link,
         }
+
         send_data_to_google_sheet(payload)
 
     elif isinstance(instance, Member):

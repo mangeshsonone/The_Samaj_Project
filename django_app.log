@@ -3809,3 +3809,6 @@ Traceback (most recent call last):
   File "/app/testapp/views.py", line 37, in <module>
     import boto3
 ModuleNotFoundError: No module named 'boto3'
+WARNING 2025-05-05 09:34:58,068 log 9 140118297955200 Not Found: /favicon.ico/
+WARNING 2025-05-05 09:35:11,545 log 9 140118297955200 Not Found: /favicon.ico/
+WARNING 2025-05-05 09:37:11,367 log 9 140118297955200 Not Found: /static/admin/css/login.css/

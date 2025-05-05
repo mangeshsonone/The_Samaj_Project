@@ -104,3 +104,42 @@ def send_to_google_sheet(request):
     response = requests.post(GOOGLE_SHEETS_SCRIPT_URL, json=payload, headers=headers)
     print("Status Code:", response.status_code)
     print("Response:", response.text)
+
+import requests
+from django.http import JsonResponse
+import json
+
+import json
+import requests
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbz6J3rfOkqg5X8PGC6Vy0MjSPl622imPlR_Pmt5ugk8hqtu17QEsu39prNJ77Xh-34C/exec"
+
+@csrf_exempt
+def send_datatosheet(request):
+    if request.method == 'GET':  # Using GET so you can hit it from the browser
+        payload = {
+            'name': 'HardcodedUser',
+            'age': 30,
+            'pin': '400001'
+        }
+
+        try:
+            headers = {'Content-Type': 'application/json'}  # Set the content type to JSON
+            response = requests.post(GOOGLE_SHEET_URL, data=json.dumps(payload), headers=headers)
+
+            if response.status_code == 200:
+                return JsonResponse({"message": "Data sent to Google Sheets!"}, status=200)
+            else:
+                return JsonResponse({"error": "Google Sheet error"}, status=500)
+
+        except Exception as e:
+            return JsonResponse({"error": str(e)}, status=500)
+
+    return JsonResponse({"error": "Only GET allowed for testing"}, status=405)
+
+    # else:
+    #     return JsonResponse({"error": "Invalid HTTP method"}, status=405)
+
+

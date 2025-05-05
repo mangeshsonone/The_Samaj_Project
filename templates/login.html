@@ -73,24 +73,16 @@
             }
         }
     </style>
-</head>
+
 <body>
-
-    <div class="container">
-        <h2>Login with OTP</h2>
-        <form method="post">
-            {% csrf_token %}
-            <input type="text" name="phone_number" placeholder="Enter Phone Number" required>
-
-            <button type="submit" name="send_otp" class="btn">Send OTP</button>
-
-            <input type="text" name="otp" placeholder="Enter OTP" required>
-
-            {% if otp_sent %}
-                <button type="submit" name="verify_otp" class="btn">Verify OTP</button>
-            {% endif %}
-        </form>
-    </div>
-
+    <h2>Login</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required><br>
+        <button type="submit">Send OTP</button>
+    </form>
 </body>
+</html>
+
 </html>

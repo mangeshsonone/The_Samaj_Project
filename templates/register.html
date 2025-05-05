@@ -80,8 +80,15 @@
         <h2>Register</h2>
         <form method="post">
             {% csrf_token %}
-            <!-- <input type="text" name="username" placeholder="Enter Username" required> -->
-            <input type="text" name="phone_number" placeholder="Enter Phone Number" required>
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" name="phone_number" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+        
+            <label for="name">Full Name:</label>
+            <input type="text" name="name" required>
+        
             <button type="submit">Register</button>
         </form>
     </div>

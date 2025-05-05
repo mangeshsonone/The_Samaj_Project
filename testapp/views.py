@@ -28,24 +28,224 @@ COUNTRIES_API_URL="https://restcountries.com/v3.1/all"
 INDIA_API_URL = "https://api.countrystatecity.in/v1/states"
 DISTRICT_API_URL = "https://cdn-api.co-vin.in/api/v2/admin/location/districts/"
 
-def login_view(request):
-    # def login_view(request):
+
+#############################################aws otp
+
+import hmac
+import hashlib
+import base64
+import boto3
+from django.shortcuts import render, redirect
+from django.contrib import messages
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# AWS Cognito credentials directly in the view
+AWS_COGNITO_CLIENT_ID = os.environ.get('AWS_COGNITO_CLIENT_ID')
+AWS_COGNITO_CLIENT_SECRET = os.environ.get('AWS_COGNITO_CLIENT_SECRET')
+AWS_REGION = os.environ.get('AWS_REGION')
+AWS_COGNITO_USER_POOL_ID = os.environ.get('AWS_COGNITO_USER_POOL_ID')
+
+# AWS Credentials
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+# Initialize the Cognito client directly with AWS credentials (NOT RECOMMENDED for production)
+cognito_client = boto3.client(
+    'cognito-idp',
+    region_name=AWS_REGION,
+    aws_access_key_id=AWS_ACCESS_KEY_ID,
+    aws_secret_access_key=AWS_SECRET_ACCESS_KEY
+)
+
+def create_user_view(request):
     if request.method == 'POST':
         phone_number = request.POST.get('phone_number')
-        otp = 123456
+        email = request.POST.get('email', 'dummy@example.com')
+        name = request.POST.get('name', 'Anonymous')
 
-        if otp:
-            # Verify OTP logic
-            if otp == "123456":  # Replace with actual verification
-                return redirect('/create_family/')
-            else:
-                return render(request, 'login.html', {'otp_sent': True, 'phone_number': phone_number, 'error': 'Invalid OTP'})
+        if not phone_number.startswith('+'):
+            phone_number = '+91' + phone_number
 
-        # Send OTP logic here
-        # e.g., twilio.verify(phone_number)
-        return render(request, 'login.html', {'otp_sent': True, 'phone_number': phone_number})
-    
+        try:
+            cognito_client.admin_create_user(
+                UserPoolId=AWS_COGNITO_USER_POOL_ID,
+                Username=phone_number,
+                UserAttributes=[
+                    {'Name': 'phone_number', 'Value': phone_number},
+                    {'Name': 'phone_number_verified', 'Value': 'true'},
+                    {'Name': 'email', 'Value': email},
+                    {'Name': 'email_verified', 'Value': 'true'},
+                    {'Name': 'name', 'Value': name}
+                ],
+                MessageAction='SUPPRESS'
+            )
+
+            # ✅ Set a permanent dummy password (won’t be used in OTP auth)
+            cognito_client.admin_set_user_password(
+                UserPoolId=AWS_COGNITO_USER_POOL_ID,
+                Username=phone_number,
+                Password='TempSecurePass123!',  # This won't be used
+                Permanent=True
+            )
+
+            # ✅ Confirm the user manually (needed if suppressing email/SMS)
+            cognito_client.admin_confirm_sign_up(
+                UserPoolId=AWS_COGNITO_USER_POOL_ID,
+                Username=phone_number
+            )
+
+            messages.success(request, "User created successfully.")
+            return redirect('login')
+        except cognito_client.exceptions.UsernameExistsException:
+            messages.info(request, "User already exists.")
+            return redirect('login')
+        except Exception as e:
+            messages.error(request, str(e))
+            return redirect('register')
+
+    return render(request, 'register.html')
+
+
+
+
+def calculate_secret_hash(username):
+    message = username + AWS_COGNITO_CLIENT_ID
+    dig = hmac.new(
+        str(AWS_COGNITO_CLIENT_SECRET).encode('utf-8'),
+        msg=message.encode('utf-8'),
+        digestmod=hashlib.sha256
+    ).digest()
+    return base64.b64encode(dig).decode()
+
+def login_view(request):
+    if request.method == 'POST':
+        phone_number = request.POST.get('phone_number')
+        if not phone_number.startswith('+'):
+            phone_number = '+91' + phone_number  # Default to Indian numbers
+
+        try:
+            # Check if user exists in Cognito
+            cognito_client.admin_get_user(
+                UserPoolId=AWS_COGNITO_USER_POOL_ID,
+                Username=phone_number
+            )
+        except cognito_client.exceptions.UserNotFoundException:
+            messages.error(request, "User does not exist in Cognito.")
+            print("User not found in Cognito")
+
+
+
+        try:
+            user = cognito_client.admin_get_user(
+                UserPoolId=AWS_COGNITO_USER_POOL_ID,
+                Username=phone_number
+            )
+            print("User status:", user['UserStatus'])  # See if it's CONFIRMED or FORCE_CHANGE_PASSWORD, etc.
+            print("Enabled:", user['Enabled'])         # False means the user is disabled
+
+        except cognito_client.exceptions.UserNotFoundException:
+            messages.error(request, "User does not exist in Cognito.")
+            print("User not found in Cognito")
+            
+
+        
+
+        secret_hash = calculate_secret_hash(phone_number)
+        print("secret hash is",secret_hash)
+
+        try:
+            response = cognito_client.initiate_auth(
+                ClientId=AWS_COGNITO_CLIENT_ID,
+                AuthFlow='CUSTOM_AUTH',
+                AuthParameters={
+                    'USERNAME': phone_number,
+                    'SECRET_HASH': secret_hash,
+                }
+            )
+
+            request.session['cognito_session'] = {
+                'username': phone_number,
+                'session': response['Session'],
+            }
+            return redirect('verify_otp')
+        except cognito_client.exceptions.UserNotFoundException:
+            messages.error(request, "User does not exist.")
+            print("User does not exist")
+        except Exception as e:
+            messages.error(request, str(e))
+            print("Login error:", str(e))
+
     return render(request, 'login.html')
+
+def verify_otp_view(request):
+    print("entered votop")
+    if request.method == 'POST':
+        otp = request.POST.get('otp')  # Get OTP from the form
+        cognito_session = request.session.get('cognito_session')  # Get the session data
+
+        if not cognito_session:
+            messages.error(request, "Session expired. Try login again.")  # If session expired
+            return redirect('login')
+
+        try:
+            # Calculate the SECRET_HASH for the stored username
+            username = cognito_session['username']
+            secret_hash = calculate_secret_hash(username)  # Use your existing function
+            
+            # Verify the OTP with Cognito, now including SECRET_HASH
+            response = cognito_client.respond_to_auth_challenge(
+                ClientId=AWS_COGNITO_CLIENT_ID,  # App Client ID
+                ChallengeName='CUSTOM_CHALLENGE',  # Custom challenge for OTP
+                Session=cognito_session['session'],  # Session from previous step
+                ChallengeResponses={
+                    'USERNAME': username,  # Username (phone number)
+                    'ANSWER': otp,  # OTP provided by the user
+                    'SECRET_HASH': secret_hash  # Add the SECRET_HASH
+                }
+            )
+
+            # Authentication success, extract the tokens
+            id_token = response['AuthenticationResult']['IdToken']
+            access_token = response['AuthenticationResult']['AccessToken']
+
+            # Store the tokens in the session
+            request.session['id_token'] = id_token
+            request.session['access_token'] = access_token
+
+            return redirect('create_family')  # Redirect after successful login
+
+        except Exception as e:
+            messages.error(request, str(e))  # Catch any exceptions during OTP verification
+            print(f"OTP verification error: {str(e)}")  # Add for debugging
+            return redirect('verify_otp')  # Redirect to OTP verification if failed
+    
+    return render(request, 'otp.html')  # Render OTP verification page if GET request
+
+
+#############################################aws otp
+
+# def login_view(request):
+#     # def login_view(request):
+#     if request.method == 'POST':
+#         phone_number = request.POST.get('phone_number')
+#         otp = 123456
+
+#         if otp:
+#             # Verify OTP logic
+#             if otp == "123456":  # Replace with actual verification
+#                 return redirect('/create_family/')
+#             else:
+#                 return render(request, 'login.html', {'otp_sent': True, 'phone_number': phone_number, 'error': 'Invalid OTP'})
+
+#         # Send OTP logic here
+#         # e.g., twilio.verify(phone_number)
+#         return render(request, 'login.html', {'otp_sent': True, 'phone_number': phone_number})
+    
+    # return render(request, 'login.html')
     # if request.method == 'POST':
     #     username = request.POST.get('username')
     #     phone_number = request.POST.get('phone_number')
@@ -71,7 +271,7 @@ def login_view(request):
     # return render(request, 'login.html')
 
 
-def register_view(request):
+# def register_view(request):
     # if request.method == 'POST':
     #     username = request.POST.get('username')
     #     phone_number = request.POST.get('phone_number')
@@ -85,22 +285,22 @@ def register_view(request):
 
     #     return redirect('/login_view/')
 
-    return render(request, 'register.html')
+    # return render(request, 'register.html')
     
 # def otp_view(request, uid):
-def otp_view(request):
+# def otp_view(request):
     # profile = get_object_or_404(Profile, uuid=uid)
     
-    if request.method == 'POST':
+    # if request.method == 'POST':
     #     otp = request.POST.get('otp')
         
 
     #     if otp == profile.otp:
     #         login(request, profile.user)
-            return redirect('/create_family/')  # Redirect to home or dashboard
+            # return redirect('/create_family/')  # Redirect to home or dashboard
 
     # return render(request, 'otp.html', {'profile': profile})
-    return render(request, 'otp.html')
+    # return render(request, 'otp.html')
 
 
 # def logout_view(request):

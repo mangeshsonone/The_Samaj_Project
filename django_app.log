@@ -3251,3 +3251,561 @@ Traceback (most recent call last):
 ValueError: The view dashboardapp.views.send_to_google_sheet didn't return an HttpResponse object. It returned None instead.
 INFO 2025-04-25 18:08:38,995 autoreload 11188 8292 C:\Users\Developers\Documents\samaj_project\samaj_repo\The_Samaj_Project\testapp\signals.py changed, reloading.
 INFO 2025-04-25 18:08:40,107 autoreload 11536 10780 Watching for file changes with StatReloader
+INFO 2025-04-27 13:20:35,047 autoreload 7668 19744 Watching for file changes with StatReloader
+INFO 2025-04-27 13:22:30,104 autoreload 7668 19744 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-27 13:22:32,533 autoreload 13520 23724 Watching for file changes with StatReloader
+INFO 2025-04-27 13:22:39,670 autoreload 13520 23724 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-27 13:22:41,788 autoreload 7824 8004 Watching for file changes with StatReloader
+INFO 2025-04-27 13:22:52,322 autoreload 7824 8004 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-27 13:22:54,570 autoreload 11156 18508 Watching for file changes with StatReloader
+INFO 2025-04-27 13:22:56,840 autoreload 11156 18508 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-27 13:22:58,812 autoreload 13984 18348 Watching for file changes with StatReloader
+INFO 2025-04-27 13:23:01,044 autoreload 13984 18348 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-27 13:23:03,196 autoreload 15992 14652 Watching for file changes with StatReloader
+ERROR 2025-04-27 13:26:51,091 log 15992 24420 Internal Server Error: /apidashboard/send_data/
+WARNING 2025-04-27 13:26:51,579 log 15992 24420 Not Found: /favicon.ico/
+ERROR 2025-04-27 13:29:31,502 log 15992 6052 Internal Server Error: /apidashboard/send_data/
+INFO 2025-04-27 13:33:39,396 autoreload 15992 14652 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 13:33:41,742 autoreload 24412 14300 Watching for file changes with StatReloader
+INFO 2025-04-27 13:33:44,058 autoreload 24412 14300 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 13:33:46,157 autoreload 7440 5208 Watching for file changes with StatReloader
+INFO 2025-04-27 13:46:22,084 autoreload 7440 5208 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 13:46:24,482 autoreload 3524 11104 Watching for file changes with StatReloader
+ERROR 2025-04-27 13:46:35,366 log 3524 11196 Internal Server Error: /apidashboard/send_data/
+ERROR 2025-04-27 13:46:42,707 log 3524 11196 Internal Server Error: /apidashboard/send_data/
+INFO 2025-04-27 15:53:09,053 autoreload 3524 11104 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:53:11,138 autoreload 20320 16144 Watching for file changes with StatReloader
+INFO 2025-04-27 15:54:37,854 autoreload 20320 16144 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:54:39,140 autoreload 17212 2688 Watching for file changes with StatReloader
+ERROR 2025-04-27 15:55:44,481 log 17212 15880 Internal Server Error: /apidashboard/send_data/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_datatosheet() takes 0 positional arguments but 1 was given
+INFO 2025-04-27 15:56:02,802 autoreload 17212 2688 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:56:04,119 autoreload 20796 396 Watching for file changes with StatReloader
+ERROR 2025-04-27 15:57:18,343 log 20796 22880 Internal Server Error: /apidashboard/send_data/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view dashboardapp.views.send_datatosheet didn't return an HttpResponse object. It returned None instead.
+INFO 2025-04-27 15:57:46,748 autoreload 20796 396 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:57:48,678 autoreload 20700 1864 Watching for file changes with StatReloader
+INFO 2025-04-27 15:57:50,509 autoreload 20700 1864 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:57:51,848 autoreload 24456 20020 Watching for file changes with StatReloader
+INFO 2025-04-27 15:57:53,595 autoreload 24456 20020 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:57:54,860 autoreload 5376 22312 Watching for file changes with StatReloader
+INFO 2025-04-27 15:58:04,226 autoreload 5376 22312 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:58:05,532 autoreload 13740 10620 Watching for file changes with StatReloader
+ERROR 2025-04-27 15:58:27,671 log 13740 16120 Internal Server Error: /apidashboard/send_data/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py", line 128, in send_datatosheet
+    return JsonResponse("Data successfully sent to Google Sheets.")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\http\response.py", line 724, in __init__
+    raise TypeError(
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+INFO 2025-04-27 15:58:49,271 autoreload 13740 10620 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:58:50,627 autoreload 8820 18896 Watching for file changes with StatReloader
+INFO 2025-04-27 15:58:54,179 autoreload 8820 18896 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:58:55,418 autoreload 20332 23680 Watching for file changes with StatReloader
+INFO 2025-04-27 15:58:57,905 autoreload 20332 23680 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:58:59,089 autoreload 14520 13424 Watching for file changes with StatReloader
+INFO 2025-04-27 15:59:03,644 autoreload 14520 13424 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:59:04,878 autoreload 19416 8976 Watching for file changes with StatReloader
+INFO 2025-04-27 15:59:08,378 autoreload 19416 8976 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:59:09,605 autoreload 10356 22120 Watching for file changes with StatReloader
+INFO 2025-04-27 15:59:21,188 autoreload 10356 22120 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:59:22,562 autoreload 3792 17496 Watching for file changes with StatReloader
+INFO 2025-04-27 15:59:27,139 autoreload 3792 17496 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 15:59:28,331 autoreload 23312 20028 Watching for file changes with StatReloader
+INFO 2025-04-27 16:01:06,509 autoreload 23312 20028 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 16:01:07,716 autoreload 10656 2972 Watching for file changes with StatReloader
+INFO 2025-04-27 16:01:10,185 autoreload 10656 2972 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 16:01:11,387 autoreload 10680 11528 Watching for file changes with StatReloader
+INFO 2025-04-27 16:07:35,599 autoreload 10680 11528 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 16:07:37,006 autoreload 5504 15600 Watching for file changes with StatReloader
+INFO 2025-04-27 16:09:38,855 autoreload 5504 15600 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 16:09:40,219 autoreload 876 19536 Watching for file changes with StatReloader
+INFO 2025-04-27 18:14:48,441 autoreload 876 19536 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 18:14:50,463 autoreload 9044 19256 Watching for file changes with StatReloader
+INFO 2025-04-27 18:23:02,782 autoreload 9044 19256 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 18:23:05,886 autoreload 19416 10300 Watching for file changes with StatReloader
+INFO 2025-04-27 18:24:27,074 autoreload 19416 10300 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 18:24:28,588 autoreload 4768 17888 Watching for file changes with StatReloader
+INFO 2025-04-27 18:58:18,716 autoreload 4768 17888 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 18:58:21,552 autoreload 10744 10556 Watching for file changes with StatReloader
+INFO 2025-04-27 19:00:35,083 autoreload 10744 10556 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 19:00:37,246 autoreload 2248 16400 Watching for file changes with StatReloader
+INFO 2025-04-27 19:01:25,223 autoreload 2248 16400 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 19:01:27,558 autoreload 21580 19340 Watching for file changes with StatReloader
+WARNING 2025-04-27 19:01:40,885 log 21580 14900 Method Not Allowed: /apidashboard/send_data/
+WARNING 2025-04-27 19:01:41,882 log 21580 14900 Method Not Allowed: /apidashboard/send_data/
+INFO 2025-04-27 19:05:39,367 autoreload 21580 19340 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 19:05:41,771 autoreload 4084 22496 Watching for file changes with StatReloader
+INFO 2025-04-27 19:05:52,267 autoreload 4084 22496 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 19:05:54,713 autoreload 22168 13992 Watching for file changes with StatReloader
+WARNING 2025-04-27 19:06:21,148 log 22168 4768 Bad Request: /apidashboard/send_data/
+WARNING 2025-04-27 19:06:21,665 log 22168 4768 Bad Request: /apidashboard/send_data/
+WARNING 2025-04-27 19:06:26,460 log 22168 4768 Bad Request: /apidashboard/send_data/
+WARNING 2025-04-27 19:06:27,633 log 22168 4768 Bad Request: /apidashboard/send_data/
+INFO 2025-04-27 19:19:55,398 autoreload 22168 13992 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 19:19:57,883 autoreload 21128 21840 Watching for file changes with StatReloader
+ERROR 2025-04-27 19:24:53,357 log 21128 18216 Internal Server Error: /apidashboard/send_data/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view dashboardapp.views.send_datatosheet didn't return an HttpResponse object. It returned None instead.
+INFO 2025-04-27 19:27:52,722 autoreload 21128 21840 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 19:27:55,597 autoreload 9564 23868 Watching for file changes with StatReloader
+WARNING 2025-04-27 19:28:01,191 log 9564 24316 Bad Request: /apidashboard/send_data/
+INFO 2025-04-27 19:32:17,605 autoreload 9564 23868 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 19:32:20,020 autoreload 1476 5540 Watching for file changes with StatReloader
+INFO 2025-04-27 19:45:35,951 autoreload 1476 5540 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 19:45:38,519 autoreload 18808 2488 Watching for file changes with StatReloader
+INFO 2025-04-27 19:57:15,607 autoreload 18808 2488 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 19:57:18,262 autoreload 248 7900 Watching for file changes with StatReloader
+WARNING 2025-04-27 19:57:32,676 log 248 22972 Not Found: /studentapi/
+INFO 2025-04-27 20:01:13,867 autoreload 248 7900 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 20:01:16,325 autoreload 5400 16968 Watching for file changes with StatReloader
+INFO 2025-04-27 20:01:37,957 autoreload 5400 16968 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 20:01:40,391 autoreload 24120 18036 Watching for file changes with StatReloader
+INFO 2025-04-27 20:25:19,388 autoreload 24120 18036 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 20:25:22,441 autoreload 7288 16360 Watching for file changes with StatReloader
+INFO 2025-04-27 20:35:16,157 autoreload 7288 16360 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 20:35:18,690 autoreload 13468 9900 Watching for file changes with StatReloader
+INFO 2025-04-27 20:36:30,021 autoreload 13468 9900 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-27 20:36:32,303 autoreload 21320 16696 Watching for file changes with StatReloader
+INFO 2025-04-28 16:29:34,972 autoreload 28388 29644 Watching for file changes with StatReloader
+INFO 2025-04-28 16:31:00,107 autoreload 2940 28540 Watching for file changes with StatReloader
+INFO 2025-04-28 16:31:33,259 autoreload 2940 28540 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\urls.py changed, reloading.
+INFO 2025-04-28 16:31:35,792 autoreload 25352 28532 Watching for file changes with StatReloader
+INFO 2025-04-28 16:35:06,113 autoreload 25352 28532 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:35:08,730 autoreload 12360 30540 Watching for file changes with StatReloader
+INFO 2025-04-28 16:35:11,614 autoreload 12360 30540 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:35:13,577 autoreload 23820 2388 Watching for file changes with StatReloader
+INFO 2025-04-28 16:35:22,470 autoreload 23820 2388 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:35:24,739 autoreload 19488 28988 Watching for file changes with StatReloader
+INFO 2025-04-28 16:35:38,034 autoreload 19488 28988 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:35:40,506 autoreload 30628 30848 Watching for file changes with StatReloader
+INFO 2025-04-28 16:35:52,568 autoreload 30628 30848 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:35:54,827 autoreload 22024 7084 Watching for file changes with StatReloader
+INFO 2025-04-28 16:38:49,275 autoreload 22024 7084 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:38:52,061 autoreload 20844 31032 Watching for file changes with StatReloader
+INFO 2025-04-28 16:39:14,470 autoreload 20844 31032 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:39:16,871 autoreload 5360 19784 Watching for file changes with StatReloader
+INFO 2025-04-28 16:39:30,044 autoreload 5360 19784 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:39:32,406 autoreload 28640 30808 Watching for file changes with StatReloader
+INFO 2025-04-28 16:41:03,801 autoreload 28640 30808 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:41:06,211 autoreload 31220 26816 Watching for file changes with StatReloader
+INFO 2025-04-28 16:50:57,037 autoreload 31220 26816 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:51:00,884 autoreload 31052 28688 Watching for file changes with StatReloader
+INFO 2025-04-28 16:51:51,672 autoreload 31052 28688 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:51:54,172 autoreload 19740 16424 Watching for file changes with StatReloader
+INFO 2025-04-28 16:52:00,188 autoreload 19740 16424 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:52:02,606 autoreload 408 20924 Watching for file changes with StatReloader
+INFO 2025-04-28 16:53:23,186 autoreload 408 20924 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:53:25,259 autoreload 31020 10884 Watching for file changes with StatReloader
+INFO 2025-04-28 16:54:19,921 autoreload 31020 10884 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 16:54:22,151 autoreload 8480 29704 Watching for file changes with StatReloader
+INFO 2025-04-28 17:34:47,628 autoreload 8480 29704 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 17:34:50,083 autoreload 13224 20468 Watching for file changes with StatReloader
+INFO 2025-04-28 17:34:54,012 autoreload 13224 20468 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 17:34:55,702 autoreload 11032 30600 Watching for file changes with StatReloader
+INFO 2025-04-28 17:34:57,908 autoreload 11032 30600 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 17:34:59,684 autoreload 30112 31704 Watching for file changes with StatReloader
+INFO 2025-04-28 17:35:01,892 autoreload 30112 31704 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 17:35:03,279 autoreload 29460 26160 Watching for file changes with StatReloader
+INFO 2025-04-28 17:37:18,809 autoreload 29460 26160 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 17:37:21,554 autoreload 16608 20888 Watching for file changes with StatReloader
+INFO 2025-04-28 17:37:31,811 autoreload 16608 20888 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 17:37:34,089 autoreload 16536 15036 Watching for file changes with StatReloader
+INFO 2025-04-28 17:37:39,466 autoreload 16536 15036 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 17:37:41,906 autoreload 14980 8556 Watching for file changes with StatReloader
+INFO 2025-04-28 17:37:44,703 autoreload 14980 8556 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 17:37:46,937 autoreload 30392 26768 Watching for file changes with StatReloader
+INFO 2025-04-28 17:37:49,719 autoreload 30392 26768 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-28 17:37:51,961 autoreload 31020 13884 Watching for file changes with StatReloader
+INFO 2025-04-28 17:45:26,511 autoreload 6824 9644 Watching for file changes with StatReloader
+INFO 2025-04-28 19:09:05,225 views 6824 15328 Family created with id: 394
+INFO 2025-04-28 19:09:06,854 views 6824 15328 Displaying family list for family id: 394
+INFO 2025-04-28 19:09:24,678 views 6824 13080 Displaying family list for family id: 393
+WARNING 2025-04-28 19:09:39,396 log 6824 9460 Not Found: /family_head/393/
+WARNING 2025-04-28 19:10:11,090 log 6824 7680 Not Found: /amilyhead_list/
+WARNING 2025-04-28 19:10:22,502 log 6824 21676 Not Found: /familyhead_list/
+WARNING 2025-04-28 19:11:45,950 log 6824 20564 Not Found: /studentapi/
+INFO 2025-04-28 20:00:38,098 autoreload 30464 31360 Watching for file changes with StatReloader
+INFO 2025-04-29 10:32:31,317 autoreload 35816 33028 Watching for file changes with StatReloader
+INFO 2025-04-29 10:42:19,184 autoreload 32348 16480 Watching for file changes with StatReloader
+WARNING 2025-04-29 10:45:25,845 log 32348 35288 Not Found: /familyhead_list/
+INFO 2025-04-29 10:46:00,683 views 32348 24252 Displaying family list for family id: 396
+INFO 2025-04-29 10:46:11,416 views 32348 33028 Using IP for session retrieval: 127.0.0.1
+ERROR 2025-04-29 10:46:13,025 views 32348 33028 Failed to fetch states from INDIA_API_URL, status: 401
+INFO 2025-04-29 10:46:13,025 views 32348 33028 Rendering familyhead_form.html
+INFO 2025-04-29 10:46:30,208 views 32348 29372 Displaying family list for family id: 395
+WARNING 2025-04-29 10:46:43,137 views 32348 32184 FamilyHead already exists for family id: 395
+INFO 2025-04-29 11:59:18,874 autoreload 32348 16480 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-29 11:59:27,458 autoreload 32156 36636 Watching for file changes with StatReloader
+INFO 2025-04-29 11:59:38,601 autoreload 32156 36636 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-29 12:13:29,252 autoreload 27788 31788 Watching for file changes with StatReloader
+INFO 2025-04-29 12:25:03,923 autoreload 25916 25820 Watching for file changes with StatReloader
+INFO 2025-04-29 12:40:42,011 autoreload 25916 25820 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-29 12:40:45,767 autoreload 32988 23784 Watching for file changes with StatReloader
+INFO 2025-04-29 12:40:51,574 autoreload 32988 23784 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-29 12:40:53,986 autoreload 31824 6548 Watching for file changes with StatReloader
+INFO 2025-04-29 12:40:56,827 autoreload 31824 6548 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-29 12:40:59,118 autoreload 27328 7060 Watching for file changes with StatReloader
+INFO 2025-04-29 12:41:30,353 autoreload 27328 7060 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-04-29 12:41:32,935 autoreload 24144 25868 Watching for file changes with StatReloader
+INFO 2025-04-29 12:46:28,449 autoreload 19952 5124 Watching for file changes with StatReloader
+INFO 2025-04-29 12:47:46,046 autoreload 31912 25928 Watching for file changes with StatReloader
+INFO 2025-04-29 13:36:45,550 autoreload 21592 35492 Watching for file changes with StatReloader
+INFO 2025-04-29 14:09:17,314 autoreload 13968 27368 Watching for file changes with StatReloader
+INFO 2025-04-29 14:57:57,765 autoreload 14776 32616 Watching for file changes with StatReloader
+INFO 2025-04-29 15:53:57,827 autoreload 14776 32616 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 15:54:00,307 autoreload 26464 10700 Watching for file changes with StatReloader
+INFO 2025-04-29 15:54:03,100 autoreload 26464 10700 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 15:54:04,402 autoreload 3452 32972 Watching for file changes with StatReloader
+INFO 2025-04-29 16:01:45,942 autoreload 3452 32972 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 16:01:47,583 autoreload 5652 23860 Watching for file changes with StatReloader
+INFO 2025-04-29 16:01:49,935 autoreload 5652 23860 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 16:01:51,115 autoreload 30948 36296 Watching for file changes with StatReloader
+INFO 2025-04-29 16:02:07,372 autoreload 30948 36296 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 16:02:08,608 autoreload 32484 2020 Watching for file changes with StatReloader
+INFO 2025-04-29 16:02:10,860 autoreload 32484 2020 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 16:02:12,148 autoreload 29620 35984 Watching for file changes with StatReloader
+INFO 2025-04-29 16:02:40,177 autoreload 29620 35984 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 16:02:41,602 autoreload 33196 31360 Watching for file changes with StatReloader
+INFO 2025-04-29 16:09:31,661 autoreload 33196 31360 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\urls.py changed, reloading.
+INFO 2025-04-29 16:09:34,683 autoreload 27892 26380 Watching for file changes with StatReloader
+INFO 2025-04-29 16:09:43,764 autoreload 27892 26380 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\urls.py changed, reloading.
+INFO 2025-04-29 16:09:45,022 autoreload 23832 36632 Watching for file changes with StatReloader
+INFO 2025-04-29 16:09:52,763 autoreload 23832 36632 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\urls.py changed, reloading.
+INFO 2025-04-29 16:09:54,112 autoreload 21152 29200 Watching for file changes with StatReloader
+INFO 2025-04-29 16:09:56,402 autoreload 21152 29200 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\urls.py changed, reloading.
+INFO 2025-04-29 16:09:57,668 autoreload 30760 31512 Watching for file changes with StatReloader
+ERROR 2025-04-29 16:10:57,259 log 30760 22908 Internal Server Error: /create_user/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\The_Samaj_Project\testapp\views.py", line 59, in create_user_view
+    cognito_client.admin_create_user(
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 570, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 1031, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (AccessDeniedException) when calling the AdminCreateUser operation: User: arn:aws:iam::881490096060:user/s3 is not authorized to perform: cognito-idp:AdminCreateUser on resource: arn:aws:cognito-idp:us-east-1:881490096060:userpool/us-east-1_cDTNap5sh because no identity-based policy allows the cognito-idp:AdminCreateUser action
+ERROR 2025-04-29 16:26:52,572 log 30760 29860 Internal Server Error: /create_user/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\The_Samaj_Project\testapp\views.py", line 59, in create_user_view
+    cognito_client.admin_create_user(
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 570, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 1031, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidParameterException: An error occurred (InvalidParameterException) when calling the AdminCreateUser operation: Username should be a phone number.
+INFO 2025-04-29 16:29:07,058 autoreload 30760 31512 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 16:29:09,146 autoreload 31112 29392 Watching for file changes with StatReloader
+ERROR 2025-04-29 16:29:39,577 log 31112 33836 Internal Server Error: /create_user/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\The_Samaj_Project\testapp\views.py", line 62, in create_user_view
+    cognito_client.admin_create_user(
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 570, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 1031, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidParameterException: An error occurred (InvalidParameterException) when calling the AdminCreateUser operation: Attributes did not conform to the schema: emails: The attribute emails is required, name.formatted: The attribute name.formatted is required
+ERROR 2025-04-29 16:50:22,884 log 31112 4844 Internal Server Error: /create_user/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\The_Samaj_Project\testapp\views.py", line 62, in create_user_view
+    cognito_client.admin_create_user(
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 570, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 1031, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidParameterException: An error occurred (InvalidParameterException) when calling the AdminCreateUser operation: Attributes did not conform to the schema: emails: The attribute emails is required, name.formatted: The attribute name.formatted is required
+INFO 2025-04-29 17:02:44,928 autoreload 31112 29392 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 17:02:48,863 autoreload 34180 18020 Watching for file changes with StatReloader
+INFO 2025-04-29 17:11:23,896 autoreload 34180 18020 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 17:11:26,563 autoreload 32444 32260 Watching for file changes with StatReloader
+INFO 2025-04-29 17:16:12,125 autoreload 32444 32260 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 17:16:14,910 autoreload 20500 28372 Watching for file changes with StatReloader
+INFO 2025-04-29 17:17:41,096 autoreload 20500 28372 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-29 17:17:43,623 autoreload 29480 29100 Watching for file changes with StatReloader
+INFO 2025-04-30 11:06:02,118 autoreload 32284 38588 Watching for file changes with StatReloader
+ERROR 2025-04-30 11:11:54,991 log 32284 16244 Internal Server Error: /create_user/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\The_Samaj_Project\testapp\views.py", line 86, in create_user_view
+    cognito_client.admin_confirm_sign_up(
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 570, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 1031, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NotAuthorizedException: An error occurred (NotAuthorizedException) when calling the AdminConfirmSignUp operation: User cannot be confirmed. Current status is CONFIRMED
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\The_Samaj_Project\testapp\views.py", line 98, in create_user_view
+    return redirect('register')
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'register' not found. 'register' is not a valid view function or pattern name.
+INFO 2025-04-30 11:19:31,381 autoreload 32284 38588 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 11:19:38,826 autoreload 3172 33776 Watching for file changes with StatReloader
+INFO 2025-04-30 11:19:46,378 autoreload 3172 33776 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 11:19:48,530 autoreload 16096 18448 Watching for file changes with StatReloader
+INFO 2025-04-30 11:19:50,269 autoreload 16096 18448 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 11:19:52,261 autoreload 30752 7532 Watching for file changes with StatReloader
+INFO 2025-04-30 11:19:54,034 autoreload 30752 7532 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 11:19:55,852 autoreload 39488 24100 Watching for file changes with StatReloader
+INFO 2025-04-30 11:27:58,305 autoreload 39488 24100 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 11:28:01,256 autoreload 40352 37280 Watching for file changes with StatReloader
+INFO 2025-04-30 11:33:44,902 autoreload 40352 37280 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 11:33:47,824 autoreload 25656 29392 Watching for file changes with StatReloader
+INFO 2025-04-30 11:34:11,831 autoreload 25656 29392 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 11:34:14,095 autoreload 28496 34764 Watching for file changes with StatReloader
+INFO 2025-04-30 11:34:48,367 autoreload 28496 34764 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 11:34:50,769 autoreload 9760 40188 Watching for file changes with StatReloader
+INFO 2025-04-30 11:34:58,179 autoreload 9760 40188 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 11:35:00,464 autoreload 33844 32352 Watching for file changes with StatReloader
+INFO 2025-04-30 11:35:10,927 autoreload 33844 32352 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 11:35:13,286 autoreload 2664 35992 Watching for file changes with StatReloader
+INFO 2025-04-30 11:35:16,373 autoreload 2664 35992 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 11:35:18,731 autoreload 28072 32308 Watching for file changes with StatReloader
+INFO 2025-04-30 12:45:12,329 autoreload 31468 18044 Watching for file changes with StatReloader
+INFO 2025-04-30 13:04:21,452 autoreload 39460 31760 Watching for file changes with StatReloader
+INFO 2025-04-30 16:43:51,588 autoreload 39460 31760 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 16:43:56,168 autoreload 18716 40912 Watching for file changes with StatReloader
+INFO 2025-04-30 16:44:03,152 autoreload 18716 40912 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 16:44:04,667 autoreload 38320 37028 Watching for file changes with StatReloader
+INFO 2025-04-30 16:44:33,897 autoreload 38320 37028 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 16:44:35,274 autoreload 37896 38016 Watching for file changes with StatReloader
+INFO 2025-04-30 16:44:37,586 autoreload 37896 38016 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 16:44:38,983 autoreload 37428 33280 Watching for file changes with StatReloader
+INFO 2025-04-30 16:45:01,888 autoreload 37428 33280 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 16:45:03,464 autoreload 30548 34632 Watching for file changes with StatReloader
+INFO 2025-04-30 16:45:05,920 autoreload 30548 34632 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 16:45:07,249 autoreload 40568 29012 Watching for file changes with StatReloader
+INFO 2025-04-30 16:45:09,573 autoreload 40568 29012 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 16:45:10,896 autoreload 34764 9460 Watching for file changes with StatReloader
+INFO 2025-04-30 16:48:03,294 autoreload 34764 9460 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-04-30 16:48:05,088 autoreload 9112 38392 Watching for file changes with StatReloader
+INFO 2025-04-30 17:29:06,097 autoreload 9112 38392 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-04-30 17:29:09,649 autoreload 33500 24272 Watching for file changes with StatReloader
+INFO 2025-04-30 17:33:42,758 autoreload 33500 24272 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-30 17:33:45,404 autoreload 40500 30628 Watching for file changes with StatReloader
+INFO 2025-04-30 17:33:57,495 autoreload 40500 30628 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-30 17:33:59,925 autoreload 32568 38424 Watching for file changes with StatReloader
+INFO 2025-04-30 17:34:07,980 autoreload 32568 38424 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-30 17:34:10,294 autoreload 33280 14532 Watching for file changes with StatReloader
+INFO 2025-04-30 17:34:16,052 autoreload 33280 14532 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-30 17:34:18,201 autoreload 5832 40320 Watching for file changes with StatReloader
+INFO 2025-04-30 17:34:20,772 autoreload 5832 40320 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-30 17:34:23,114 autoreload 39316 36568 Watching for file changes with StatReloader
+INFO 2025-04-30 17:34:41,423 autoreload 39316 36568 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-30 17:34:43,636 autoreload 37192 37100 Watching for file changes with StatReloader
+INFO 2025-04-30 17:37:10,385 autoreload 37192 37100 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-30 17:37:13,118 autoreload 5832 22840 Watching for file changes with StatReloader
+INFO 2025-04-30 17:37:16,384 autoreload 5832 22840 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-04-30 17:37:18,585 autoreload 39756 27172 Watching for file changes with StatReloader
+WARNING 2025-04-30 17:40:25,385 log 39756 40548 Method Not Allowed: /apidashboard/family_profile/
+WARNING 2025-04-30 17:50:15,908 log 39756 31948 Method Not Allowed: /apidashboard/send_data/
+WARNING 2025-04-30 17:56:57,194 log 39756 33868 Method Not Allowed: /apidashboard/family_profile/
+WARNING 2025-04-30 17:57:52,440 log 39756 38392 Method Not Allowed: /apidashboard/family_profile/
+INFO 2025-05-02 10:54:00,593 autoreload 42284 46488 Watching for file changes with StatReloader
+INFO 2025-05-02 12:11:36,070 autoreload 42284 46488 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-02 12:11:41,809 autoreload 42160 40796 Watching for file changes with StatReloader
+INFO 2025-05-02 12:12:52,850 autoreload 42160 40796 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-02 12:12:55,123 autoreload 43284 32804 Watching for file changes with StatReloader
+INFO 2025-05-02 12:13:08,776 autoreload 43284 32804 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-02 12:13:11,063 autoreload 12064 11504 Watching for file changes with StatReloader
+WARNING 2025-05-02 12:14:39,917 log 12064 41912 Not Found: /apidashboard/family_profile/
+WARNING 2025-05-02 13:42:48,539 log 12064 30844 Not Found: /family_profile/9847082228/
+WARNING 2025-05-02 13:42:49,383 log 12064 30844 Not Found: /favicon.ico/
+INFO 2025-05-02 14:03:58,323 autoreload 12064 11504 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-02 14:04:01,714 autoreload 46480 41520 Watching for file changes with StatReloader
+WARNING 2025-05-02 14:24:02,229 log 46480 32668 Not Found: /favicon.ico/
+INFO 2025-05-02 15:56:32,904 autoreload 46480 41520 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-02 15:56:36,451 autoreload 41560 43756 Watching for file changes with StatReloader
+INFO 2025-05-02 16:10:58,718 autoreload 41560 43756 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-02 16:11:00,852 autoreload 19688 44716 Watching for file changes with StatReloader
+INFO 2025-05-05 12:05:45,167 autoreload 37420 45968 Watching for file changes with StatReloader
+INFO 2025-05-05 12:18:51,138 autoreload 37420 45968 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-05 12:18:54,480 autoreload 49648 2692 Watching for file changes with StatReloader
+INFO 2025-05-05 12:19:02,085 autoreload 49648 2692 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-05 12:19:04,138 autoreload 46468 43104 Watching for file changes with StatReloader
+INFO 2025-05-05 12:19:07,050 autoreload 46468 43104 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-05 12:19:09,173 autoreload 34908 50060 Watching for file changes with StatReloader
+INFO 2025-05-05 12:19:16,036 autoreload 34908 50060 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-05 12:19:17,913 autoreload 39668 25188 Watching for file changes with StatReloader
+INFO 2025-05-05 12:43:14,340 autoreload 39668 25188 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-05-05 12:43:17,660 autoreload 51584 38968 Watching for file changes with StatReloader
+INFO 2025-05-05 12:44:32,001 autoreload 51584 38968 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-05-05 12:44:34,331 autoreload 48904 49840 Watching for file changes with StatReloader
+INFO 2025-05-05 12:45:55,573 autoreload 48904 49840 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-05-05 12:45:57,804 autoreload 51900 49888 Watching for file changes with StatReloader
+INFO 2025-05-05 12:46:02,188 autoreload 51900 49888 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-05-05 12:46:04,218 autoreload 49100 12356 Watching for file changes with StatReloader
+INFO 2025-05-05 13:05:30,385 autoreload 45592 34764 Watching for file changes with StatReloader
+INFO 2025-05-05 13:06:33,484 autoreload 45592 34764 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-05-05 13:06:35,589 autoreload 49816 13496 Watching for file changes with StatReloader
+INFO 2025-05-05 13:06:48,143 autoreload 16560 12564 Watching for file changes with StatReloader
+INFO 2025-05-05 13:07:11,251 autoreload 16560 12564 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-05-05 13:07:13,241 autoreload 1336 33716 Watching for file changes with StatReloader
+INFO 2025-05-05 13:07:15,314 autoreload 1336 33716 C:\python\samaj repo\The_Samaj_Project\testapp\views.py changed, reloading.
+INFO 2025-05-05 13:07:17,265 autoreload 38308 42736 Watching for file changes with StatReloader
+INFO 2025-05-05 13:21:36,276 autoreload 38308 42736 C:\python\samaj repo\The_Samaj_Project\the_samaj_project\settings.py changed, reloading.
+INFO 2025-05-05 13:40:36,408 autoreload 45524 49396 Watching for file changes with StatReloader
+ERROR 2025-05-05 09:26:51,814 signal 1 139914980842368 Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x7f407d8c6a40>> raised: ModuleNotFoundError("No module named 'boto3'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/utils/dispatch/signal.py", line 280, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 101, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 141, in validate_models
+    run_checks()
+  File "/usr/local/lib/python3.10/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 494, in check
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 715, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 708, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/app/the_samaj_project/urls.py", line 20, in <module>
+    from testapp import views
+  File "/app/testapp/views.py", line 37, in <module>
+    import boto3
+ModuleNotFoundError: No module named 'boto3'
+ERROR 2025-05-05 09:26:51,814 signal 1 139757242215296 Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x7f1bc397aa40>> raised: ModuleNotFoundError("No module named 'boto3'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/utils/dispatch/signal.py", line 280, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 101, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/usr/local/lib/python3.10/site-packages/celery/fixups/django.py", line 141, in validate_models
+    run_checks()
+  File "/usr/local/lib/python3.10/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python3.10/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 494, in check
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 715, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 708, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/app/the_samaj_project/urls.py", line 20, in <module>
+    from testapp import views
+  File "/app/testapp/views.py", line 37, in <module>
+    import boto3
+ModuleNotFoundError: No module named 'boto3'

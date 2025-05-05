@@ -27,6 +27,9 @@ DEBUG = True
 
 
 
+AWS_COGNITO_USER_POOL_ID = 'us-east-1_cDTNap5sh'  # Your Cognito User Pool ID
+AWS_COGNITO_CLIENT_ID = '2drlbcp9a6k2s4gqdjba9rvpvt'  # Your App Client ID
+AWS_REGION = 'us-east-1'  # Your AWS Region (N. Virginia)
 
 
 CSRF_TRUSTED_ORIGINS = [
@@ -107,6 +110,8 @@ import os
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+
 DATABASES = {
     'default': dj_database_url.parse(
         "postgresql://the_samaj_db_user:AGk5vVKHzmCQM4oQvRPuyQO7CdDSBY8Q@dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com/the_samaj_db"
@@ -114,6 +119,13 @@ DATABASES = {
 }
 # postgresql://the_samaj_db_user:AGk5vVKHzmCQM4oQvRPuyQO7CdDSBY8Q@dpg-cvqaajpr0fns73elgpig-a.oregon-postgres.render.com/the_samaj_db
 
+# new /db
+# postgresql://wh_db_samaj_user:EvII08zpwY9TMTotD54s6wijPTN5nSeA@dpg-d086vf49c44c73bjoa8g-a.virginia-postgres.render.com/wh_db_samaj
+# DATABASES = {
+#     'default': dj_database_url.parse(
+#         "postgresql://wh_db_samaj_user:EvII08zpwY9TMTotD54s6wijPTN5nSeA@dpg-d086vf49c44c73bjoa8g-a.virginia-postgres.render.com/wh_db_samaj"
+#     )
+# }
 
 
 

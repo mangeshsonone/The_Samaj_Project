@@ -5,6 +5,7 @@ amqp==5.3.1
 asgiref==3.8.1
 attrs==25.3.0
 billiard==4.2.1
+boto3==1.38.3
 cachetools==5.5.2
 celery==5.5.1
 certifi==2025.1.31

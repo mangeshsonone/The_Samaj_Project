@@ -1,5 +1,7 @@
 import csv
 import os
+from itertools import chain
+from operator import attrgetter
 from datetime import datetime
 from django.core.management.base import BaseCommand
 from django.db.models import Sum
@@ -7,18 +9,22 @@ from testapp.models import Samaj, Family, FamilyHead, Member
 
 
 class Command(BaseCommand):
-    help = 'Export Samaj summary and incomplete family heads to CSV files'
+    help = 'Export Samaj summary, incomplete family heads, and all family heads/members to CSV files'
 
     def handle(self, *args, **kwargs):
-        # Create output directory if it doesn't exist
         output_dir = 'exports'
         os.makedirs(output_dir, exist_ok=True)
 
         today_str = datetime.now().strftime('%Y-%m-%d')
 
+        samajs = Samaj.objects.all()
+
         # === File 1: Samaj Summary CSV ===
         summary_filename = f"samaj_summary_{today_str}.csv"
         summary_path = os.path.join(output_dir, summary_filename)
+
+        if os.path.exists(summary_path):
+            os.remove(summary_path)
 
         with open(summary_path, mode='w', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
@@ -30,8 +36,6 @@ class Command(BaseCommand):
             grand_actual_members = 0
             grand_expected_members = 0
             grand_remaining = 0
-
-            samajs = Samaj.objects.all()
 
             for samaj in samajs:
                 families = Family.objects.filter(samaj=samaj)
@@ -71,6 +75,9 @@ class Command(BaseCommand):
         # === File 2: Incomplete Family Heads CSV ===
         incomplete_filename = f"incomplete_members_family_heads_{today_str}.csv"
         incomplete_path = os.path.join(output_dir, incomplete_filename)
+
+        if os.path.exists(incomplete_path):
+            os.remove(incomplete_path)
 
         with open(incomplete_path, mode='w', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
@@ -113,6 +120,133 @@ class Command(BaseCommand):
                 total_missing_all
             ])
 
+        # === File 3: Family Heads and Members Combined CSV ===
+        combined_filename = f"family_heads_and_members_{today_str}.csv"
+        combined_path = os.path.join(output_dir, combined_filename)
+
+        if os.path.exists(combined_path):
+            os.remove(combined_path)
+
+        with open(combined_path, mode='w', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerow([f"Family Heads and Members - {today_str}"])
+            writer.writerow([])
+            writer.writerow([
+                'Created At', 'Samaj Name', 'Head of Family',
+                'Total Members Needed', 'Total Members Entered', 'Remaining Members',
+                'First Name', 'Middle Name', 'Last Name', 'Birth Date', 'Age', 'Gender',
+                'Marital Status', 'Relation with Head',
+                'Phone No', 'Alternative No', 'Landline No', 'Email ID',
+                'Country', 'State', 'District', 'Pincode',
+                'Building Name', 'Flat No', 'Door No', 'Street Name', 'Landmark',
+                'Native City', 'Native State',
+                'Qualification', 'Occupation', 'Nature of Duties', 'Blood Group', 'Social Media Link'
+            ])
+
+            heads = FamilyHead.objects.all()
+            members = Member.objects.all()
+
+            combined = sorted(
+                chain(heads, members),
+                key=attrgetter('created_at')
+            )
+
+            for obj in combined:
+                if isinstance(obj, FamilyHead):
+                    row = self.format_family_head_row(obj)
+                else:
+                    row = self.format_member_row(obj)
+                writer.writerow(row)
+
         self.stdout.write(self.style.SUCCESS(
-            f'CSV files "{summary_filename}" and "{incomplete_filename}" created successfully in "{output_dir}/"!'
+            f'CSV files "{summary_filename}", "{incomplete_filename}", and "{combined_filename}" created successfully in "{output_dir}/"!'
         ))
+
+    def format_family_head_row(self, head):
+        family = head.family
+        samaj = family.samaj
+        number_of_members = Member.objects.filter(family_head=head).count() + 1
+        remaining_members = family.total_family_members - number_of_members
+
+        return [
+            head.created_at.strftime('%Y-%m-%d %H:%M:%S') if head.created_at else '',
+            samaj.samaj_name,
+            f"{head.name_of_head} {head.middle_name} {head.last_name}".title().strip(),
+            family.total_family_members,
+            number_of_members,
+            remaining_members,
+            
+            head.name_of_head,
+            head.middle_name,
+            head.last_name,
+            head.birth_date.strftime('%Y-%m-%d') if head.birth_date else '',
+            head.age,
+            head.gender,
+            head.marital_status,
+            "Self",
+            head.phone_no,
+            head.alternative_no,
+            head.landline_no,
+            head.email_id,
+            head.country,
+            head.state,
+            head.district,
+            head.pincode,
+            head.building_name,
+            head.flat_no,
+            head.door_no,
+            head.street_name,
+            head.landmark,
+            head.native_city,
+            head.native_state,
+            head.qualification,
+            head.occupation,
+            head.exact_nature_of_duties,
+            head.blood_group,
+            head.social_media_link
+        ]
+
+    def format_member_row(self, member):
+        head = member.family_head
+        family = head.family
+        samaj = family.samaj
+        number_of_members = Member.objects.filter(family_head=head).count() + 1
+        remaining_members = family.total_family_members - number_of_members
+
+        return [
+            member.created_at.strftime('%Y-%m-%d %H:%M:%S') if member.created_at else '',
+            samaj.samaj_name,
+            f"{head.name_of_head} {head.middle_name} {head.last_name}".title().strip(),
+            family.total_family_members,
+            number_of_members,
+            remaining_members,
+            
+            member.name,
+            member.middle_name,
+            member.last_name,
+            member.birth_date.strftime('%Y-%m-%d') if member.birth_date else '',
+            member.age,
+            member.gender,
+            member.marital_status,
+            member.relation_with_family_head,
+            member.phone_no,
+            member.alternative_no,
+            member.landline_no,
+            member.email_id,
+            member.country,
+            member.state,
+            member.district,
+            member.pincode,
+            member.building_name,
+            member.flat_no,
+            member.door_no,
+            member.street_name,
+            member.landmark,
+            member.native_city,
+            member.native_state,
+            member.qualification,
+            member.occupation,
+            member.exact_nature_of_duties,
+            member.blood_group,
+            member.social_media_link
+        ]

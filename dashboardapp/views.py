@@ -105,6 +105,32 @@ class DashboardDataAPIView(APIView):
 
 
 
+class DashbordSamajAPIView(APIView):
+    def get(self, request):
+        total_samaj = Samaj.objects.count()
+
+        # Stats for each Samaj
+        stats = []
+
+        for samaj in Samaj.objects.all():
+            families = Family.objects.filter(samaj=samaj)
+            family_ids = families.values_list('id', flat=True)
+
+            family_heads_count = FamilyHead.objects.filter(family__in=family_ids).count()
+            families_count=family_heads_count
+            members_count = Member.objects.filter(family_head__family__in=family_ids).count()
+
+            stats.append({
+                'samaj_name': samaj.samaj_name,
+                'total_families': families_count,
+                'total_family_heads': family_heads_count,
+                'total_members': members_count + family_heads_count,  # include family heads as members
+            })
+
+        return Response({
+            'total_samaj': total_samaj,
+            'samaj_stats': stats
+        }, status=200)
 
 
 

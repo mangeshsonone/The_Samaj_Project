@@ -4803,3 +4803,151 @@ INFO 2025-05-08 13:40:02,131 familyview 32108 32384 Sending OTP verification req
 INFO 2025-05-08 13:40:03,764 familyview 32108 32384 OTP verification successful for user: +917775889251
 INFO 2025-05-08 13:40:03,765 familyview 32108 32384 User +917775889251 successfully authenticated
 INFO 2025-05-08 13:50:25,610 autoreload 8948 28988 Watching for file changes with StatReloader
+INFO 2025-05-08 16:39:15,117 autoreload 29384 12204 Watching for file changes with StatReloader
+INFO 2025-05-08 16:39:41,373 views 29384 30756 Dashboard data API requested
+INFO 2025-05-08 16:39:41,666 views 29384 30756 Found 12 Samaj records
+INFO 2025-05-08 16:39:44,737 views 29384 30756 Samaj Bhatia stats - Families: 2, Members: 2, Expected: 6, Remaining: 4
+INFO 2025-05-08 16:39:49,551 views 29384 30756 Samaj Bhora Samaj stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-08 16:39:52,930 views 29384 30756 Samaj Brahma Samaj stats - Families: 3, Members: 7, Expected: 9, Remaining: 2
+INFO 2025-05-08 16:39:59,267 views 29384 30756 Samaj Jain Samaj stats - Families: 28, Members: 69, Expected: 129, Remaining: 60
+INFO 2025-05-08 16:40:22,562 views 29384 30756 Samaj Lohana Samaj stats - Families: 3, Members: 13, Expected: 15, Remaining: 2
+INFO 2025-05-08 16:40:27,099 views 29384 30756 Samaj Maharashtra Mandal stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-08 16:40:30,387 views 29384 30756 Samaj Marwadi Samaj stats - Families: 1, Members: 1, Expected: 4, Remaining: 3
+INFO 2025-05-08 16:40:34,302 views 29384 30756 Samaj Panjabi Samaj stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-08 16:40:37,167 views 29384 30756 Samaj Parsi Samaj stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-08 16:40:40,036 views 29384 30756 Samaj Patel Samaj stats - Families: 1, Members: 4, Expected: 4, Remaining: 0
+INFO 2025-05-08 16:40:43,210 views 29384 30756 Samaj Sindhi Samaj stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-08 16:40:45,762 views 29384 30756 Samaj Vaishnav Vanik Samaj stats - Families: 2, Members: 3, Expected: 6, Remaining: 3
+INFO 2025-05-08 16:40:48,023 views 29384 30756 Dashboard data API completed in 66.65 seconds
+INFO 2025-05-08 16:40:48,024 views 29384 30756 Returning 12 samaj records and 22 incomplete family records
+WARNING 2025-05-08 16:41:05,764 log 29384 33732 Method Not Allowed: /apidashboard/loginview/
+INFO 2025-05-08 16:41:53,973 familyview 29384 30408 Login API endpoint accessed
+INFO 2025-05-08 16:41:53,976 familyview 29384 30408 Login attempt for phone number: 7775889251
+INFO 2025-05-08 16:41:53,984 credentials 29384 30408 Found credentials in environment variables.
+INFO 2025-05-08 16:41:55,388 familyview 29384 30408 User found in Cognito: +917775889251
+INFO 2025-05-08 16:41:55,389 familyview 29384 30408 Initiating CUSTOM_AUTH flow for: +917775889251
+INFO 2025-05-08 16:41:56,226 familyview 29384 30408 Authentication initiated successfully for: +917775889251
+WARNING 2025-05-08 16:53:08,365 log 29384 13780 Method Not Allowed: /apidashboard/otpview/
+INFO 2025-05-08 16:53:36,976 familyview 29384 4792 OTP verification API accessed
+INFO 2025-05-08 16:53:36,982 familyview 29384 4792 Verifying OTP for user: +917775889251
+INFO 2025-05-08 16:53:36,985 familyview 29384 4792 Sending OTP verification request to Cognito for user: +917775889251
+ERROR 2025-05-08 16:53:37,030 familyview 29384 4792 OTP verification error for user +917775889251: Parameter validation failed:
+Invalid type for parameter ChallengeResponses.ANSWER, value: None, type: <class 'NoneType'>, valid types: <class 'str'>
+Traceback (most recent call last):
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py", line 221, in post
+    response = cognito_client.respond_to_auth_challenge(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 570, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 988, in _make_api_call
+    request_dict = self._convert_to_request_dict(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\client.py", line 1055, in _convert_to_request_dict
+    request_dict = self._serializer.serialize_to_request(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\botocore\validate.py", line 381, in serialize_to_request
+    raise ParamValidationError(report=report.generate_report())
+botocore.exceptions.ParamValidationError: Parameter validation failed:
+Invalid type for parameter ChallengeResponses.ANSWER, value: None, type: <class 'NoneType'>, valid types: <class 'str'>
+ERROR 2025-05-08 16:53:37,380 log 29384 4792 Internal Server Error: /apidashboard/otpview/
+WARNING 2025-05-08 16:54:19,992 log 29384 25088 Method Not Allowed: /apidashboard/loginview/
+INFO 2025-05-08 16:54:30,243 familyview 29384 23656 Login API endpoint accessed
+INFO 2025-05-08 16:54:30,251 familyview 29384 23656 Login attempt for phone number: 7775889251
+INFO 2025-05-08 16:54:32,480 familyview 29384 23656 User found in Cognito: +917775889251
+INFO 2025-05-08 16:54:32,482 familyview 29384 23656 Initiating CUSTOM_AUTH flow for: +917775889251
+INFO 2025-05-08 16:54:35,852 familyview 29384 23656 Authentication initiated successfully for: +917775889251
+INFO 2025-05-08 17:04:05,821 views 29384 19728 Dashboard data API requested
+INFO 2025-05-08 17:04:10,233 views 29384 19728 Found 12 Samaj records
+INFO 2025-05-08 17:04:13,714 views 29384 19728 Samaj Bhatia stats - Families: 2, Members: 2, Expected: 6, Remaining: 4
+INFO 2025-05-08 17:04:18,833 views 29384 19728 Samaj Bhora Samaj stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-08 17:04:21,700 views 29384 19728 Samaj Brahma Samaj stats - Families: 3, Members: 7, Expected: 9, Remaining: 2
+INFO 2025-05-08 17:04:27,823 views 29384 19728 Samaj Jain Samaj stats - Families: 28, Members: 69, Expected: 129, Remaining: 60
+INFO 2025-05-08 17:04:55,288 views 29384 19728 Samaj Lohana Samaj stats - Families: 3, Members: 13, Expected: 15, Remaining: 2
+INFO 2025-05-08 17:05:00,101 views 29384 19728 Samaj Maharashtra Mandal stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-08 17:05:02,762 views 29384 19728 Samaj Marwadi Samaj stats - Families: 1, Members: 1, Expected: 4, Remaining: 3
+INFO 2025-05-08 17:05:06,349 views 29384 19728 Samaj Panjabi Samaj stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-08 17:05:10,341 views 29384 19728 Samaj Parsi Samaj stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-08 17:05:13,517 views 29384 19728 Samaj Patel Samaj stats - Families: 1, Members: 4, Expected: 4, Remaining: 0
+INFO 2025-05-08 17:05:17,407 views 29384 19728 Samaj Sindhi Samaj stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-08 17:05:20,791 views 29384 19728 Samaj Vaishnav Vanik Samaj stats - Families: 2, Members: 3, Expected: 6, Remaining: 3
+INFO 2025-05-08 17:05:22,845 views 29384 19728 Dashboard data API completed in 77.01 seconds
+INFO 2025-05-08 17:05:22,845 views 29384 19728 Returning 12 samaj records and 22 incomplete family records
+INFO 2025-05-08 17:08:49,094 familyview 29384 16840 Login API endpoint accessed
+INFO 2025-05-08 17:08:49,106 familyview 29384 16840 Login attempt for phone number: 7775889251
+INFO 2025-05-08 17:08:50,503 familyview 29384 16840 User found in Cognito: +917775889251
+INFO 2025-05-08 17:08:50,505 familyview 29384 16840 Initiating CUSTOM_AUTH flow for: +917775889251
+INFO 2025-05-08 17:08:55,638 familyview 29384 16840 Authentication initiated successfully for: +917775889251
+INFO 2025-05-08 17:35:44,836 autoreload 29384 12204 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:35:49,945 autoreload 33916 30764 Watching for file changes with StatReloader
+INFO 2025-05-08 17:36:18,591 autoreload 33916 30764 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:36:20,991 autoreload 21672 10188 Watching for file changes with StatReloader
+INFO 2025-05-08 17:36:25,755 autoreload 21672 10188 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:36:27,729 autoreload 10236 11504 Watching for file changes with StatReloader
+INFO 2025-05-08 17:36:43,135 autoreload 10236 11504 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-08 17:36:45,364 autoreload 27316 27500 Watching for file changes with StatReloader
+INFO 2025-05-08 17:37:19,315 autoreload 27316 27500 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-08 17:37:21,708 autoreload 16904 22300 Watching for file changes with StatReloader
+INFO 2025-05-08 17:37:32,672 autoreload 16904 22300 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-08 17:37:34,850 autoreload 3076 28372 Watching for file changes with StatReloader
+INFO 2025-05-08 17:37:45,117 autoreload 3076 28372 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-08 17:37:47,330 autoreload 23004 15640 Watching for file changes with StatReloader
+INFO 2025-05-08 17:37:50,442 autoreload 23004 15640 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-08 17:37:52,642 autoreload 30096 31208 Watching for file changes with StatReloader
+INFO 2025-05-08 17:37:55,712 autoreload 30096 31208 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-08 17:37:57,961 autoreload 34408 16364 Watching for file changes with StatReloader
+INFO 2025-05-08 17:38:01,093 autoreload 34408 16364 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-08 17:38:03,253 autoreload 18568 20476 Watching for file changes with StatReloader
+INFO 2025-05-08 17:38:07,919 autoreload 18568 20476 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-08 17:38:10,290 autoreload 23664 5240 Watching for file changes with StatReloader
+WARNING 2025-05-08 17:38:44,998 log 23664 31452 Method Not Allowed: /apidashboard/dashb_samaj/
+ERROR 2025-05-08 17:39:22,471 log 23664 23624 Internal Server Error: /apidashboard/dashb_samaj/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py", line 132, in get
+    }, status=status.HTTP_200_OK)
+              ^^^^^^
+NameError: name 'status' is not defined
+INFO 2025-05-08 17:40:14,359 autoreload 23664 5240 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:40:16,796 autoreload 32656 7928 Watching for file changes with StatReloader
+INFO 2025-05-08 17:40:30,741 autoreload 6704 26628 Watching for file changes with StatReloader
+INFO 2025-05-08 17:42:42,576 autoreload 6704 26628 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:42:44,967 autoreload 17432 6556 Watching for file changes with StatReloader
+INFO 2025-05-08 17:42:53,031 autoreload 17432 6556 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:42:55,354 autoreload 7016 27228 Watching for file changes with StatReloader
+INFO 2025-05-08 17:43:12,309 autoreload 7016 27228 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:43:14,718 autoreload 30116 14108 Watching for file changes with StatReloader
+INFO 2025-05-08 17:43:20,457 autoreload 30116 14108 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:43:22,701 autoreload 20028 30964 Watching for file changes with StatReloader
+INFO 2025-05-08 17:43:25,889 autoreload 20028 30964 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:43:28,074 autoreload 23268 16656 Watching for file changes with StatReloader
+INFO 2025-05-08 17:43:36,066 autoreload 23268 16656 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:43:38,471 autoreload 7620 4568 Watching for file changes with StatReloader
+INFO 2025-05-08 17:45:03,526 autoreload 7620 4568 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:45:05,936 autoreload 20592 3276 Watching for file changes with StatReloader
+INFO 2025-05-08 17:45:19,481 autoreload 20592 3276 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 17:45:21,799 autoreload 15916 31796 Watching for file changes with StatReloader

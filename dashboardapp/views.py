@@ -9,6 +9,10 @@ import requests
 from django.http import JsonResponse
 import logging
 import time
+from rest_framework import status
+from django.db.models import Sum
+
+
 logger = logging.getLogger(__name__)
 
 class DashboardDataAPIView(APIView):
@@ -107,30 +111,52 @@ class DashboardDataAPIView(APIView):
 
 class DashbordSamajAPIView(APIView):
     def get(self, request):
-        total_samaj = Samaj.objects.count()
+        samajs = Samaj.objects.all()
 
-        # Stats for each Samaj
-        stats = []
+        result = []
+        grand_total_heads = 0
+        grand_actual_members = 0
+        grand_expected_members = 0
+        grand_remaining = 0
 
-        for samaj in Samaj.objects.all():
+        for samaj in samajs:
             families = Family.objects.filter(samaj=samaj)
-            family_ids = families.values_list('id', flat=True)
+            family_ids_with_heads = FamilyHead.objects.filter(family__in=families).values_list('family_id', flat=True).distinct()
+            valid_families = families.filter(id__in=family_ids_with_heads)
 
-            family_heads_count = FamilyHead.objects.filter(family__in=family_ids).count()
-            families_count=family_heads_count
-            members_count = Member.objects.filter(family_head__family__in=family_ids).count()
+            family_heads = FamilyHead.objects.filter(family__in=valid_families)
+            members = Member.objects.filter(family_head__in=family_heads)
 
-            stats.append({
-                'samaj_name': samaj.samaj_name,
-                'total_families': families_count,
-                'total_family_heads': family_heads_count,
-                'total_members': members_count + family_heads_count,  # include family heads as members
+            total_heads = family_heads.count()
+            total_expected = valid_families.aggregate(total=Sum('total_family_members'))['total'] or 0
+            actual_entries = total_heads + members.count()
+            remaining = total_expected - actual_entries
+
+
+
+            result.append({
+                "name": samaj.samaj_name,
+                "families": total_heads,
+                "members": actual_entries,
+                "needed": total_expected,
+                "missing_members": remaining
             })
 
+            grand_total_heads += total_heads
+            grand_actual_members += actual_entries
+            grand_expected_members += total_expected
+            grand_remaining += remaining
+
         return Response({
-            'total_samaj': total_samaj,
-            'samaj_stats': stats
-        }, status=200)
+            "data": result,
+            "summary": {
+                "total_family_heads": grand_total_heads,
+                "total_entered_members": grand_actual_members,
+                "total_expected_members": grand_expected_members,
+                "total_missing_members": grand_remaining
+            }
+        }, status=status.HTTP_200_OK)
+
 
 
 

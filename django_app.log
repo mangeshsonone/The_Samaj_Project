@@ -4951,3 +4951,30 @@ INFO 2025-05-08 17:45:03,526 autoreload 7620 4568 C:\python\samaj repo\The_Samaj
 INFO 2025-05-08 17:45:05,936 autoreload 20592 3276 Watching for file changes with StatReloader
 INFO 2025-05-08 17:45:19,481 autoreload 20592 3276 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
 INFO 2025-05-08 17:45:21,799 autoreload 15916 31796 Watching for file changes with StatReloader
+WARNING 2025-05-08 17:53:51,524 log 15916 20728 Not Found: /favicon.ico/
+INFO 2025-05-08 18:03:34,646 autoreload 15916 31796 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:03:38,255 autoreload 30244 928 Watching for file changes with StatReloader
+INFO 2025-05-08 18:03:50,554 autoreload 30244 928 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:03:53,100 autoreload 22192 19780 Watching for file changes with StatReloader
+INFO 2025-05-08 18:04:44,046 autoreload 22192 19780 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:04:46,473 autoreload 32760 28264 Watching for file changes with StatReloader
+INFO 2025-05-08 18:12:36,026 autoreload 32760 28264 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:12:39,413 autoreload 28736 7524 Watching for file changes with StatReloader
+INFO 2025-05-08 18:13:38,296 autoreload 28736 7524 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:13:41,175 autoreload 3216 20044 Watching for file changes with StatReloader
+INFO 2025-05-08 18:13:44,742 autoreload 3216 20044 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:13:46,884 autoreload 12184 19788 Watching for file changes with StatReloader
+INFO 2025-05-08 18:13:53,924 autoreload 12184 19788 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:13:56,201 autoreload 25452 23064 Watching for file changes with StatReloader
+INFO 2025-05-08 18:14:02,043 autoreload 25452 23064 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:14:04,046 autoreload 24872 31304 Watching for file changes with StatReloader
+INFO 2025-05-08 18:14:21,976 autoreload 24872 31304 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:14:24,139 autoreload 10848 29376 Watching for file changes with StatReloader
+INFO 2025-05-08 18:14:38,833 autoreload 10848 29376 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:14:41,179 autoreload 28508 29168 Watching for file changes with StatReloader
+INFO 2025-05-08 18:14:47,155 autoreload 28508 29168 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:14:49,491 autoreload 13500 15920 Watching for file changes with StatReloader
+INFO 2025-05-08 18:14:56,561 autoreload 13500 15920 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:14:58,709 autoreload 28332 2456 Watching for file changes with StatReloader
+INFO 2025-05-08 18:15:13,376 autoreload 28332 2456 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-08 18:15:15,748 autoreload 20600 6532 Watching for file changes with StatReloader

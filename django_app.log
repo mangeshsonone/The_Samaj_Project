@@ -5263,3 +5263,5 @@ INFO 2025-05-09 15:22:33,283 autoreload 21228 25884 C:\python\samaj repo\The_Sam
 INFO 2025-05-09 15:22:35,591 autoreload 6812 20236 Watching for file changes with StatReloader
 INFO 2025-05-09 15:23:05,300 autoreload 6812 20236 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
 INFO 2025-05-09 15:23:07,925 autoreload 16928 17124 Watching for file changes with StatReloader
+INFO 2025-05-09 18:16:11,011 autoreload 16928 17124 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 18:16:16,861 autoreload 9060 24864 Watching for file changes with StatReloader

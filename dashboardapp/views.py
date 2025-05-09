@@ -80,7 +80,7 @@ class DashboardDataAPIViewforcharts(APIView):
                             logger.debug(f"Incomplete family found: {head.name_of_head}, Missing: {missing} members")
                             incomplete_heads.append({
                                 "samaj": samaj.samaj_name,
-                                "head": head.name_of_head,
+                                "head":  f"{head.name_of_head} {head.middle_name or ''} {head.last_name or ''}".strip().title(),
                                 "phone": head.phone_no,
                                 "expected": expected,
                                 "entered": with_head,

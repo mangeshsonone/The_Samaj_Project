@@ -15,7 +15,7 @@ from django.db.models import Sum
 
 logger = logging.getLogger(__name__)
 
-class DashboardDataAPIView(APIView):
+class DashboardDataAPIViewforcharts(APIView):
     def get(self, request):
         logger.info("Dashboard data API requested")
         start_time = time.time()
@@ -109,7 +109,7 @@ class DashboardDataAPIView(APIView):
 
 
 
-class DashbordSamajAPIView(APIView):
+class DashbordSamajAPIViewforcards(APIView):
     def get(self, request):
         samajs = Samaj.objects.all()
 
@@ -160,6 +160,88 @@ class DashbordSamajAPIView(APIView):
 
 
 
+
+from itertools import chain
+from operator import attrgetter
+from django.utils.timezone import localtime
+class DashbordSamajAPIViewfortables(APIView):
+   
+    def get(self, request):
+        heads = FamilyHead.objects.select_related('family__samaj').all()
+        members = Member.objects.select_related('family_head__family__samaj').all()
+
+        combined = sorted(
+            chain(heads, members),
+            key=attrgetter('created_at')
+        )
+
+        response_data = []
+        for obj in combined:
+            if isinstance(obj, FamilyHead):
+                family = obj.family
+                samaj = family.samaj
+                total = family.total_family_members
+                entered = Member.objects.filter(family_head=obj).count() + 1
+                remaining = total - entered
+                head_name = f"{obj.name_of_head} {obj.middle_name or ''} {obj.last_name or ''}".strip().title()
+
+                data = {
+                    "type": "FamilyHead",
+
+
+                    
+
+                    "name": f"{obj.name_of_head} {obj.middle_name or ''} {obj.last_name or ''}".strip().title(),
+
+                    "head_name": head_name,
+                    
+                    "birth_date": obj.birth_date.strftime('%Y-%m-%d') if obj.birth_date else '',
+
+                    "age": obj.age,
+                    
+                    "phone_no": obj.phone_no,
+                   
+                    "blood_group": obj.blood_group,
+                   
+                    "samaj_name": samaj.samaj_name,
+
+                    "profile": obj.photo_upload.url if obj.photo_upload and hasattr(obj.photo_upload, 'url') else None,
+
+                   
+                }
+            else:
+                head = obj.family_head
+                family = head.family
+                samaj = family.samaj
+                total = family.total_family_members
+                entered = Member.objects.filter(family_head=head).count() + 1
+                remaining = total - entered
+                head_name = f"{head.name_of_head} {head.middle_name or ''} {head.last_name or ''}".strip().title()
+
+                data = {
+                    "type": "Member",
+                    
+                    
+                    "name": f"{obj.name} {obj.middle_name or ''} {obj.last_name or ''}".strip().title(),
+                    "head_name": head_name,
+                    
+                    "birth_date": obj.birth_date.strftime('%Y-%m-%d') if obj.birth_date else '',
+                    "age": obj.age,
+                   
+                    "phone_no": obj.phone_no,
+                    
+                    "blood_group": obj.blood_group,
+                    
+                    "samaj_name": samaj.samaj_name,
+
+                    "profile": obj.photo_upload.url if obj.photo_upload and hasattr(obj.photo_upload, 'url') else None,
+
+                   
+                }
+
+            response_data.append(data)
+
+        return Response(response_data)
 
 
 

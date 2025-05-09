@@ -4978,3 +4978,288 @@ INFO 2025-05-08 18:14:56,561 autoreload 13500 15920 C:\python\samaj repo\The_Sam
 INFO 2025-05-08 18:14:58,709 autoreload 28332 2456 Watching for file changes with StatReloader
 INFO 2025-05-08 18:15:13,376 autoreload 28332 2456 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
 INFO 2025-05-08 18:15:15,748 autoreload 20600 6532 Watching for file changes with StatReloader
+INFO 2025-05-09 10:34:50,571 autoreload 20600 6532 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:34:56,732 autoreload 19732 28676 Watching for file changes with StatReloader
+INFO 2025-05-09 10:35:08,235 autoreload 19732 28676 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:35:09,716 autoreload 31460 21124 Watching for file changes with StatReloader
+INFO 2025-05-09 10:43:29,074 autoreload 31460 21124 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:43:31,183 autoreload 18116 22680 Watching for file changes with StatReloader
+INFO 2025-05-09 10:45:33,935 autoreload 18116 22680 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:45:35,434 autoreload 23640 16668 Watching for file changes with StatReloader
+INFO 2025-05-09 10:45:39,099 autoreload 23640 16668 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:45:40,492 autoreload 27184 27968 Watching for file changes with StatReloader
+INFO 2025-05-09 10:45:42,806 autoreload 27184 27968 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:45:44,215 autoreload 9924 18200 Watching for file changes with StatReloader
+INFO 2025-05-09 10:45:47,829 autoreload 9924 18200 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:45:49,167 autoreload 32800 22624 Watching for file changes with StatReloader
+INFO 2025-05-09 10:47:00,498 autoreload 32800 22624 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:47:02,023 autoreload 29776 23436 Watching for file changes with StatReloader
+INFO 2025-05-09 10:47:05,679 autoreload 29776 23436 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:47:07,071 autoreload 10104 5600 Watching for file changes with StatReloader
+INFO 2025-05-09 10:47:09,403 autoreload 10104 5600 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:47:10,872 autoreload 11096 10828 Watching for file changes with StatReloader
+INFO 2025-05-09 10:47:41,013 autoreload 11096 10828 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:47:42,391 autoreload 24084 34792 Watching for file changes with StatReloader
+ERROR 2025-05-09 10:48:50,822 log 24084 18356 Internal Server Error: /apidashboard/dashb_samaj/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py", line 119, in get
+    chain(heads, members),
+    ^^^^^
+NameError: name 'chain' is not defined
+INFO 2025-05-09 10:49:41,107 autoreload 24084 34792 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:49:42,710 autoreload 9728 29352 Watching for file changes with StatReloader
+ERROR 2025-05-09 10:49:50,003 log 9728 24048 Internal Server Error: /apidashboard/dashb_samaj/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py", line 120, in get
+    key=attrgetter('created_at')
+        ^^^^^^^^^^
+NameError: name 'attrgetter' is not defined
+INFO 2025-05-09 10:50:26,071 autoreload 9728 29352 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:50:27,468 autoreload 31104 34108 Watching for file changes with StatReloader
+ERROR 2025-05-09 10:50:41,334 log 31104 11920 Internal Server Error: /apidashboard/dashb_samaj/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py", line 135, in get
+    "created_at": localtime(obj.created_at).strftime('%Y-%m-%d %H:%M:%S') if obj.created_at else '',
+                  ^^^^^^^^^
+NameError: name 'localtime' is not defined
+INFO 2025-05-09 10:51:02,528 autoreload 31104 34108 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:51:04,068 autoreload 21404 17744 Watching for file changes with StatReloader
+ERROR 2025-05-09 10:51:13,444 log 21404 26608 Internal Server Error: /apidashboard/dashb_samaj/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py", line 137, in get
+    "name_of_head":f"{head.name_of_head} {head.middle_name} {head.last_name}".title().strip(),
+                      ^^^^
+UnboundLocalError: cannot access local variable 'head' where it is not associated with a value
+INFO 2025-05-09 10:52:20,263 autoreload 21404 17744 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:52:21,721 autoreload 25552 26184 Watching for file changes with StatReloader
+INFO 2025-05-09 10:52:33,782 autoreload 25552 26184 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:52:35,346 autoreload 26912 17596 Watching for file changes with StatReloader
+INFO 2025-05-09 10:52:37,708 autoreload 26912 17596 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:52:39,041 autoreload 32492 27888 Watching for file changes with StatReloader
+INFO 2025-05-09 10:52:41,392 autoreload 32492 27888 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:52:42,862 autoreload 9924 12888 Watching for file changes with StatReloader
+INFO 2025-05-09 10:56:33,275 autoreload 9924 12888 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 10:56:35,162 autoreload 27096 34168 Watching for file changes with StatReloader
+WARNING 2025-05-09 11:06:00,941 log 27096 6880 Not Found: /favicon.ico/
+INFO 2025-05-09 14:51:02,956 autoreload 18332 33112 Watching for file changes with StatReloader
+INFO 2025-05-09 14:52:23,119 autoreload 18332 33112 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-09 14:52:25,940 autoreload 25048 19424 Watching for file changes with StatReloader
+INFO 2025-05-09 14:52:43,327 autoreload 25048 19424 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-09 14:52:45,691 autoreload 30492 19600 Watching for file changes with StatReloader
+INFO 2025-05-09 14:53:04,936 autoreload 30492 19600 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-09 14:53:07,282 autoreload 26568 23264 Watching for file changes with StatReloader
+INFO 2025-05-09 15:00:42,822 autoreload 26568 23264 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:00:46,591 autoreload 7024 15972 Watching for file changes with StatReloader
+INFO 2025-05-09 15:01:41,185 autoreload 7024 15972 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:01:43,637 autoreload 12764 29384 Watching for file changes with StatReloader
+INFO 2025-05-09 15:02:01,671 autoreload 12764 29384 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:02:04,036 autoreload 9980 32856 Watching for file changes with StatReloader
+INFO 2025-05-09 15:02:17,618 autoreload 9980 32856 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:02:19,991 autoreload 30276 23204 Watching for file changes with StatReloader
+INFO 2025-05-09 15:02:25,817 autoreload 30276 23204 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:02:28,056 autoreload 33736 1980 Watching for file changes with StatReloader
+INFO 2025-05-09 15:03:02,786 autoreload 33736 1980 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:03:05,279 autoreload 25360 6252 Watching for file changes with StatReloader
+INFO 2025-05-09 15:03:22,357 autoreload 25360 6252 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:03:24,906 autoreload 33960 21440 Watching for file changes with StatReloader
+INFO 2025-05-09 15:03:43,085 autoreload 33960 21440 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:03:45,562 autoreload 24464 27700 Watching for file changes with StatReloader
+INFO 2025-05-09 15:03:58,132 autoreload 24464 27700 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:04:00,357 autoreload 27892 25500 Watching for file changes with StatReloader
+INFO 2025-05-09 15:04:03,668 autoreload 27892 25500 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:04:06,051 autoreload 3676 34004 Watching for file changes with StatReloader
+INFO 2025-05-09 15:04:14,272 autoreload 3676 34004 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:04:16,406 autoreload 31404 24820 Watching for file changes with StatReloader
+INFO 2025-05-09 15:04:21,354 autoreload 31404 24820 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:04:23,615 autoreload 14256 10688 Watching for file changes with StatReloader
+INFO 2025-05-09 15:05:27,357 autoreload 14256 10688 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:05:29,689 autoreload 17400 23060 Watching for file changes with StatReloader
+INFO 2025-05-09 15:05:43,169 autoreload 17400 23060 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:05:45,589 autoreload 21768 31964 Watching for file changes with StatReloader
+INFO 2025-05-09 15:05:48,815 autoreload 21768 31964 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:05:51,098 autoreload 15696 24600 Watching for file changes with StatReloader
+INFO 2025-05-09 15:06:02,614 autoreload 15696 24600 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:06:05,060 autoreload 5368 28516 Watching for file changes with StatReloader
+INFO 2025-05-09 15:06:15,474 autoreload 5368 28516 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:06:17,931 autoreload 6420 17476 Watching for file changes with StatReloader
+INFO 2025-05-09 15:06:27,226 autoreload 6420 17476 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:06:29,660 autoreload 9692 17368 Watching for file changes with StatReloader
+INFO 2025-05-09 15:06:45,681 autoreload 9692 17368 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:06:48,256 autoreload 30612 16048 Watching for file changes with StatReloader
+INFO 2025-05-09 15:06:52,971 autoreload 30612 16048 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:06:55,171 autoreload 9500 32836 Watching for file changes with StatReloader
+INFO 2025-05-09 15:06:59,973 autoreload 9500 32836 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:07:02,177 autoreload 24624 32528 Watching for file changes with StatReloader
+INFO 2025-05-09 15:07:09,204 autoreload 24624 32528 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:07:11,428 autoreload 32996 17324 Watching for file changes with StatReloader
+INFO 2025-05-09 15:07:14,519 autoreload 32996 17324 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:07:16,749 autoreload 23672 24916 Watching for file changes with StatReloader
+INFO 2025-05-09 15:12:05,713 autoreload 23672 24916 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:12:09,501 autoreload 23192 33128 Watching for file changes with StatReloader
+INFO 2025-05-09 15:12:13,062 autoreload 23192 33128 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:12:15,207 autoreload 34768 28732 Watching for file changes with StatReloader
+INFO 2025-05-09 15:12:17,846 autoreload 34768 28732 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:12:20,108 autoreload 6420 23088 Watching for file changes with StatReloader
+INFO 2025-05-09 15:12:22,705 autoreload 6420 23088 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:12:25,052 autoreload 16360 1828 Watching for file changes with StatReloader
+INFO 2025-05-09 15:12:38,986 autoreload 16360 1828 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:12:41,440 autoreload 31580 31516 Watching for file changes with StatReloader
+ERROR 2025-05-09 15:13:35,363 log 31580 27220 Internal Server Error: /apidashboard/dashb_table/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\renderers.py", line 731, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\renderers.py", line 687, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\renderers.py", line 417, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\json\encoder.py", line 430, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "C:\Program Files\Python311\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Program Files\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Program Files\Python311\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\utils\encoders.py", line 66, in default
+    return tuple(item for item in obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\utils\encoders.py", line 66, in <genexpr>
+    return tuple(item for item in obj)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\files\base.py", line 78, in __iter__
+    for chunk in self.chunks():
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\files\base.py", line 55, in chunks
+    self.seek(0)
+    ^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\files\utils.py", line 45, in <lambda>
+    seek = property(lambda self: self.file.seek)
+                                 ^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\fields\files.py", line 46, in _get_file
+    self._require_file()
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\fields\files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'photo_upload' attribute has no file associated with it.
+INFO 2025-05-09 15:22:17,183 autoreload 31580 31516 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:22:20,957 autoreload 26456 24104 Watching for file changes with StatReloader
+INFO 2025-05-09 15:22:25,098 autoreload 26456 24104 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:22:27,293 autoreload 21228 25884 Watching for file changes with StatReloader
+INFO 2025-05-09 15:22:33,283 autoreload 21228 25884 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:22:35,591 autoreload 6812 20236 Watching for file changes with StatReloader
+INFO 2025-05-09 15:23:05,300 autoreload 6812 20236 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
+INFO 2025-05-09 15:23:07,925 autoreload 16928 17124 Watching for file changes with StatReloader

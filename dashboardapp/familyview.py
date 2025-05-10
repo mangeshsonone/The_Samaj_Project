@@ -475,7 +475,7 @@ class MemberEditView(APIView):
     """
     API View to edit member information based on ID
     """
-    permission_classes = [AllowAny]
+   
     
     def put(self, request, member_id, *args, **kwargs):
         """
@@ -609,3 +609,33 @@ class MemberDeleteView(APIView):
                 'status': 'error',
                 'message': str(e)
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+class CreateMemberAPIView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request, familyhead_id, *args, **kwargs):
+        family_head = get_object_or_404(FamilyHead, pk=familyhead_id)
+        total_members_allowed = family_head.family.total_family_members - 1  # excluding head
+        current_member_count = Member.objects.filter(family_head=family_head).count()
+
+        if current_member_count >= total_members_allowed:
+            return Response({
+                'status': 'error',
+                'message': 'All family members already added. Update total members in family to add more.'
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        serializer = MemberSerializer(data=request.data)
+        if serializer.is_valid():
+            member = serializer.save(family_head=family_head)
+            return Response({
+                'status': 'success',
+                'message': 'Family member added successfully.',
+                'member': MemberSerializer(member).data
+            }, status=status.HTTP_201_CREATED)
+
+        return Response({
+            'status': 'error',
+            'errors': serializer.errors
+        }, status=status.HTTP_400_BAD_REQUEST)

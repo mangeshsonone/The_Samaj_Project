@@ -5616,3 +5616,92 @@ INFO 2025-05-10 14:57:07,782 autoreload 23756 2220 C:\python\samaj repo\The_Sama
 INFO 2025-05-10 14:57:09,122 autoreload 3332 21724 Watching for file changes with StatReloader
 INFO 2025-05-10 15:01:03,240 autoreload 3332 21724 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
 INFO 2025-05-10 15:01:04,629 autoreload 7572 23184 Watching for file changes with StatReloader
+INFO 2025-05-10 15:02:55,039 familyview 7572 21252 Member edit request received for ID: 79
+INFO 2025-05-10 15:02:56,677 familyview 7572 21252 Found member: Viraj (Family Head ID: 74)
+INFO 2025-05-10 15:02:56,681 familyview 7572 21252 Updating fields: alternative_no
+INFO 2025-05-10 15:02:56,894 familyview 7572 21252 Member updated successfully in 1.85 seconds
+INFO 2025-05-10 15:03:20,084 familyview 7572 21252 Member edit request received for ID: 79
+INFO 2025-05-10 15:03:21,768 familyview 7572 21252 Found member: Viraj (Family Head ID: 74)
+INFO 2025-05-10 15:03:21,772 familyview 7572 21252 Updating fields: alternative_no
+INFO 2025-05-10 15:03:21,990 familyview 7572 21252 Member updated successfully in 1.91 seconds
+INFO 2025-05-10 15:03:39,043 familyview 7572 21252 Member edit request received for ID: 79
+INFO 2025-05-10 15:03:40,767 familyview 7572 21252 Found member: Viraj (Family Head ID: 74)
+INFO 2025-05-10 15:03:40,771 familyview 7572 21252 Updating fields: alternative_no
+INFO 2025-05-10 15:03:40,992 familyview 7572 21252 Member updated successfully in 1.95 seconds
+INFO 2025-05-10 15:15:03,452 familyview 7572 20128 Member edit request received for ID: 79
+INFO 2025-05-10 15:15:05,165 familyview 7572 20128 Found member: Viraj (Family Head ID: 74)
+INFO 2025-05-10 15:15:05,174 familyview 7572 20128 Updating fields: alternative_no
+INFO 2025-05-10 15:15:05,390 familyview 7572 20128 Member updated successfully in 1.94 seconds
+INFO 2025-05-10 15:28:37,805 familyview 7572 19944 Family head edit request received for ID: 74
+INFO 2025-05-10 15:28:39,463 familyview 7572 19944 Found family head: Mangesh (Phone: 0777588925)
+INFO 2025-05-10 15:28:39,474 familyview 7572 19944 Updating fields: alternative_no
+INFO 2025-05-10 15:28:39,701 familyview 7572 19944 Family head updated successfully in 1.90 seconds
+INFO 2025-05-10 15:56:49,644 autoreload 7572 23184 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 15:56:53,153 autoreload 5412 22864 Watching for file changes with StatReloader
+INFO 2025-05-10 16:08:26,806 autoreload 5412 22864 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 16:08:29,118 autoreload 22112 12272 Watching for file changes with StatReloader
+INFO 2025-05-10 16:22:17,311 autoreload 22112 12272 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 16:22:20,710 autoreload 10140 11200 Watching for file changes with StatReloader
+INFO 2025-05-10 16:22:30,048 autoreload 10140 11200 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 16:22:32,252 autoreload 19432 17816 Watching for file changes with StatReloader
+INFO 2025-05-10 16:22:48,941 autoreload 19432 17816 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 16:22:51,069 autoreload 7020 6836 Watching for file changes with StatReloader
+INFO 2025-05-10 16:22:54,169 autoreload 7020 6836 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 16:22:56,200 autoreload 16568 14208 Watching for file changes with StatReloader
+INFO 2025-05-10 16:23:09,602 autoreload 16568 14208 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 16:23:11,594 autoreload 17132 22228 Watching for file changes with StatReloader
+INFO 2025-05-10 16:23:18,315 autoreload 17132 22228 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 16:23:20,464 autoreload 15464 9808 Watching for file changes with StatReloader
+ERROR 2025-05-10 16:31:34,940 log 15464 19720 Internal Server Error: /apidashboard/member_add/74/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CreateMemberAPIView.post() missing 1 required positional argument: 'familyhead_id'
+WARNING 2025-05-10 16:32:21,309 log 15464 22560 Method Not Allowed: /apidashboard/member_add/74/
+ERROR 2025-05-10 16:34:24,570 log 15464 20756 Internal Server Error: /apidashboard/member_add/74/
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\python\samaj repo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CreateMemberAPIView.post() missing 1 required positional argument: 'familyhead_id'
+INFO 2025-05-10 16:35:52,374 autoreload 15464 9808 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 16:35:55,083 autoreload 19108 23332 Watching for file changes with StatReloader

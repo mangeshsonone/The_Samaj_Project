@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import DashboardDataAPIViewforcharts,send_to_google_sheet,send_datatosheet, DashbordSamajAPIViewforcards,DashbordSamajAPIViewfortables
-from .familyview import FamilyInformationView,FamilyHeadEditView,LoginAPIView,VerifyOTPAPIView
+from .familyview import FamilyInformationView,FamilyHeadEditView,LoginAPIView,VerifyOTPAPIView,MemberEditView
 
 urlpatterns = [
     path('', DashboardDataAPIViewforcharts.as_view()),
@@ -9,7 +9,8 @@ urlpatterns = [
     path('send_gs/', send_to_google_sheet),
     path('send_data/', send_datatosheet),
      path('family_profile/<str:phone_number>/', FamilyInformationView.as_view(), name='family-profile'),
-     path('family_profile_edit/<int:family_head_id>/', FamilyHeadEditView.as_view(), name='family-profile-edit'),
+     path('family_head_edit/<int:family_head_id>/', FamilyHeadEditView.as_view(), name='family-profile-edit'),
+     path('member_edit/<int:member_id>/', MemberEditView.as_view(), name='member-edit'),
      path('loginview/', LoginAPIView.as_view(), name='loginview'),
      path('otpview/', VerifyOTPAPIView.as_view(), name='otpview'),
 ]

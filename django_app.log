@@ -5576,3 +5576,43 @@ INFO 2025-05-10 12:03:01,161 autoreload 9676 17772 C:\python\samaj repo\The_Sama
 INFO 2025-05-10 12:03:03,463 autoreload 20848 9008 Watching for file changes with StatReloader
 INFO 2025-05-10 12:03:06,856 autoreload 20848 9008 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
 INFO 2025-05-10 12:03:09,008 autoreload 5172 15452 Watching for file changes with StatReloader
+INFO 2025-05-10 12:03:24,960 familyview 5172 1456 Family information request received for phone: 7736002228
+INFO 2025-05-10 12:03:27,086 familyview 5172 1456 Phone number belongs to a member: Jyoti (ID: 11)
+INFO 2025-05-10 12:03:27,092 familyview 5172 1456 Member information request processed successfully in 2.13 seconds
+INFO 2025-05-10 12:03:41,009 familyview 5172 1456 Family information request received for phone: 9847143794
+INFO 2025-05-10 12:03:43,259 familyview 5172 1456 Found family head: Kalpesh (ID: 38)
+INFO 2025-05-10 12:03:44,488 familyview 5172 1456 Family information request processed successfully in 3.48 seconds
+INFO 2025-05-10 12:11:25,903 familyview 5172 13228 Family information request received for phone: 7736002228
+INFO 2025-05-10 12:11:28,068 familyview 5172 13228 Phone number belongs to a member: Jyoti (ID: 11)
+INFO 2025-05-10 12:11:28,072 familyview 5172 13228 Member information request processed successfully in 2.17 seconds
+INFO 2025-05-10 13:50:21,077 autoreload 5172 15452 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 13:50:23,272 autoreload 10504 18212 Watching for file changes with StatReloader
+INFO 2025-05-10 13:50:31,477 autoreload 10504 18212 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 13:50:32,818 autoreload 18992 408 Watching for file changes with StatReloader
+WARNING 2025-05-10 13:58:17,506 log 18992 14956 Not Found: /apidashboard/family_head_edit/
+WARNING 2025-05-10 13:58:30,675 log 18992 14956 Method Not Allowed: /apidashboard/family_head_edit/74/
+WARNING 2025-05-10 13:58:38,920 log 18992 14956 Method Not Allowed: /apidashboard/family_head_edit/74/
+WARNING 2025-05-10 13:59:36,724 log 18992 14956 Method Not Allowed: /apidashboard/family_head_edit/74/
+INFO 2025-05-10 14:00:21,016 familyview 18992 14956 Family head edit request received for ID: 74
+INFO 2025-05-10 14:00:22,531 familyview 18992 14956 Found family head: Mangesh (Phone: 0777588925)
+INFO 2025-05-10 14:00:22,548 familyview 18992 14956 Updating fields: phone_number
+INFO 2025-05-10 14:00:22,765 familyview 18992 14956 Family head updated successfully in 1.76 seconds
+INFO 2025-05-10 14:01:56,721 familyview 18992 18872 Family head edit request received for ID: 74
+INFO 2025-05-10 14:01:58,144 familyview 18992 18872 Found family head: Mangesh (Phone: 0777588925)
+INFO 2025-05-10 14:01:58,157 familyview 18992 18872 Updating fields: alternative_no
+INFO 2025-05-10 14:01:58,369 familyview 18992 18872 Family head updated successfully in 1.65 seconds
+WARNING 2025-05-10 14:02:43,616 log 18992 15292 Method Not Allowed: /apidashboard/family_head_edit/74/
+INFO 2025-05-10 14:56:02,164 autoreload 18992 408 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 14:56:05,739 autoreload 19288 8104 Watching for file changes with StatReloader
+INFO 2025-05-10 14:56:19,240 autoreload 19288 8104 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 14:56:20,639 autoreload 21276 14224 Watching for file changes with StatReloader
+INFO 2025-05-10 14:56:28,308 autoreload 21276 14224 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 14:56:29,559 autoreload 22656 5252 Watching for file changes with StatReloader
+INFO 2025-05-10 14:56:35,080 autoreload 22656 5252 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 14:56:36,403 autoreload 20888 19248 Watching for file changes with StatReloader
+INFO 2025-05-10 14:56:51,389 autoreload 20888 19248 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 14:56:52,737 autoreload 23756 2220 Watching for file changes with StatReloader
+INFO 2025-05-10 14:57:07,782 autoreload 23756 2220 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 14:57:09,122 autoreload 3332 21724 Watching for file changes with StatReloader
+INFO 2025-05-10 15:01:03,240 autoreload 3332 21724 C:\python\samaj repo\The_Samaj_Project\dashboardapp\urls.py changed, reloading.
+INFO 2025-05-10 15:01:04,629 autoreload 7572 23184 Watching for file changes with StatReloader

@@ -319,96 +319,80 @@ class FamilyInformationView(APIView):
     """
     API View to retrieve family head and member information based on phone number passed as URL parameter
     """
-    permission_classes = [AllowAny]
-    
+   
     def get(self, request, phone_number, *args, **kwargs):
-        """
-        Get family information using phone number from URL parameter
-        
-        URL format: /api/family-info/{phone_number}/
-        """
         start_time = time.time()
         logger.info(f"Family information request received for phone: {phone_number}")
-        
+
         if not phone_number:
             logger.warning("API request made with empty phone number")
             return Response({
                 'status': 'error',
                 'message': 'Phone number is required'
             }, status=status.HTTP_400_BAD_REQUEST)
-        
+
         try:
-            # Get the family head with the provided phone number
-            logger.debug(f"Looking up family head with phone: {phone_number}")
-            try:
-                family_head = get_object_or_404(FamilyHead, phone_no=phone_number)
+            # Try to get the FamilyHead
+            family_head = FamilyHead.objects.filter(phone_no=phone_number).first()
+            if family_head:
                 logger.info(f"Found family head: {family_head.name_of_head} (ID: {family_head.id})")
-            except:
-                logger.warning(f"No family head found with phone number: {phone_number}")
+                members = Member.objects.filter(family_head=family_head)
+                member_count = members.count()
+                total_members_needed = family_head.family.total_family_members
+                total_members_added = member_count + 1
+                remaining_members = total_members_needed - total_members_added
+
+                family_head_data = FamilyHeadSerializer(family_head).data
+                family_head_data['full_name'] = f"{family_head.name_of_head} {family_head.middle_name or ''} {family_head.last_name}".title().strip()
+
+                members_data = MemberSerializer(members, many=True).data
+                for i, member in enumerate(members):
+                    members_data[i]['full_name'] = f"{member.name} {member.middle_name or ''} {member.last_name}".title().strip()
+
+                elapsed_time = time.time() - start_time
+                logger.info(f"Family information request processed successfully in {elapsed_time:.2f} seconds")
+
                 return Response({
-                    'status': 'error',
-                    'message': 'No family head found with this phone number'
-                }, status=status.HTTP_404_NOT_FOUND)
-            
-            # Get all members associated with this family head
-            logger.debug(f"Fetching members for family head: {family_head.id}")
-            members = Member.objects.filter(family_head=family_head)
-            member_count = members.count()
-            logger.info(f"Found {member_count} family members")
-            
-            # Get the total members needed from the family model
-            total_members_needed = family_head.family.total_family_members
-            logger.debug(f"Total members needed for this family: {total_members_needed}")
-            
-            # Calculate total members added (family head + members)
-            total_members_added = member_count + 1
-            
-            # Calculate remaining members
-            remaining_members = total_members_needed - total_members_added
-            logger.info(f"Family completion status: {total_members_added}/{total_members_needed} ({remaining_members} remaining)")
-            
-            # Serialize the data
-            logger.debug("Serializing family head data")
-            family_head_data = FamilyHeadSerializer(family_head).data
-            
-            # Add full name to family head data
-            first_name = family_head.name_of_head
-            middle_name = family_head.middle_name if family_head.middle_name else ""
-            last_name = family_head.last_name
-            family_head_data['full_name'] = f"{first_name} {middle_name} {last_name}".title().strip()
-            
-            logger.debug("Serializing family members data")
-            members_data = MemberSerializer(members, many=True).data
-            
-            # Add full name to each member
-            for i, member in enumerate(members):
-                first_name = member.name
-                middle_name = member.middle_name if member.middle_name else ""
-                last_name = member.last_name
-                members_data[i]['full_name'] = f"{first_name} {middle_name} {last_name}".title().strip()
-            
-            elapsed_time = time.time() - start_time
-            logger.info(f"Family information request processed successfully in {elapsed_time:.2f} seconds")
-            
+                    'status': 'success',
+                    'person_type': 'FamilyHead',
+                    'FamilyHead':True,
+                    'family_head': family_head_data,
+                    'members': members_data,
+                    'total_members_added': total_members_added,
+                    'total_members_needed': total_members_needed,
+                    'remaining_members': remaining_members
+                }, status=status.HTTP_200_OK)
+
+            # If not family head, try member
+            member = Member.objects.filter(phone_no=phone_number).first()
+            if member:
+                logger.info(f"Phone number belongs to a member: {member.name} (ID: {member.id})")
+                member_data = MemberSerializer(member).data
+                member_data['full_name'] = f"{member.name} {member.middle_name or ''} {member.last_name}".title().strip()
+
+                elapsed_time = time.time() - start_time
+                logger.info(f"Member information request processed successfully in {elapsed_time:.2f} seconds")
+
+                return Response({
+                    'status': 'success',
+                    'person_type': 'Member',
+                    'Member': True,
+                    'member': member_data
+                }, status=status.HTTP_200_OK)
+
+            logger.warning(f"No family head or member found with phone number: {phone_number}")
             return Response({
-                'status': 'success',
-                'family_head': family_head_data,
-                'members': members_data,
-                'total_members_added': total_members_added,
-                'total_members_needed': total_members_needed,
-                'remaining_members': remaining_members  # Fixed typo in field name
-            }, status=status.HTTP_200_OK)
-            
+                'status': 'error',
+                'message': 'No family head or member found with this phone number'
+            }, status=status.HTTP_404_NOT_FOUND)
+
         except Exception as e:
             elapsed_time = time.time() - start_time
             logger.error(f"Error processing family information for phone {phone_number}: {str(e)}", exc_info=True)
-            logger.info(f"Failed request completed in {elapsed_time:.2f} seconds")
-            
             return Response({
                 'status': 'error',
                 'message': str(e)
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
 
 
 

@@ -5265,3 +5265,314 @@ INFO 2025-05-09 15:23:05,300 autoreload 6812 20236 C:\python\samaj repo\The_Sama
 INFO 2025-05-09 15:23:07,925 autoreload 16928 17124 Watching for file changes with StatReloader
 INFO 2025-05-09 18:16:11,011 autoreload 16928 17124 C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py changed, reloading.
 INFO 2025-05-09 18:16:16,861 autoreload 9060 24864 Watching for file changes with StatReloader
+INFO 2025-05-09 18:21:03,821 views 9060 31900 Dashboard data API requested
+INFO 2025-05-09 18:21:04,088 views 9060 31900 Found 12 Samaj records
+INFO 2025-05-09 18:21:06,630 views 9060 31900 Samaj Bhatia stats - Families: 2, Members: 2, Expected: 6, Remaining: 4
+INFO 2025-05-09 18:21:10,545 views 9060 31900 Samaj Bhora Samaj stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-09 18:21:13,090 views 9060 31900 Samaj Brahma Samaj stats - Families: 3, Members: 7, Expected: 9, Remaining: 2
+INFO 2025-05-09 18:21:17,530 views 9060 31900 Samaj Jain Samaj stats - Families: 28, Members: 69, Expected: 129, Remaining: 60
+INFO 2025-05-09 18:21:36,739 views 9060 31900 Samaj Lohana Samaj stats - Families: 3, Members: 13, Expected: 15, Remaining: 2
+INFO 2025-05-09 18:21:41,248 views 9060 31900 Samaj Maharashtra Mandal stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-09 18:21:43,809 views 9060 31900 Samaj Marwadi Samaj stats - Families: 1, Members: 1, Expected: 4, Remaining: 3
+INFO 2025-05-09 18:21:46,964 views 9060 31900 Samaj Panjabi Samaj stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-09 18:21:49,571 views 9060 31900 Samaj Parsi Samaj stats - Families: 0, Members: 0, Expected: 0, Remaining: 0
+INFO 2025-05-09 18:22:56,562 views 9060 23396 Dashboard data API requested
+ERROR 2025-05-09 19:45:35,420 views 9060 31900 Error processing Samaj Parsi Samaj: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py", line 73, in get
+    for head in family_heads:
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+ERROR 2025-05-09 19:45:35,437 views 9060 23396 Error generating dashboard data: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py", line 32, in get
+    logger.info(f"Found {samajs.count()} Samaj records")
+                         ^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+ERROR 2025-05-09 19:45:36,552 views 9060 31900 Error processing Samaj Patel Samaj: connection already closed
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 308, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 330, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py", line 40, in get
+    logger.debug(f"Found {families.count()} families for Samaj: {samaj.samaj_name}")
+                          ^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 307, in _cursor
+    with self.wrap_database_errors:
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 308, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 330, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+ERROR 2025-05-09 19:45:36,973 views 9060 31900 Error processing Samaj Sindhi Samaj: connection already closed
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 308, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 330, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py", line 40, in get
+    logger.debug(f"Found {families.count()} families for Samaj: {samaj.samaj_name}")
+                          ^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 307, in _cursor
+    with self.wrap_database_errors:
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 308, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 330, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+ERROR 2025-05-09 19:45:36,993 views 9060 31900 Error processing Samaj Vaishnav Vanik Samaj: connection already closed
+Traceback (most recent call last):
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 308, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 330, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.InterfaceError: connection already closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\python\samaj repo\The_Samaj_Project\dashboardapp\views.py", line 40, in get
+    logger.debug(f"Found {families.count()} families for Samaj: {samaj.samaj_name}")
+                          ^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 307, in _cursor
+    with self.wrap_database_errors:
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\base\base.py", line 308, in _cursor
+    return self._prepare_cursor(self.create_cursor(name))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\samaj repo\venv\Lib\site-packages\django\db\backends\postgresql\base.py", line 330, in create_cursor
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.InterfaceError: connection already closed
+INFO 2025-05-09 19:45:37,017 views 9060 31900 Dashboard data API completed in 5073.19 seconds
+INFO 2025-05-09 19:45:37,023 views 9060 31900 Returning 9 samaj records and 21 incomplete family records
+INFO 2025-05-10 11:05:43,640 autoreload 10672 18608 Watching for file changes with StatReloader
+WARNING 2025-05-10 11:06:09,189 log 10672 18524 Not Found: /favicon.ico/
+INFO 2025-05-10 11:51:37,482 autoreload 10672 18608 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 11:51:40,468 autoreload 4964 20556 Watching for file changes with StatReloader
+INFO 2025-05-10 11:51:50,770 autoreload 4964 20556 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 11:51:53,030 autoreload 11776 19656 Watching for file changes with StatReloader
+INFO 2025-05-10 11:52:40,296 autoreload 11776 19656 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 11:52:42,706 autoreload 2968 8080 Watching for file changes with StatReloader
+WARNING 2025-05-10 11:54:39,325 log 2968 19052 Not Found: /favicon.ico/
+WARNING 2025-05-10 11:56:01,959 log 2968 10776 Not Found: /family_profile/9847143794/
+INFO 2025-05-10 11:56:28,263 familyview 2968 11768 Family information request received for phone: 9847143794
+INFO 2025-05-10 11:56:30,298 familyview 2968 11768 Found family head: Kalpesh (ID: 38)
+INFO 2025-05-10 11:56:31,431 familyview 2968 11768 Family information request processed successfully in 3.17 seconds
+INFO 2025-05-10 11:59:09,016 familyview 2968 18096 Family information request received for phone: 7736002228
+INFO 2025-05-10 11:59:11,177 familyview 2968 18096 Phone number belongs to a member: Jyoti (ID: 11)
+INFO 2025-05-10 11:59:11,182 familyview 2968 18096 Member information request processed successfully in 2.17 seconds
+INFO 2025-05-10 12:01:41,740 autoreload 2968 8080 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 12:01:44,681 autoreload 20944 8216 Watching for file changes with StatReloader
+INFO 2025-05-10 12:02:03,491 autoreload 20944 8216 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 12:02:05,797 autoreload 3796 18272 Watching for file changes with StatReloader
+INFO 2025-05-10 12:02:09,352 autoreload 3796 18272 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 12:02:11,564 autoreload 15504 13272 Watching for file changes with StatReloader
+INFO 2025-05-10 12:02:44,562 autoreload 15504 13272 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 12:02:46,856 autoreload 2064 19980 Watching for file changes with StatReloader
+INFO 2025-05-10 12:02:51,318 autoreload 2064 19980 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 12:02:53,358 autoreload 9676 17772 Watching for file changes with StatReloader
+INFO 2025-05-10 12:03:01,161 autoreload 9676 17772 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 12:03:03,463 autoreload 20848 9008 Watching for file changes with StatReloader
+INFO 2025-05-10 12:03:06,856 autoreload 20848 9008 C:\python\samaj repo\The_Samaj_Project\dashboardapp\familyview.py changed, reloading.
+INFO 2025-05-10 12:03:09,008 autoreload 5172 15452 Watching for file changes with StatReloader
